@@ -13,28 +13,28 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useMemo } from "react";
+import { useMemo } from 'react';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // uuid is a library for generating unique id
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from 'uuid';
 
 // @mui material components
-import { Table as MuiTable } from "@mui/material";
-import TableBody from "@mui/material/TableBody";
-import TableContainer from "@mui/material/TableContainer";
-import TableRow from "@mui/material/TableRow";
+import { Table as MuiTable } from '@mui/material';
+import TableBody from '@mui/material/TableBody';
+import TableContainer from '@mui/material/TableContainer';
+import TableRow from '@mui/material/TableRow';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonAvatar from "components/ArgonAvatar";
-import ArgonTypography from "components/ArgonTypography";
+import ArgonBox from 'components/ArgonBox';
+import ArgonAvatar from 'components/ArgonAvatar';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Argon Dashboard 2 MUI base styles
-import typography from "assets/theme/base/typography";
-import borders from "assets/theme/base/borders";
+import typography from 'assets/theme/base/typography';
+import borders from 'assets/theme/base/borders';
 
 function Table({ columns, rows }) {
   const { size, fontWeightBold } = typography;
@@ -59,17 +59,19 @@ function Table({ columns, rows }) {
       <ArgonBox
         key={name}
         component="th"
-        width={width || "auto"}
+        width={width || 'auto'}
         pt={1.5}
         pb={1.25}
-        pl={align === "left" ? pl : 3}
-        pr={align === "right" ? pr : 3}
+        pl={align === 'left' ? pl : 3}
+        pr={align === 'right' ? pr : 3}
         textAlign={align}
         fontSize={size.xxs}
         fontWeight={fontWeightBold}
         color="secondary"
         opacity={0.7}
-        sx={({ palette: { light } }) => ({ borderBottom: `${borderWidth[1]} solid ${light.main}` })}
+        sx={({ palette: { light } }) => ({
+          borderBottom: `${borderWidth[1]} solid ${light.main}`,
+        })}
       >
         {name.toUpperCase()}
       </ArgonBox>
@@ -96,7 +98,7 @@ function Table({ columns, rows }) {
               <ArgonBox mr={2}>
                 <ArgonAvatar src={row[name][0]} name={row[name][1]} variant="rounded" size="sm" />
               </ArgonBox>
-              <ArgonTypography variant="button" fontWeight="medium" sx={{ width: "max-content" }}>
+              <ArgonTypography variant="button" fontWeight="medium" sx={{ width: 'max-content' }}>
                 {row[name][1]}
               </ArgonTypography>
             </ArgonBox>
@@ -119,8 +121,7 @@ function Table({ columns, rows }) {
               variant="button"
               fontWeight="regular"
               color="secondary"
-              sx={{ display: "inline-block", width: "max-content" }}
-            >
+              sx={{ display: 'inline-block', width: 'max-content' }}>
               {row[name]}
             </ArgonTypography>
           </ArgonBox>

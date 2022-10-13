@@ -14,19 +14,19 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
-import ArgonButton from "components/ArgonButton";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonButton from 'components/ArgonButton';
 
 // Billing page components
-import Invoice from "layouts/billing/components/Invoice";
+import Invoice from 'layouts/billing/components/Invoice';
 
 function Invoices() {
   return (
-    <Card sx={{ height: "100%" }}>
+    <Card sx={{ height: '100%' }}>
       <ArgonBox pt={2} px={2} display="flex" justifyContent="space-between" alignItems="center">
         <ArgonTypography variant="h6" fontWeight="medium">
           Invoices

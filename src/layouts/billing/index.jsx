@@ -10,25 +10,29 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
+// Import React
+import React from 'react';
+
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
+import ArgonBox from 'components/ArgonBox';
 
 // Argon Dashboard 2 MUI components
-import MasterCard from "examples/Cards/MasterCard";
-import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
+import MasterCard from 'examples/Cards/MasterCard';
+import DefaultInfoCard from 'examples/Cards/InfoCards/DefaultInfoCard';
 
 // Billing page components
-import BaseLayout from "layouts/billing/components/BaseLayout";
-import PaymentMethod from "layouts/billing/components/PaymentMethod";
-import Invoices from "layouts/billing/components/Invoices";
-import BillingInformation from "layouts/billing/components/BillingInformation";
-import Transactions from "layouts/billing/components/Transactions";
+import BaseLayout from 'layouts/billing/components/BaseLayout';
+import PaymentMethod from 'layouts/billing/components/PaymentMethod';
+import Invoices from 'layouts/billing/components/Invoices';
+import BillingInformation from 'layouts/billing/components/BillingInformation';
+import Transactions from 'layouts/billing/components/Transactions';
 
 function Billing() {
   return (

@@ -14,18 +14,18 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Icon from "@mui/material/Icon";
+import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
-import ArgonButton from "components/ArgonButton";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonButton from 'components/ArgonButton';
 
 // Argon Dashboard 2 MUI contexts
-import { useArgonController } from "context";
+import { useArgonController } from 'context';
 
 function Bill({ name, company, email, vat, noGutter }) {
   const [controller] = useArgonController();
@@ -49,8 +49,8 @@ function Bill({ name, company, email, vat, noGutter }) {
         <ArgonBox
           display="flex"
           justifyContent="space-between"
-          alignItems={{ xs: "flex-start", sm: "center" }}
-          flexDirection={{ xs: "column", sm: "row" }}
+          alignItems={{ xs: 'flex-start', sm: 'center' }}
+          flexDirection={{ xs: 'column', sm: 'row' }}
           mb={1}
         >
           <ArgonTypography variant="button" fontWeight="medium" textTransform="capitalize">
@@ -65,11 +65,13 @@ function Bill({ name, company, email, vat, noGutter }) {
           >
             <ArgonBox mr={1}>
               <ArgonButton variant="text" color="error">
-                <Icon>delete</Icon>&nbsp;Delete
+                <Icon>delete</Icon>
+                &nbsp;Delete
               </ArgonButton>
             </ArgonBox>
             <ArgonButton variant="text" color="dark">
-              <Icon>edit</Icon>&nbsp;Edit
+              <Icon>edit</Icon>
+              &nbsp;Edit
             </ArgonButton>
           </ArgonBox>
         </ArgonBox>

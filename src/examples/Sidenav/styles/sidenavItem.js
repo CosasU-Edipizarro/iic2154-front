@@ -24,7 +24,7 @@ function item(theme, ownerState) {
 
   return {
     background: active
-      ? rgba(palette[sidenavColor ?? "info"].main, sidenavColor ? 1 : 0.1)
+      ? rgba(palette[sidenavColor ?? 'info'].main, sidenavColor ? 1 : 0.1)
       : transparent.main,
     color: () => {
       let result = text.main;
@@ -37,30 +37,30 @@ function item(theme, ownerState) {
 
       return result;
     },
-    display: miniSidenav ? "block" : "flex",
-    alignItems: "center",
-    width: "100%",
+    display: miniSidenav ? 'block' : 'flex',
+    alignItems: 'center',
+    width: '100%',
     padding: `${pxToRem(10.8)} ${pxToRem(16)} ${pxToRem(10.8)} ${pxToRem(16)}`,
     margin: `0 ${pxToRem(8)}`,
     borderRadius: borderRadius.md,
-    cursor: "pointer",
-    userSelect: "none",
-    whiteSpace: "nowrap",
-    boxShadow: active && darkSidenav ? xxl : "none",
+    cursor: 'pointer',
+    userSelect: 'none',
+    whiteSpace: 'nowrap',
+    boxShadow: active && darkSidenav ? xxl : 'none',
 
-    [breakpoints.up("xl")]: {
+    [breakpoints.up('xl')]: {
       boxShadow: () => {
         if (active) {
-          return darkSidenav ? xxl : "none";
+          return darkSidenav ? xxl : 'none';
         }
 
-        return "none";
+        return 'none';
       },
-      transition: transitions.create("box-shadow", {
+      transition: transitions.create('box-shadow', {
         easing: transitions.easing.easeInOut,
         duration: transitions.duration.shorter,
-      }),
-    },
+      })
+    }
   };
 }
 
@@ -72,24 +72,24 @@ function itemIconBox(theme, ownerState) {
   const { pxToRem } = functions;
 
   return {
-    color: "inherit",
+    color: 'inherit',
     minWidth: pxToRem(32),
     minHeight: pxToRem(32),
     borderRadius: borderRadius.md,
-    display: "grid",
-    placeItems: "center",
-    transition: transitions.create("margin", {
+    display: 'grid',
+    placeItems: 'center',
+    transition: transitions.create('margin', {
       easing: transitions.easing.easeInOut,
       duration: transitions.duration.standard,
     }),
 
-    "& svg, svg g": {
-      fill: "currentColor",
+    '& svg, svg g': {
+      fill: 'currentColor'
     },
 
-    "& i": {
-      color: active && (darkSidenav || sidenavColor) ? "inherit" : null,
-    },
+    '& i': {
+      color: active && (darkSidenav || sidenavColor) ? 'inherit' : null
+    }
   };
 }
 
@@ -105,21 +105,21 @@ function itemText(theme, ownerState) {
   const { pxToRem } = functions;
 
   return {
-    color: "inherit",
+    color: 'inherit',
     marginLeft: pxToRem(4),
 
-    [breakpoints.up("xl")]: {
+    [breakpoints.up('xl')]: {
       opacity: miniSidenav ? 0 : 1,
-      maxWidth: miniSidenav ? 0 : "100%",
+      maxWidth: miniSidenav ? 0 : '100%',
       marginLeft: miniSidenav ? 0 : pxToRem(4),
-      transition: transitions.create(["opacity", "margin"], {
+      transition: transitions.create(['opacity', 'margin'], {
         easing: transitions.easing.easeInOut,
         duration: transitions.duration.standard,
-      }),
+      })
     },
 
-    "& span": {
-      color: "inherit",
+    '& span': {
+      color: 'inherit',
       fontWeight: active ? fontWeightMedium : fontWeightRegular,
       fontSize: size.sm,
       lineHeight: 0,

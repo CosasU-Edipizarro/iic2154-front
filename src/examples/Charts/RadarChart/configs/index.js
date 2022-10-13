@@ -25,7 +25,7 @@ function configs(labels, datasets) {
           display: false,
         },
       },
-    },
+    }
   };
 }
 

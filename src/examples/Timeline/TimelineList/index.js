@@ -14,25 +14,25 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Timeline context
-import { TimelineProvider } from "examples/Timeline/context";
+import { TimelineProvider } from 'examples/Timeline/context';
 
 function TimelineList({ title, dark, children }) {
   return (
     <TimelineProvider value={dark}>
       <Card>
-        <ArgonBox bgColor={dark ? "dark" : "white"} variant="gradient">
+        <ArgonBox bgColor={dark ? 'dark' : 'white'} variant="gradient">
           <ArgonBox pt={3} px={3}>
-            <ArgonTypography variant="h6" fontWeight="medium" color={dark ? "white" : "dark"}>
+            <ArgonTypography variant="h6" fontWeight="medium" color={dark ? 'white' : 'dark'}>
               {title}
             </ArgonTypography>
           </ArgonBox>

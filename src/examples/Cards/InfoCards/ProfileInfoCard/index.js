@@ -14,24 +14,24 @@ Coded by www.creative-tim.com
 */
 
 // react-routers components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // prop-types is library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Divider from "@mui/material/Divider";
-import Tooltip from "@mui/material/Tooltip";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card';
+import Divider from '@mui/material/Divider';
+import Tooltip from '@mui/material/Tooltip';
+import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Argon Dashboard 2 MUI base styles
-import colors from "assets/theme/base/colors";
-import typography from "assets/theme/base/typography";
+import colors from 'assets/theme/base/colors';
+import typography from 'assets/theme/base/typography';
 
 function ProfileInfoCard({ title, description, info, social, action }) {
   const labels = [];
@@ -61,7 +61,8 @@ function ProfileInfoCard({ title, description, info, social, action }) {
         {label}: &nbsp;
       </ArgonTypography>
       <ArgonTypography variant="button" fontWeight="regular" color="text">
-        &nbsp;{values[key]}
+        &nbsp;
+        {values[key]}
       </ArgonTypography>
     </ArgonBox>
   ));
@@ -85,7 +86,7 @@ function ProfileInfoCard({ title, description, info, social, action }) {
   ));
 
   return (
-    <Card sx={{ height: "100%" }}>
+    <Card sx={{ height: '100%' }}>
       <ArgonBox display="flex" justifyContent="space-between" alignItems="center" pt={2} px={2}>
         <ArgonTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           {title}

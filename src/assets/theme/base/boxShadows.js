@@ -20,10 +20,10 @@ Coded by www.creative-tim.com
  */
 
 // Argon Dashboard 2 MUI Base Styles
-import colors from "assets/theme/base/colors";
+import colors from 'assets/theme/base/colors';
 
 // Argon Dashboard 2 MUI Helper Functions
-import boxShadow from "assets/theme/functions/boxShadow";
+import boxShadow from 'assets/theme/functions/boxShadow';
 
 const { black, white, info, tabs, dark, text } = colors;
 
@@ -44,8 +44,8 @@ const boxShadows = {
   )}`,
   xl: boxShadow([0, 23], [45, -11], black.light, 0.25),
   xxl: boxShadow([0, 20], [27, 0], black.main, 0.05),
-  inset: boxShadow([0, 1], [2, 0], black.main, 0.075, "inset"),
-  navbarBoxShadow: `${boxShadow([0, 0], [1, 1], white.main, 0.9, "inset")}, ${boxShadow(
+  inset: boxShadow([0, 1], [2, 0], black.main, 0.075, 'inset'),
+  navbarBoxShadow: `${boxShadow([0, 0], [1, 1], white.main, 0.9, 'inset')}, ${boxShadow(
     [0, 20],
     [27, 0],
     black.main,

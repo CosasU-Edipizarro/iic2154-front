@@ -14,8 +14,8 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI base styles
-import typography from "assets/theme-dark/base/typography";
-import colors from "assets/theme-dark/base/colors";
+import typography from 'assets/theme-dark/base/typography';
+import colors from 'assets/theme-dark/base/colors';
 
 // Argon Dashboard 2 MUI helper functions
 // import pxToRem from "assets/theme-dark/functions/pxToRem";

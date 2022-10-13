@@ -20,10 +20,10 @@ Coded by www.creative-tim.com
  */
 
 // Argon Dashboard 2 MUI Base Styles
-import colors from "assets/theme/base/colors";
+import colors from 'assets/theme/base/colors';
 
 // Argon Dashboard 2 MUI Helper Functions
-import pxToRem from "assets/theme/functions/pxToRem";
+import pxToRem from 'assets/theme/functions/pxToRem';
 
 const { dark } = colors;
 
@@ -130,7 +130,7 @@ const typography = {
     fontSize: baseProperties.fontSizeSM,
     fontWeight: baseProperties.fontWeightBold,
     lineHeight: 1.5,
-    textTransform: "uppercase",
+    textTransform: 'uppercase'
   },
 
   caption: {

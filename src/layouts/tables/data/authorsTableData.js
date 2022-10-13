@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
-import ArgonAvatar from "components/ArgonAvatar";
-import ArgonBadge from "components/ArgonBadge";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonAvatar from 'components/ArgonAvatar';
+import ArgonBadge from 'components/ArgonBadge';
 
 // Images
-import team2 from "assets/images/team-2.jpg";
-import team3 from "assets/images/team-3.jpg";
-import team4 from "assets/images/team-4.jpg";
+import team2 from 'assets/images/team-2.jpg';
+import team3 from 'assets/images/team-3.jpg';
+import team4 from 'assets/images/team-4.jpg';
 
 function Author({ image, name, email }) {
   return (
@@ -43,11 +43,11 @@ function Function({ job, org }) {
 
 const authorsTableData = {
   columns: [
-    { name: "author", align: "left" },
-    { name: "function", align: "left" },
-    { name: "status", align: "center" },
-    { name: "employed", align: "center" },
-    { name: "action", align: "center" },
+    { name: 'author', align: 'left' },
+    { name: 'function', align: 'left' },
+    { name: 'status', align: 'center' },
+    { name: 'employed', align: 'center' },
+    { name: 'action', align: 'center' }
   ],
 
   rows: [
@@ -78,7 +78,13 @@ const authorsTableData = {
       author: <Author image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
       function: <Function job="Programator" org="Developer" />,
       status: (
-        <ArgonBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
+        <ArgonBadge
+          variant="gradient"
+          badgeContent="offline"
+          color="secondary"
+          size="xs"
+          container
+        />
       ),
       employed: (
         <ArgonTypography variant="caption" color="secondary" fontWeight="medium">
@@ -147,7 +153,13 @@ const authorsTableData = {
       author: <Author image={team2} name="Richard Gran" email="richard@creative-tim.com" />,
       function: <Function job="Manager" org="Executive" />,
       status: (
-        <ArgonBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
+        <ArgonBadge
+          variant="gradient"
+          badgeContent="offline"
+          color="secondary"
+          size="xs"
+          container
+        />
       ),
       employed: (
         <ArgonTypography variant="caption" color="secondary" fontWeight="medium">
@@ -170,7 +182,13 @@ const authorsTableData = {
       author: <Author image={team4} name="Miriam Eric" email="miriam@creative-tim.com" />,
       function: <Function job="Programtor" org="Developer" />,
       status: (
-        <ArgonBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
+        <ArgonBadge
+          variant="gradient"
+          badgeContent="offline"
+          color="secondary"
+          size="xs"
+          container
+        />
       ),
       employed: (
         <ArgonTypography variant="caption" color="secondary" fontWeight="medium">

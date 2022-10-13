@@ -14,16 +14,16 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI helper functions
-import pxToRem from "assets/theme-dark/functions/pxToRem";
+import pxToRem from 'assets/theme-dark/functions/pxToRem';
 
 const svgIcon = {
   defaultProps: {
-    fontSize: "inherit",
+    fontSize: 'inherit'
   },
 
   styleOverrides: {
     fontSizeInherit: {
-      fontSize: "inherit !important",
+      fontSize: 'inherit !important'
     },
 
     fontSizeSmall: {

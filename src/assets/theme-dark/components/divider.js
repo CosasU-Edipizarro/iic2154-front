@@ -14,11 +14,11 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI base styles
-import colors from "assets/theme-dark/base/colors";
+import colors from 'assets/theme-dark/base/colors';
 
 // Argon Dashboard 2 MUI helper functions
-import rgba from "assets/theme-dark/functions/rgba";
-import pxToRem from "assets/theme-dark/functions/pxToRem";
+import rgba from 'assets/theme-dark/functions/rgba';
+import pxToRem from 'assets/theme-dark/functions/pxToRem';
 
 const { dark, transparent, white } = colors;
 
@@ -45,9 +45,9 @@ const divider = {
         0.4
       )}, ${rgba(white.main, 0)}) !important`,
       width: pxToRem(1),
-      height: "100%",
+      height: '100%',
       margin: `0 ${pxToRem(16)}`,
-      borderRight: "unset",
+      borderRight: 'unset'
     },
 
     light: {
@@ -57,14 +57,14 @@ const divider = {
         0
       )}) !important`,
 
-      "&.MuiDivider-vertical": {
+      '&.MuiDivider-vertical': {
         backgroundImage: `linear-gradient(180deg, ${rgba(dark.main, 0)}, ${dark.main}, ${rgba(
           dark.main,
           0
         )}) !important`,
       },
     },
-  },
+  }
 };
 
 export default divider;

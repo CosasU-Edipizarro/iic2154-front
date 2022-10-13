@@ -14,20 +14,20 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card';
+import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Images
-import masterCardLogo from "assets/images/logos/mastercard.png";
-const bgImage =
-  "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/card-visa.jpg";
+import masterCardLogo from 'assets/images/logos/mastercard.png';
+
+const bgImage =  'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/card-visa.jpg';
 
 function MasterCard({ color, number, holder, expires }) {
   const numbers = [...`${number}`];
@@ -38,10 +38,10 @@ function MasterCard({ color, number, holder, expires }) {
     );
   }
 
-  const num1 = numbers.slice(0, 4).join("");
-  const num2 = numbers.slice(4, 8).join("");
-  const num3 = numbers.slice(8, 12).join("");
-  const num4 = numbers.slice(12, 16).join("");
+  const num1 = numbers.slice(0, 4).join('');
+  const num2 = numbers.slice(4, 8).join('');
+  const num3 = numbers.slice(8, 12).join('');
+  const num4 = numbers.slice(12, 16).join('');
 
   return (
     <Card
@@ -72,7 +72,13 @@ function MasterCard({ color, number, holder, expires }) {
           fontWeight="medium"
           sx={{ mt: 3, mb: 5, pb: 1 }}
         >
-          {num1}&nbsp;&nbsp;&nbsp;{num2}&nbsp;&nbsp;&nbsp;{num3}&nbsp;&nbsp;&nbsp;{num4}
+          {num1}
+          &nbsp;&nbsp;&nbsp;
+          {num2}
+          &nbsp;&nbsp;&nbsp;
+          {num3}
+          &nbsp;&nbsp;&nbsp;
+          {num4}
         </ArgonTypography>
         <ArgonBox display="flex" justifyContent="space-between" alignItems="center">
           <ArgonBox display="flex" alignItems="center">
@@ -109,12 +115,12 @@ function MasterCard({ color, number, holder, expires }) {
 
 // Setting default values for the props of MasterCard
 MasterCard.defaultProps = {
-  color: "dark",
+  color: 'dark'
 };
 
 // Typechecking props for the MasterCard
 MasterCard.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  color: PropTypes.oneOf(['primary', 'secondary', 'info', 'success', 'warning', 'error', 'dark']),
   number: PropTypes.number.isRequired,
   holder: PropTypes.string.isRequired,
   expires: PropTypes.string.isRequired,

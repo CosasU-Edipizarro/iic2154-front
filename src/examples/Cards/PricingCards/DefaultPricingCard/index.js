@@ -14,19 +14,19 @@ Coded by www.creative-tim.com
 */
 
 // react-router-dom components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card';
+import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
-import ArgonButton from "components/ArgonButton";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonButton from 'components/ArgonButton';
 
 function DefaultPricingCard({ title, price, specifications, action }) {
   const renderSpecifications = specifications.map(({ label, includes }) => (
@@ -39,12 +39,12 @@ function DefaultPricingCard({ title, price, specifications, action }) {
         height="1.5rem"
         borderRadius="50%"
         shadow="md"
-        bgColor={includes ? "success" : "secondary"}
+        bgColor={includes ? 'success' : 'secondary'}
         variant="gradient"
         mr={2}
       >
         <ArgonTypography variant="button" color="white" sx={{ lineHeight: 0 }}>
-          <Icon sx={{ fontWeight: "bold" }}>{includes ? "done" : "remove"}</Icon>
+          <Icon sx={{ fontWeight: 'bold' }}>{includes ? 'done' : 'remove'}</Icon>
         </ArgonTypography>
       </ArgonBox>
       <ArgonTypography variant="body2" color="text">
@@ -70,11 +70,12 @@ function DefaultPricingCard({ title, price, specifications, action }) {
       </ArgonBox>
       <ArgonBox pb={3} px={3}>
         {renderSpecifications}
-        {action.type === "internal" ? (
+        {action.type === 'internal' ? (
           <ArgonBox mt={3}>
             <ArgonButton component={Link} to={action.route} color={action.color} fullWidth>
-              {action.label}&nbsp;
-              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+              {action.label}
+              &nbsp;
+              <Icon sx={{ fontWeight: 'bold' }}>arrow_forward</Icon>
             </ArgonButton>
           </ArgonBox>
         ) : (
@@ -87,8 +88,9 @@ function DefaultPricingCard({ title, price, specifications, action }) {
               color={action.color}
               fullWidth
             >
-              {action.label}&nbsp;
-              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+              {action.label}
+              &nbsp;
+              <Icon sx={{ fontWeight: 'bold' }}>arrow_forward</Icon>
             </ArgonButton>
           </ArgonBox>
         )}
@@ -106,18 +108,18 @@ DefaultPricingCard.propTypes = {
   }).isRequired,
   specifications: PropTypes.arrayOf(PropTypes.object).isRequired,
   action: PropTypes.shape({
-    type: PropTypes.oneOf(["external", "internal"]).isRequired,
+    type: PropTypes.oneOf(['external', 'internal']).isRequired,
     route: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     color: PropTypes.oneOf([
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "light",
-      "dark",
+      'primary',
+      'secondary',
+      'info',
+      'success',
+      'warning',
+      'error',
+      'light',
+      'dark'
     ]).isRequired,
   }).isRequired,
 };

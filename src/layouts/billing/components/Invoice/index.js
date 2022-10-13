@@ -14,14 +14,14 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Icon from "@mui/material/Icon";
+import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 function Invoice({ date, id, price, noGutter }) {
   return (
@@ -51,8 +51,7 @@ function Invoice({ date, id, price, noGutter }) {
           alignItems="center"
           lineHeight={1}
           ml={3}
-          sx={{ cursor: "pointer" }}
-        >
+          sx={{ cursor: 'pointer' }}>
           <Icon fontSize="small">picture_as_pdf</Icon>
           <ArgonTypography variant="button" fontWeight="bold">
             &nbsp;PDF

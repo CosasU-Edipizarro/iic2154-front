@@ -21,295 +21,295 @@ Coded by www.creative-tim.com
 
 const colors = {
   background: {
-    default: "#051139",
-    dark: "#111c44",
+    default: '#051139',
+    dark: '#111c44'
   },
 
   text: {
-    main: "#ffffffcc",
-    focus: "#ffffffcc",
+    main: '#ffffffcc',
+    focus: '#ffffffcc'
   },
 
   transparent: {
-    main: "transparent",
+    main: 'transparent'
   },
 
   white: {
-    main: "#ffffff",
-    focus: "#ffffff",
+    main: '#ffffff',
+    focus: '#ffffff'
   },
 
   black: {
-    light: "#141414",
-    main: "#000000",
-    focus: "#000000",
+    light: '#141414',
+    main: '#000000',
+    focus: '#000000'
   },
 
   primary: {
-    main: "#5e72e4",
-    focus: "#5e72e4",
+    main: '#5e72e4',
+    focus: '#5e72e4'
   },
 
   secondary: {
-    main: "#8392ab",
-    focus: "#8392ab",
+    main: '#8392ab',
+    focus: '#8392ab'
   },
 
   info: {
-    main: "#11cdef",
-    focus: "#11cdef",
+    main: '#11cdef',
+    focus: '#11cdef'
   },
 
   success: {
-    main: "#2dce89",
-    focus: "#2dce89",
+    main: '#2dce89',
+    focus: '#2dce89'
   },
 
   warning: {
-    main: "#fb6340",
-    focus: "#fb6340",
+    main: '#fb6340',
+    focus: '#fb6340'
   },
 
   error: {
-    main: "#f5365c",
-    focus: "#f5365c",
+    main: '#f5365c',
+    focus: '#f5365c'
   },
 
   light: {
-    main: "#f0f2f566",
-    focus: "#f0f2f566",
+    main: '#f0f2f566',
+    focus: '#f0f2f566'
   },
 
   dark: {
-    main: "#344767",
-    focus: "#344767",
+    main: '#344767',
+    focus: '#344767'
   },
 
   grey: {
-    100: "#f8f9fa",
-    200: "#f0f2f566",
-    300: "#ffffff26",
-    400: "#ced4da",
-    500: "#adb5bd",
-    600: "#6c757d",
-    700: "#495057",
-    800: "#343a40",
-    900: "#212529",
+    100: '#f8f9fa',
+    200: '#f0f2f566',
+    300: '#ffffff26',
+    400: '#ced4da',
+    500: '#adb5bd',
+    600: '#6c757d',
+    700: '#495057',
+    800: '#343a40',
+    900: '#212529'
   },
 
   gradients: {
     primary: {
-      main: "#5e72e4",
-      state: "#825ee4",
+      main: '#5e72e4',
+      state: '#825ee4'
     },
 
     secondary: {
-      main: "#627594",
-      state: "#a8b8d8",
+      main: '#627594',
+      state: '#a8b8d8'
     },
 
     info: {
-      main: "#1171ef",
-      state: "#11cdef",
+      main: '#1171ef',
+      state: '#11cdef'
     },
 
     success: {
-      main: "#2dce89",
-      state: "#2dcecc",
+      main: '#2dce89',
+      state: '#2dcecc'
     },
 
     warning: {
-      main: "#fb6340",
-      state: "#fbb140",
+      main: '#fb6340',
+      state: '#fbb140'
     },
 
     error: {
-      main: "#f5365c",
-      state: "#f56036",
+      main: '#f5365c',
+      state: '#f56036'
     },
 
     light: {
-      main: "#ced4da",
-      state: "#ebeff4",
+      main: '#ced4da',
+      state: '#ebeff4'
     },
 
     dark: {
-      main: "#212229",
-      state: "#212529",
-    },
+      main: '#212229',
+      state: '#212529'
+    }
   },
 
   socialMediaColors: {
     facebook: {
-      main: "#3b5998",
-      dark: "#344e86",
+      main: '#3b5998',
+      dark: '#344e86'
     },
 
     twitter: {
-      main: "#55acee",
-      dark: "#3ea1ec",
+      main: '#55acee',
+      dark: '#3ea1ec'
     },
 
     instagram: {
-      main: "#125688",
-      dark: "#0e456d",
+      main: '#125688',
+      dark: '#0e456d'
     },
 
     linkedin: {
-      main: "#0077b5",
-      dark: "#00669c",
+      main: '#0077b5',
+      dark: '#00669c'
     },
 
     pinterest: {
-      main: "#cc2127",
-      dark: "#b21d22",
+      main: '#cc2127',
+      dark: '#b21d22'
     },
 
     youtube: {
-      main: "#e52d27",
-      dark: "#d41f1a",
+      main: '#e52d27',
+      dark: '#d41f1a'
     },
 
     vimeo: {
-      main: "#1ab7ea",
-      dark: "#13a3d2",
+      main: '#1ab7ea',
+      dark: '#13a3d2'
     },
 
     slack: {
-      main: "#3aaf85",
-      dark: "#329874",
+      main: '#3aaf85',
+      dark: '#329874'
     },
 
     dribbble: {
-      main: "#ea4c89",
-      dark: "#e73177",
+      main: '#ea4c89',
+      dark: '#e73177'
     },
 
     github: {
-      main: "#24292e",
-      dark: "#171a1d",
+      main: '#24292e',
+      dark: '#171a1d'
     },
 
     reddit: {
-      main: "#ff4500",
-      dark: "#e03d00",
+      main: '#ff4500',
+      dark: '#e03d00'
     },
 
     tumblr: {
-      main: "#35465c",
-      dark: "#2a3749",
-    },
+      main: '#35465c',
+      dark: '#2a3749'
+    }
   },
 
   alertColors: {
     primary: {
-      main: "#5e72e4",
-      state: "#673bde",
-      border: "#cfd5f7",
+      main: '#5e72e4',
+      state: '#673bde',
+      border: '#cfd5f7'
     },
 
     secondary: {
-      main: "#627594",
-      state: "#8ca1cb",
-      border: "#dadee6",
+      main: '#627594',
+      state: '#8ca1cb',
+      border: '#dadee6'
     },
 
     info: {
-      main: "#1171ef",
-      state: "#0eadca",
-      border: "#b8f0fa",
+      main: '#1171ef',
+      state: '#0eadca',
+      border: '#b8f0fa'
     },
 
     success: {
-      main: "#2dce89",
-      state: "#26adab",
-      border: "#c0f0dc",
+      main: '#2dce89',
+      state: '#26adab',
+      border: '#c0f0dc'
     },
 
     warning: {
-      main: "#fb6340",
-      state: "#faa118",
-      border: "#fed0c6",
+      main: '#fb6340',
+      state: '#faa118',
+      border: '#fed0c6'
     },
 
     error: {
-      main: "#f5365c",
-      state: "#f3410f",
-      border: "#fcc3ce",
+      main: '#f5365c',
+      state: '#f3410f',
+      border: '#fcc3ce'
     },
 
     light: {
-      main: "#ced4da",
-      state: "#d1dae6",
-      border: "#f8f9fa",
+      main: '#ced4da',
+      state: '#d1dae6',
+      border: '#f8f9fa'
     },
 
     dark: {
-      main: "#212229",
-      state: "#0f1112",
-      border: "#c2c8d1",
-    },
+      main: '#212229',
+      state: '#0f1112',
+      border: '#c2c8d1'
+    }
   },
 
   badgeColors: {
     primary: {
-      background: "#eaecfb",
-      text: "##2643e9",
+      background: '#eaecfb',
+      text: '##2643e9'
     },
 
     secondary: {
-      background: "#e4e8ed",
-      text: "#5974a2",
+      background: '#e4e8ed',
+      text: '#5974a2'
     },
 
     info: {
-      background: "#aaedf9",
-      text: "#03acca",
+      background: '#aaedf9',
+      text: '#03acca'
     },
 
     success: {
-      background: "#b0eed3",
-      text: "#1aae6f",
+      background: '#b0eed3',
+      text: '#1aae6f'
     },
 
     warning: {
-      background: "#fee6e0",
-      text: "#ff3709",
+      background: '#fee6e0',
+      text: '#ff3709'
     },
 
     error: {
-      background: "#fdd1da",
-      text: "#f80031",
+      background: '#fdd1da',
+      text: '#f80031'
     },
 
     light: {
-      background: "#ffffff",
-      text: "#c7d3de",
+      background: '#ffffff',
+      text: '#c7d3de'
     },
 
     dark: {
-      background: "#8097bf",
-      text: "#1e2e4a",
-    },
+      background: '#8097bf',
+      text: '#1e2e4a'
+    }
   },
 
   inputColors: {
-    borderColor: { main: "#f0f2f566", focus: "#11cdef" },
-    error: "#f5365c",
-    success: "#2dce89",
+    borderColor: { main: '#f0f2f566', focus: '#11cdef' },
+    error: '#f5365c',
+    success: '#2dce89'
   },
 
   sliderColors: {
-    thumb: { borderColor: "#d9d9d9" },
+    thumb: { borderColor: '#d9d9d9' }
   },
 
   circleSliderColors: {
-    background: "#d3d3d3",
+    background: '#d3d3d3'
   },
 
   tabs: {
-    indicator: { boxShadow: "#ddd" },
-  },
+    indicator: { boxShadow: '#ddd' }
+  }
 };
 
 export default colors;

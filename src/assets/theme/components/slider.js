@@ -14,11 +14,11 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI base styles
-import colors from "assets/theme/base/colors";
-import borders from "assets/theme/base/borders";
+import colors from 'assets/theme/base/colors';
+import borders from 'assets/theme/base/borders';
 
 // Argon Dashboard 2 MUI helper functions
-import pxToRem from "assets/theme/functions/pxToRem";
+import pxToRem from 'assets/theme/functions/pxToRem';
 
 const { light, black, info } = colors;
 const { borderRadius } = borders;
@@ -26,13 +26,13 @@ const { borderRadius } = borders;
 const slider = {
   styleOverrides: {
     root: {
-      width: "100%",
+      width: '100%',
 
-      "& .MuiSlider-active, & .Mui-focusVisible": {
-        boxShadow: "none !important",
+      '& .MuiSlider-active, & .Mui-focusVisible': {
+        boxShadow: 'none !important'
       },
 
-      "& .MuiSlider-valueLabel": {
+      '& .MuiSlider-valueLabel': {
         color: black.main,
       },
     },
@@ -46,9 +46,9 @@ const slider = {
     track: {
       backgroundColor: info.main,
       height: pxToRem(6),
-      position: "relative",
+      position: 'relative',
       top: pxToRem(2),
-      border: "none",
+      border: 'none',
       borderRadius: borderRadius.lg,
       zIndex: 1,
     },
@@ -58,14 +58,14 @@ const slider = {
       height: pxToRem(15),
       backgroundColor: info.main,
       zIndex: 10,
-      boxShadow: "none",
+      boxShadow: 'none',
       border: 0,
 
-      "&:hover": {
-        boxShadow: "none",
-      },
+      '&:hover': {
+        boxShadow: 'none'
+      }
     },
-  },
+  }
 };
 
 export default slider;

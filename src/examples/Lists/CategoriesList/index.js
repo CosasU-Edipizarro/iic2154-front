@@ -14,22 +14,22 @@ Coded by www.creative-tim.com
 */
 
 // react-router-dom components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card';
+import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 function CategoriesList({ title, categories }) {
   const renderItems = categories.map(({ color, icon, name, description, route }, key) => (
-    <ArgonBox
+  <ArgonBox
       key={name}
       component="li"
       display="flex"
@@ -41,7 +41,7 @@ function CategoriesList({ title, categories }) {
       mb={categories.length - 1 === key ? 0 : 1}
     >
       <ArgonBox display="flex" alignItems="center">
-        <ArgonBox
+      <ArgonBox
           display="grid"
           alignItems="center"
           justifyContent="center"
@@ -55,42 +55,41 @@ function CategoriesList({ title, categories }) {
           variant="gradient"
         >
           <Icon
-            sx={{
-              display: "grid",
-              placeItems: "center",
+          sx={{
+              display: 'grid',
+              placeItems: 'center',
             }}
-          >
-            {icon}
-          </Icon>
+        >
+          {icon}
+        </Icon>
         </ArgonBox>
-        <ArgonBox display="flex" flexDirection="column">
+      <ArgonBox display="flex" flexDirection="column">
           <ArgonTypography variant="button" color={color} fontWeight="medium" gutterBottom>
-            {name}
-          </ArgonTypography>
+          {name}
+        </ArgonTypography>
           <ArgonTypography variant="caption" color="text">
-            {description}
-          </ArgonTypography>
+          {description}
+        </ArgonTypography>
         </ArgonBox>
-      </ArgonBox>
+    </ArgonBox>
       <ArgonBox display="flex">
-        <ArgonTypography
+      <ArgonTypography
           component={Link}
           variant="button"
           color={color}
           to={route}
           sx={{
-            lineHeight: 0,
-            transition: "all 0.2s cubic-bezier(.34,1.61,.7,1.3)",
-            p: 0.5,
+          lineHeight: 0,
+          transition: 'all 0.2s cubic-bezier(.34,1.61,.7,1.3)',
+          p: 0.5,
 
-            "&:hover, &:focus": {
-              transform: "translateX(5px)",
+          '&:hover, &:focus': {
+            transform: 'translateX(5px)'
             },
-          }}
-        >
-          <Icon sx={{ fontWeight: "bold" }}>chevron_right</Icon>
+          }}>
+          <Icon sx={{ fontWeight: 'bold' }}>chevron_right</Icon>
         </ArgonTypography>
-      </ArgonBox>
+    </ArgonBox>
     </ArgonBox>
   ));
 

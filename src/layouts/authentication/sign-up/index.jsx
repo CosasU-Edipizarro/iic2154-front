@@ -10,30 +10,33 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
+// Import React
+import React from 'react';
+
 // react-router-dom components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Checkbox from "@mui/material/Checkbox";
+import Card from '@mui/material/Card';
+import Checkbox from '@mui/material/Checkbox';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
-import ArgonInput from "components/ArgonInput";
-import ArgonButton from "components/ArgonButton";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonInput from 'components/ArgonInput';
+import ArgonButton from 'components/ArgonButton';
 
 // Authentication layout components
-import CoverLayout from "layouts/authentication/components/CoverLayout";
-import Socials from "layouts/authentication/components/Socials";
-import Separator from "layouts/authentication/components/Separator";
+import CoverLayout from 'layouts/authentication/components/CoverLayout';
+import Socials from 'layouts/authentication/components/Socials';
+import Separator from 'layouts/authentication/components/Separator';
 
 // Images
-const bgImage =
-  "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signup-cover.jpg";
+const bgImage =  'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signup-cover.jpg';
 
 function Cover() {
   return (
@@ -42,8 +45,7 @@ function Cover() {
       description="Use these awesome forms to login or create new account in your project for free."
       image={bgImage}
       imgPosition="top"
-      button={{ color: "dark", variant: "gradient" }}
-    >
+      button={{ color: 'dark', variant: 'gradient' }}>
       <Card>
         <ArgonBox p={3} mb={1} textAlign="center">
           <ArgonTypography variant="h5" fontWeight="medium">
@@ -72,8 +74,7 @@ function Cover() {
               <ArgonTypography
                 variant="button"
                 fontWeight="regular"
-                sx={{ cursor: "pointer", userSelect: "none" }}
-              >
+                sx={{ cursor: 'pointer', userSelect: 'none' }}>
                 &nbsp;&nbsp;I agree the&nbsp;
               </ArgonTypography>
               <ArgonTypography

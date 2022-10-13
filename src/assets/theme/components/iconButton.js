@@ -14,18 +14,18 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI Base Styles
-import colors from "assets/theme/base/colors";
+import colors from 'assets/theme/base/colors';
 
 const { transparent } = colors;
 
 const iconButton = {
   styleOverrides: {
     root: {
-      "&:hover": {
+      '&:hover': {
         backgroundColor: transparent.main,
       },
     },
-  },
+  }
 };
 
 export default iconButton;

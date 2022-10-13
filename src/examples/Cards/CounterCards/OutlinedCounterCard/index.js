@@ -14,18 +14,18 @@ Coded by www.creative-tim.com
 */
 
 // react-countup components
-import CountUp from "react-countup";
+import CountUp from 'react-countup';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Argon Dashboard 2 MUI base styles
-import colors from "assets/theme/base/colors";
-import borders from "assets/theme/base/borders";
+import colors from 'assets/theme/base/colors';
+import borders from 'assets/theme/base/borders';
 
 function OutlinedCounterCard({ color, count, title, prefix, suffix }) {
   const { secondary } = colors;
@@ -62,14 +62,14 @@ function OutlinedCounterCard({ color, count, title, prefix, suffix }) {
 
 // Setting default values for the props of OutlinedCounterCard
 OutlinedCounterCard.defaultProps = {
-  color: "info",
-  prefix: "",
-  suffix: "",
+  color: 'info',
+  prefix: '',
+  suffix: ''
 };
 
 // Typechecking props for the BlogCard
 OutlinedCounterCard.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  color: PropTypes.oneOf(['primary', 'secondary', 'info', 'success', 'warning', 'error', 'dark']),
   count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   title: PropTypes.string.isRequired,
   prefix: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),

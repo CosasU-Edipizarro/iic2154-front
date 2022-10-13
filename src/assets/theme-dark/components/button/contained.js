@@ -14,12 +14,12 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI Base Styles
-import colors from "assets/theme-dark/base/colors";
-import typography from "assets/theme-dark/base/typography";
-import boxShadows from "assets/theme-dark/base/boxShadows";
+import colors from 'assets/theme-dark/base/colors';
+import typography from 'assets/theme-dark/base/typography';
+import boxShadows from 'assets/theme-dark/base/boxShadows';
 
 // Argon Dashboard 2 MUI Helper Functions
-import pxToRem from "assets/theme-dark/functions/pxToRem";
+import pxToRem from 'assets/theme-dark/functions/pxToRem';
 
 const { white, text, info, secondary } = colors;
 const { size } = typography;
@@ -33,25 +33,25 @@ const contained = {
     boxShadow: buttonBoxShadow.main,
     padding: `${pxToRem(10)} ${pxToRem(20)}`,
 
-    "&:hover": {
+    '&:hover': {
       backgroundColor: white.main,
       boxShadow: buttonBoxShadow.stateOf,
     },
 
-    "&:focus": {
+    '&:focus': {
       boxShadow: buttonBoxShadow.stateOf,
     },
 
-    "&:active, &:active:focus, &:active:hover": {
+    '&:active, &:active:focus, &:active:hover': {
       opacity: 0.85,
       boxShadow: buttonBoxShadow.stateOf,
     },
 
-    "&:disabled": {
+    '&:disabled': {
       boxShadow: buttonBoxShadow.main,
     },
 
-    "& .material-icon, .material-icons-round, svg": {
+    '& .material-icon, .material-icons-round, svg': {
       fontSize: `${pxToRem(16)} !important`,
     },
   },
@@ -61,7 +61,7 @@ const contained = {
     padding: `${pxToRem(8)} ${pxToRem(32)}`,
     fontSize: size.xs,
 
-    "& .material-icon, .material-icons-round, svg": {
+    '& .material-icon, .material-icons-round, svg': {
       fontSize: `${pxToRem(12)} !important`,
     },
   },
@@ -71,7 +71,7 @@ const contained = {
     padding: `${pxToRem(14)} ${pxToRem(64)}`,
     fontSize: size.sm,
 
-    "& .material-icon, .material-icons-round, svg": {
+    '& .material-icon, .material-icons-round, svg': {
       fontSize: `${pxToRem(22)} !important`,
     },
   },
@@ -79,11 +79,11 @@ const contained = {
   primary: {
     backgroundColor: info.main,
 
-    "&:hover": {
+    '&:hover': {
       backgroundColor: info.main,
     },
 
-    "&:focus:not(:hover)": {
+    '&:focus:not(:hover)': {
       backgroundColor: info.focus,
       boxShadow: buttonBoxShadow.stateOfNotHover,
     },
@@ -92,11 +92,11 @@ const contained = {
   secondary: {
     backgroundColor: secondary.main,
 
-    "&:hover": {
+    '&:hover': {
       backgroundColor: secondary.main,
     },
 
-    "&:focus:not(:hover)": {
+    '&:focus:not(:hover)': {
       backgroundColor: secondary.focus,
       boxShadow: buttonBoxShadow.stateOfNotHover,
     },

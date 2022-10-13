@@ -13,31 +13,31 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+import { useState } from 'react';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // react-router components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // @mui material components
-import Collapse from "@mui/material/Collapse";
-import MuiLink from "@mui/material/Link";
-import Icon from "@mui/material/Icon";
+import Collapse from '@mui/material/Collapse';
+import MuiLink from '@mui/material/Link';
+import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Argon Dashboard 2 MUI exampless
-import DefaultNavbarDropdown from "examples/Navbars/DefaultNavbar/DefaultNavbarDropdown";
+import DefaultNavbarDropdown from 'examples/Navbars/DefaultNavbar/DefaultNavbarDropdown';
 
 // Argon Dashboard 2 PRO React contexts
-import { useArgonController } from "context";
+import { useArgonController } from 'context';
 
 function DefaultNavbarMobile({ routes, open }) {
-  const [collapse, setCollapse] = useState("");
+  const [collapse, setCollapse] = useState('');
   const [controller] = useArgonController();
   const { darkMode } = controller;
 
@@ -45,7 +45,7 @@ function DefaultNavbarMobile({ routes, open }) {
 
   const renderNavbarItems = routes.map(
     ({ name, icon, collapse: routeCollapses, href, route, collapse: navCollapse }) => (
-      <DefaultNavbarDropdown
+  <DefaultNavbarDropdown
         key={name}
         name={name}
         icon={icon}
@@ -55,8 +55,8 @@ function DefaultNavbarMobile({ routes, open }) {
         route={route}
         collapse={Boolean(navCollapse)}
       >
-        <ArgonBox sx={{ height: "15rem", maxHeight: "15rem", overflowY: "scroll" }}>
-          {routeCollapses &&
+        <ArgonBox sx={{ height: '15rem', maxHeight: '15rem', overflowY: 'scroll' }}>
+      {routeCollapses &&
             routeCollapses.map((item) => (
               <ArgonBox key={item.name} px={item.icon ? 1 : 2}>
                 {item.collapse ? (
@@ -75,7 +75,7 @@ function DefaultNavbarMobile({ routes, open }) {
                           fontSize="1rem"
                           lineHeight={1}
                         >
-                          {typeof item.icon === "string" ? <Icon>{item.icon}</Icon> : item.icon}
+                          {typeof item.icon === 'string' ? <Icon>{item.icon}</Icon> : item.icon}
                         </ArgonBox>
                       )}
                       <ArgonTypography
@@ -91,10 +91,10 @@ function DefaultNavbarMobile({ routes, open }) {
                       <ArgonTypography
                         key={el.name}
                         component={el.route ? Link : MuiLink}
-                        to={el.route ? el.route : ""}
-                        href={el.href ? el.href : ""}
-                        target={el.href ? "_blank" : ""}
-                        rel={el.href ? "noreferrer" : "noreferrer"}
+                        to={el.route ? el.route : ''}
+                        href={el.href ? el.href : ''}
+                        target={el.href ? '_blank' : ''}
+                        rel={el.href ? 'noreferrer' : 'noreferrer'}
                         minWidth="11.25rem"
                         display="block"
                         variant="button"
@@ -110,10 +110,10 @@ function DefaultNavbarMobile({ routes, open }) {
                           functions: { rgba },
                         }) => ({
                           borderRadius: borderRadius.md,
-                          cursor: "pointer",
-                          transition: "all 300ms linear",
+                          cursor: 'pointer',
+                          transition: 'all 300ms linear',
 
-                          "&:hover": {
+                          '&:hover': {
                             backgroundColor: rgba(grey[200], darkMode ? 0.1 : 1),
                             color: darkMode ? white.main : dark.main,
                           },
@@ -128,22 +128,22 @@ function DefaultNavbarMobile({ routes, open }) {
                     key={item.key}
                     display="flex"
                     component={item.route ? Link : MuiLink}
-                    to={item.route ? item.route : ""}
-                    href={item.href ? item.href : ""}
-                    target={item.href ? "_blank" : ""}
-                    rel={item.href ? "noreferrer" : "noreferrer"}
+                    to={item.route ? item.route : ''}
+                    href={item.href ? item.href : ''}
+                    target={item.href ? '_blank' : ''}
+                    rel={item.href ? 'noreferrer' : 'noreferrer'}
                     sx={({
                       palette: { white, grey, dark },
                       borders: { borderRadius },
                       functions: { rgba },
                     }) => ({
                       borderRadius: borderRadius.md,
-                      cursor: "pointer",
-                      transition: "all 300ms linear",
+                      cursor: 'pointer',
+                      transition: 'all 300ms linear',
                       py: 1,
                       px: 1.625,
 
-                      "&:hover": {
+                      '&:hover': {
                         backgroundColor: rgba(grey[200], darkMode ? 0.1 : 1),
                         color: darkMode ? white.main : dark.main,
                       },
@@ -161,17 +161,17 @@ function DefaultNavbarMobile({ routes, open }) {
                       fontSize="1rem"
                       lineHeight={1}
                     >
-                      {typeof item.icon === "string" ? <Icon>{item.icon}</Icon> : item.icon}
+                      {typeof item.icon === 'string' ? <Icon>{item.icon}</Icon> : item.icon}
                     </ArgonBox>
                     <ArgonBox>
                       <ArgonTypography
                         display="block"
                         variant="button"
-                        fontWeight={!item.description ? "regular" : "bold"}
+                        fontWeight={!item.description ? 'regular' : 'bold'}
                         mt={!item.description ? 0.25 : 0}
                         textTransform="capitalize"
                       >
-                        {item.name || "&nbsp"}
+                        {item.name || '&nbsp'}
                       </ArgonTypography>
                       {item.description && (
                         <ArgonTypography
@@ -179,8 +179,7 @@ function DefaultNavbarMobile({ routes, open }) {
                           variant="button"
                           color="text"
                           fontWeight="regular"
-                          sx={{ transition: "all 300ms linear" }}
-                        >
+                          sx={{ transition: 'all 300ms linear' }}>
                           {item.description}
                         </ArgonTypography>
                       )}
@@ -189,7 +188,7 @@ function DefaultNavbarMobile({ routes, open }) {
                 )}
               </ArgonBox>
             ))}
-        </ArgonBox>
+    </ArgonBox>
       </DefaultNavbarDropdown>
     )
   );

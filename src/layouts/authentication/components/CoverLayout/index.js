@@ -14,21 +14,21 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Argon Dashboard 2 MUI example components
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import PageLayout from "examples/LayoutContainers/PageLayout";
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import PageLayout from 'examples/LayoutContainers/PageLayout';
 
 // Authentication layout components
-import Footer from "layouts/authentication/components/Footer";
+import Footer from 'layouts/authentication/components/Footer';
 
 function CoverLayout({ title, description, image, imgPosition, button, children }) {
   return (
@@ -36,9 +36,9 @@ function CoverLayout({ title, description, image, imgPosition, button, children 
       <ArgonBox mt={1}>
         <DefaultNavbar
           action={{
-            type: "external",
-            route: "https://creative-tim.com/product/argon-dashboard-material-ui",
-            label: "Free Download",
+            type: 'external',
+            route: 'https://creative-tim.com/product/argon-dashboard-material-ui',
+            label: 'Free Download',
             ...button,
           }}
           transparent
@@ -61,12 +61,12 @@ function CoverLayout({ title, description, image, imgPosition, button, children 
               rgba(gradients.dark.main, 0.6),
               rgba(gradients.dark.state, 0.6)
             )}, url(${image})`,
-          backgroundSize: "cover",
+          backgroundSize: 'cover',
           backgroundPosition: imgPosition,
-          backgroundRepeat: "no-repeat",
+          backgroundRepeat: 'no-repeat'
         }}
       >
-        <Grid container spacing={3} justifyContent="center" sx={{ textAlign: "center" }}>
+        <Grid container spacing={3} justifyContent="center" sx={{ textAlign: 'center' }}>
           <Grid item xs={10} lg={4}>
             <ArgonBox mb={1}>
               <ArgonTypography variant="h1" color="white" fontWeight="bold">
@@ -95,10 +95,10 @@ function CoverLayout({ title, description, image, imgPosition, button, children 
 
 // Setting default values for the props of CoverLayout
 CoverLayout.defaultProps = {
-  title: "",
-  description: "",
-  imgPosition: "center",
-  button: { color: "white" },
+  title: '',
+  description: '',
+  imgPosition: 'center',
+  button: { color: 'white' }
 };
 
 // Typechecking props for the CoverLayout

@@ -14,9 +14,9 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import { styled } from "@mui/material/styles";
+import { styled } from '@mui/material/styles';
 
-export default styled("span")(({ theme }) => {
+export default styled('span')(({ theme }) => {
   const { palette, typography, functions, transitions } = theme;
 
   const { white } = palette;
@@ -30,14 +30,14 @@ export default styled("span")(({ theme }) => {
     marginLeft: pxToRem(40),
     fontWeight: fontWeightMedium,
     opacity: 0.9,
-    cursor: "pointer",
+    cursor: 'pointer',
     lineHeight: 0,
-    transition: transitions.create("opacity", {
+    transition: transitions.create('opacity', {
       easing: transitions.easing.easeInOut,
       duration: transitions.duration.shorter,
     }),
 
-    "&:hover": {
+    '&:hover': {
       opacity: 1,
     },
   };

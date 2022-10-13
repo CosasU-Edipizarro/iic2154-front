@@ -15,7 +15,7 @@ Coded by www.creative-tim.com
 
 /* eslint-disable no-dupe-keys */
 // Argon Dashboard 2 MUI base styles
-import colors from "assets/theme/base/colors";
+import colors from 'assets/theme/base/colors';
 
 const { gradients, dark } = colors;
 
@@ -23,8 +23,7 @@ function configs(labels, datasets) {
   const backgroundColors = [];
 
   if (datasets.backgroundColors) {
-    datasets.backgroundColors.forEach((color) =>
-      gradients[color]
+    datasets.backgroundColors.forEach((color) => (gradients[color]
         ? backgroundColors.push(gradients[color].state)
         : backgroundColors.push(dark.main)
     );
@@ -39,14 +38,14 @@ function configs(labels, datasets) {
         {
           label: datasets.label,
           backgroundColor: backgroundColors,
-          data: datasets.data,
+          data: datasets.data
         },
       ],
     },
     options: {
       plugins: {
         legend: {
-          display: false,
+          display: false
         },
       },
     },

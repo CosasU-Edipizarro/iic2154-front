@@ -14,12 +14,12 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI base styles
-import borders from "assets/theme/base/borders";
-import colors from "assets/theme/base/colors";
+import borders from 'assets/theme/base/borders';
+import colors from 'assets/theme/base/colors';
 
 // Argon Dashboard 2 MUI helper functions
-import pxToRem from "assets/theme/functions/pxToRem";
-import linearGradient from "assets/theme/functions/linearGradient";
+import pxToRem from 'assets/theme/functions/pxToRem';
+import linearGradient from 'assets/theme/functions/linearGradient';
 
 const { borderWidth, borderColor } = borders;
 const { transparent, gradients, info } = colors;
@@ -27,27 +27,27 @@ const { transparent, gradients, info } = colors;
 const radio = {
   styleOverrides: {
     root: {
-      backgroundPosition: "center",
-      backgroundSize: "contain",
-      backgroundRepeat: "no-repeat",
+      backgroundPosition: 'center',
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat',
       width: pxToRem(20),
       height: pxToRem(20),
       marginRight: pxToRem(6),
       padding: 0,
       color: transparent.main,
       border: `${borderWidth[1]} solid ${borderColor}`,
-      borderRadius: "50%",
-      transition: "all 250ms ease",
+      borderRadius: '50%',
+      transition: 'all 250ms ease',
 
-      "&:hover": {
+      '&:hover': {
         backgroundColor: transparent.main,
       },
 
-      "& .MuiSvgIcon-root": {
+      '& .MuiSvgIcon-root': {
         fill: transparent.main,
       },
 
-      "&.Mui-focusVisible": {
+      '&.Mui-focusVisible': {
         border: `${borderWidth[2]} solid ${info.main} !important`,
       },
     },
@@ -55,7 +55,7 @@ const radio = {
     colorPrimary: {
       backgroundColor: transparent.main,
 
-      "&.Mui-checked": {
+      '&.Mui-checked': {
         backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='15px' width='15px'%3E%3Ccircle cx='50%' cy='50%' r='3' fill='%23fff' /%3E%3C/svg%3E"), ${linearGradient(
           gradients.info.main,
           gradients.info.state
@@ -63,7 +63,7 @@ const radio = {
         borderColor: gradients.info.state,
       },
 
-      "&:hover": {
+      '&:hover': {
         backgroundColor: transparent.main,
       },
     },
@@ -71,7 +71,7 @@ const radio = {
     colorSecondary: {
       backgroundColor: transparent.main,
 
-      "&.Mui-checked": {
+      '&.Mui-checked': {
         backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='15px' width='15px'%3E%3Ccircle cx='50%' cy='50%' r='3' fill='%23fff' /%3E%3C/svg%3E"), ${linearGradient(
           gradients.info.main,
           gradients.info.state
@@ -79,11 +79,11 @@ const radio = {
         borderColor: gradients.info.state,
       },
 
-      "&:hover": {
+      '&:hover': {
         backgroundColor: transparent.main,
       },
     },
-  },
+  }
 };
 
 export default radio;

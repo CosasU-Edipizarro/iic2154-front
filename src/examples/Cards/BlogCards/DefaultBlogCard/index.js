@@ -14,25 +14,25 @@ Coded by www.creative-tim.com
 */
 
 // react-router components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import MuiLink from "@mui/material/Link";
+import Card from '@mui/material/Card';
+import MuiLink from '@mui/material/Link';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
-import ArgonAvatar from "components/ArgonAvatar";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonAvatar from 'components/ArgonAvatar';
 
 function DefaultBlogCard({ image, category, title, description, author, action }) {
   return (
     <Card>
       <ArgonBox mt={2} mx={2}>
-        {action.type === "internal" ? (
+        {action.type === 'internal' ? (
           <Link to={action.route}>
             <ArgonBox component="img" src={image} alt={title} width="100%" borderRadius="lg" />
           </Link>
@@ -55,7 +55,7 @@ function DefaultBlogCard({ image, category, title, description, author, action }
           </ArgonTypography>
         )}
         <ArgonBox display="block" mt={0.5} mb={1}>
-          {action.type === "internal" ? (
+          {action.type === 'internal' ? (
             <Link to={action.route}>
               <ArgonTypography
                 display="inline"
@@ -112,13 +112,13 @@ DefaultBlogCard.propTypes = {
   category: PropTypes.oneOfType([
     PropTypes.shape({
       color: PropTypes.oneOf([
-        "primary",
-        "secondary",
-        "info",
-        "success",
-        "warning",
-        "error",
-        "dark",
+        'primary',
+        'secondary',
+        'info',
+        'success',
+        'warning',
+        'error',
+        'dark'
       ]).isRequired,
       label: PropTypes.string.isRequired,
     }),
@@ -135,7 +135,7 @@ DefaultBlogCard.propTypes = {
     PropTypes.bool,
   ]),
   action: PropTypes.shape({
-    type: PropTypes.oneOf(["external", "internal"]).isRequired,
+    type: PropTypes.oneOf(['external', 'internal']).isRequired,
     route: PropTypes.string.isRequired,
   }).isRequired,
 };

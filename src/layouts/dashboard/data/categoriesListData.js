@@ -14,64 +14,62 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI components
-import ArgonTypography from "components/ArgonTypography";
+import ArgonTypography from 'components/ArgonTypography';
 
 const categoriesListData = [
   {
-    color: "dark",
-    icon: <i className="ni ni-mobile-button" style={{ fontSize: "12px" }} />,
-    name: "Devices",
+    color: 'dark',
+    icon: <i className="ni ni-mobile-button" style={{ fontSize: '12px' }} />,
+    name: 'Devices',
     description: (
       <>
-        250 in stock,{" "}
+        250 in stock,{' '}
         <ArgonTypography variant="caption" color="text" fontWeight="medium">
           346+ sold
         </ArgonTypography>
       </>
     ),
-    route: "/",
+    route: '/'
   },
   {
-    color: "dark",
-    icon: <i className="ni ni-tag" style={{ fontSize: "12px" }} />,
-    name: "Tickets",
+    color: 'dark',
+    icon: <i className="ni ni-tag" style={{ fontSize: '12px' }} />,
+    name: 'Tickets',
     description: (
       <>
-        123 closed,{" "}
+        123 closed,{' '}
         <ArgonTypography variant="caption" color="text" fontWeight="medium">
           15 open
         </ArgonTypography>
       </>
     ),
-    route: "/",
+    route: '/'
   },
   {
-    color: "dark",
-    icon: <i className="ni ni-box-2" style={{ fontSize: "12px" }} />,
-    name: "Error logs",
+    color: 'dark',
+    icon: <i className="ni ni-box-2" style={{ fontSize: '12px' }} />,
+    name: 'Error logs',
     description: (
       <>
-        1 is active,{" "}
+        1 is active,{' '}
         <ArgonTypography variant="caption" color="text" fontWeight="medium">
           40 closed
         </ArgonTypography>
       </>
     ),
-    route: "/",
+    route: '/'
   },
   {
-    color: "dark",
-    icon: <i className="ni ni-satisfied" style={{ fontSize: "12px" }} />,
-    name: "Happy Users",
+    color: 'dark',
+    icon: <i className="ni ni-satisfied" style={{ fontSize: '12px' }} />,
+    name: 'Happy Users',
     description: (
-      <>
-        <ArgonTypography variant="caption" color="text" fontWeight="medium">
-          +&nbsp;430
-        </ArgonTypography>
-      </>
+      <ArgonTypography variant="caption" color="text" fontWeight="medium">
+        +&nbsp;430
+      </ArgonTypography>
     ),
-    route: "/",
-  },
+    route: '/'
+  }
 ];
 
 export default categoriesListData;

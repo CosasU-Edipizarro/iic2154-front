@@ -13,19 +13,28 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { forwardRef } from "react";
+import { forwardRef } from 'react';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // Custom styles for the ArgonBadge
-import ArgonBadgeRoot from "components/ArgonBadge/ArgonBadgeRoot";
+import ArgonBadgeRoot from 'components/ArgonBadge/ArgonBadgeRoot';
 
 const ArgonBadge = forwardRef(
   ({ color, variant, size, circular, indicator, border, container, children, ...rest }, ref) => (
-    <ArgonBadgeRoot
+  <ArgonBadgeRoot
       {...rest}
-      ownerState={{ color, variant, size, circular, indicator, border, container, children }}
+      ownerState={{
+      color,
+      variant,
+      size,
+      circular,
+      indicator,
+      border,
+      container,
+      children
+    }}
       ref={ref}
       color="default"
     >
@@ -36,9 +45,9 @@ const ArgonBadge = forwardRef(
 
 // Setting default values for the props of ArgonBadge
 ArgonBadge.defaultProps = {
-  color: "info",
-  variant: "gradient",
-  size: "sm",
+  color: 'info',
+  variant: 'gradient',
+  size: 'sm',
   circular: false,
   indicator: false,
   border: false,
@@ -49,17 +58,17 @@ ArgonBadge.defaultProps = {
 // Typechecking props of the ArgonBadge
 ArgonBadge.propTypes = {
   color: PropTypes.oneOf([
-    "primary",
-    "secondary",
-    "info",
-    "success",
-    "warning",
-    "error",
-    "light",
-    "dark",
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'error',
+    'light',
+    'dark'
   ]),
-  variant: PropTypes.oneOf(["gradient", "contained"]),
-  size: PropTypes.oneOf(["xs", "sm", "md", "lg"]),
+  variant: PropTypes.oneOf(['gradient', 'contained']),
+  size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
   circular: PropTypes.bool,
   indicator: PropTypes.bool,
   border: PropTypes.bool,

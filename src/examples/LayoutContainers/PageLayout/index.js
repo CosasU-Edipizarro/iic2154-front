@@ -13,19 +13,19 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 // react-router-dom components
-import { useLocation } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
 // prop-types is a library for typechecking of props.
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
+import ArgonBox from 'components/ArgonBox';
 
 // Argon Dashboard 2 MUI context
-import { useArgonController, setLayout } from "context";
+import { useArgonController, setLayout } from 'context';
 
 function PageLayout({ background, children }) {
   const [controller, dispatch] = useArgonController();
@@ -34,7 +34,7 @@ function PageLayout({ background, children }) {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    setLayout(dispatch, "page");
+    setLayout(dispatch, 'page');
   }, [pathname]);
 
   return (
@@ -42,9 +42,8 @@ function PageLayout({ background, children }) {
       width="100vw"
       height="100%"
       minHeight="100vh"
-      bgColor={darkMode ? "transparent" : background}
-      sx={{ overflowX: "hidden" }}
-    >
+      bgColor={darkMode ? 'transparent' : background}
+      sx={{ overflowX: 'hidden' }}>
       {children}
     </ArgonBox>
   );
@@ -52,12 +51,12 @@ function PageLayout({ background, children }) {
 
 // Setting default values for the props for PageLayout
 PageLayout.defaultProps = {
-  background: "default",
+  background: 'default'
 };
 
 // Typechecking props for the PageLayout
 PageLayout.propTypes = {
-  background: PropTypes.oneOf(["white", "light", "default"]),
+  background: PropTypes.oneOf(['white', 'light', 'default']),
   children: PropTypes.node.isRequired,
 };
 

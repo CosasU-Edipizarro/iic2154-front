@@ -14,21 +14,21 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card';
 // import Divider from "@mui/material/Divider";
-import Icon from "@mui/material/Icon";
+import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 // import ArgonButton from "components/ArgonButton";
 
 // Billing page components
-import Transaction from "layouts/billing/components/Transaction";
+import Transaction from 'layouts/billing/components/Transaction';
 
 function Transactions() {
   return (
-    <Card sx={{ height: "100%" }}>
+    <Card sx={{ height: '100%' }}>
       <ArgonBox display="flex" justifyContent="space-between" alignItems="center" pt={3} px={2}>
         <ArgonTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           Your Transaction&apos;s
@@ -61,8 +61,7 @@ function Transactions() {
           flexDirection="column"
           p={0}
           m={0}
-          sx={{ listStyle: "none" }}
-        >
+          sx={{ listStyle: 'none' }}>
           <Transaction
             color="error"
             icon="arrow_downward"
@@ -94,8 +93,7 @@ function Transactions() {
           flexDirection="column"
           p={0}
           m={0}
-          sx={{ listStyle: "none" }}
-        >
+          sx={{ listStyle: 'none' }}>
           <Transaction
             color="success"
             icon="arrow_upward"

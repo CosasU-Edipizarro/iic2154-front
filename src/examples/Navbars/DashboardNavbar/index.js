@@ -13,29 +13,29 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 // react-router components
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link } from 'react-router-dom';
 
 // prop-types is a library for typechecking of props.
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui core components
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
-import Icon from "@mui/material/Icon";
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
+import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
-import ArgonInput from "components/ArgonInput";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonInput from 'components/ArgonInput';
 
 // Argon Dashboard 2 MUI example components
-import Breadcrumbs from "examples/Breadcrumbs";
-import NotificationItem from "examples/Items/NotificationItem";
+import Breadcrumbs from 'examples/Breadcrumbs';
+import NotificationItem from 'examples/Items/NotificationItem';
 
 // Custom styles for DashboardNavbar
 import {
@@ -45,7 +45,7 @@ import {
   navbarIconButton,
   navbarDesktopMenu,
   navbarMobileMenu,
-} from "examples/Navbars/DashboardNavbar/styles";
+} from 'examples/Navbars/DashboardNavbar/styles';
 
 // Argon Dashboard 2 MUI context
 import {
@@ -53,25 +53,25 @@ import {
   setTransparentNavbar,
   setMiniSidenav,
   setOpenConfigurator,
-} from "context";
+} from 'context';
 
 // Images
-import team2 from "assets/images/team-2.jpg";
-import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
+import team2 from 'assets/images/team-2.jpg';
+import logoSpotify from 'assets/images/small-logos/logo-spotify.svg';
 
 function DashboardNavbar({ absolute, light, isMini }) {
   const [navbarType, setNavbarType] = useState();
   const [controller, dispatch] = useArgonController();
   const { miniSidenav, transparentNavbar, fixedNavbar, openConfigurator } = controller;
   const [openMenu, setOpenMenu] = useState(false);
-  const route = useLocation().pathname.split("/").slice(1);
+  const route = useLocation().pathname.split('/').slice(1);
 
   useEffect(() => {
     // Setting the navbar type
     if (fixedNavbar) {
-      setNavbarType("sticky");
+      setNavbarType('sticky');
     } else {
-      setNavbarType("static");
+      setNavbarType('static');
     }
 
     // A function that sets the transparent state of the navbar.
@@ -79,17 +79,17 @@ function DashboardNavbar({ absolute, light, isMini }) {
       setTransparentNavbar(dispatch, (fixedNavbar && window.scrollY === 0) || !fixedNavbar);
     }
 
-    /** 
-     The event listener that's calling the handleTransparentNavbar function when 
+    /**
+     The event listener that's calling the handleTransparentNavbar function when
      scrolling the window.
     */
-    window.addEventListener("scroll", handleTransparentNavbar);
+    window.addEventListener('scroll', handleTransparentNavbar);
 
     // Call the handleTransparentNavbar function to set the state with the initial value.
     handleTransparentNavbar();
 
     // Remove event listener on cleanup
-    return () => window.removeEventListener("scroll", handleTransparentNavbar);
+    return () => window.removeEventListener('scroll', handleTransparentNavbar);
   }, [dispatch, fixedNavbar]);
 
   const handleMiniSidenav = () => setMiniSidenav(dispatch, !miniSidenav);
@@ -103,8 +103,8 @@ function DashboardNavbar({ absolute, light, isMini }) {
       anchorEl={openMenu}
       anchorReference={null}
       anchorOrigin={{
-        vertical: "bottom",
-        horizontal: "left",
+        vertical: 'bottom',
+        horizontal: 'left'
       }}
       open={Boolean(openMenu)}
       onClose={handleCloseMenu}
@@ -112,13 +112,13 @@ function DashboardNavbar({ absolute, light, isMini }) {
     >
       <NotificationItem
         image={<img src={team2} alt="person" />}
-        title={["New message", "from Laur"]}
+        title={['New message', 'from Laur']}
         date="13 minutes ago"
         onClick={handleCloseMenu}
       />
       <NotificationItem
         image={<img src={logoSpotify} alt="person" />}
-        title={["New album", "by Travis Scott"]}
+        title={['New album', 'by Travis Scott']}
         date="1 day"
         onClick={handleCloseMenu}
       />
@@ -129,7 +129,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
             payment
           </Icon>
         }
-        title={["", "Payment successfully completed"]}
+        title={['', 'Payment successfully completed']}
         date="2 days"
         onClick={handleCloseMenu}
       />
@@ -138,13 +138,13 @@ function DashboardNavbar({ absolute, light, isMini }) {
 
   return (
     <AppBar
-      position={absolute ? "absolute" : navbarType}
+      position={absolute ? 'absolute' : navbarType}
       color="inherit"
       sx={(theme) => navbar(theme, { transparentNavbar, absolute, light })}
     >
       <Toolbar sx={(theme) => navbarContainer(theme, { navbarType })}>
         <ArgonBox
-          color={light && transparentNavbar ? "white" : "dark"}
+          color={light && transparentNavbar ? 'white' : 'dark'}
           mb={{ xs: 1, md: 0 }}
           sx={(theme) => navbarRow(theme, { isMini })}
         >
@@ -155,7 +155,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
             light={transparentNavbar ? light : false}
           />
           <Icon fontSize="medium" sx={navbarDesktopMenu} onClick={handleMiniSidenav}>
-            {miniSidenav ? "menu_open" : "menu"}
+            {miniSidenav ? 'menu_open' : 'menu'}
           </Icon>
         </ArgonBox>
         {isMini ? null : (
@@ -164,13 +164,13 @@ function DashboardNavbar({ absolute, light, isMini }) {
               <ArgonInput
                 placeholder="Type here..."
                 startAdornment={
-                  <Icon fontSize="small" style={{ marginRight: "6px" }}>
+                  <Icon fontSize="small" style={{ marginRight: '6px' }}>
                     search
                   </Icon>
                 }
               />
             </ArgonBox>
-            <ArgonBox color={light ? "white" : "inherit"}>
+            <ArgonBox color={light ? 'white' : 'inherit'}>
               <Link to="/authentication/sign-in/basic">
                 <IconButton sx={navbarIconButton} size="small">
                   <Icon
@@ -183,23 +183,22 @@ function DashboardNavbar({ absolute, light, isMini }) {
                   <ArgonTypography
                     variant="button"
                     fontWeight="medium"
-                    color={light && transparentNavbar ? "white" : "dark"}
-                  >
+                    color={light && transparentNavbar ? 'white' : 'dark'}>
                     Sign in
                   </ArgonTypography>
                 </IconButton>
               </Link>
               <IconButton
                 size="small"
-                color={light && transparentNavbar ? "white" : "dark"}
+                color={light && transparentNavbar ? 'white' : 'dark'}
                 sx={navbarMobileMenu}
                 onClick={handleMiniSidenav}
               >
-                <Icon>{miniSidenav ? "menu_open" : "menu"}</Icon>
+                <Icon>{miniSidenav ? 'menu_open' : 'menu'}</Icon>
               </IconButton>
               <IconButton
                 size="small"
-                color={light && transparentNavbar ? "white" : "dark"}
+                color={light && transparentNavbar ? 'white' : 'dark'}
                 sx={navbarIconButton}
                 onClick={handleConfiguratorOpen}
               >
@@ -207,7 +206,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
               </IconButton>
               <IconButton
                 size="small"
-                color={light && transparentNavbar ? "white" : "dark"}
+                color={light && transparentNavbar ? 'white' : 'dark'}
                 sx={navbarIconButton}
                 aria-controls="notification-menu"
                 aria-haspopup="true"

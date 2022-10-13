@@ -14,32 +14,32 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Argon Dashboard 2 MUI example components
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import PageLayout from "examples/LayoutContainers/PageLayout";
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import PageLayout from 'examples/LayoutContainers/PageLayout';
 
 function IllustrationLayout({ color, header, title, description, button, illustration, children }) {
   return (
     <PageLayout background="white">
       <DefaultNavbar
         action={{
-          type: "external",
-          route: "https://creative-tim.com/product/argon-dashboard-material-ui",
-          label: "Free Download",
+          type: 'external',
+          route: 'https://creative-tim.com/product/argon-dashboard-material-ui',
+          label: 'Free Download',
           ...button,
         }}
       />
       <Grid container>
-        <Grid item xs={11} sm={8} md={6} lg={4} xl={3} sx={{ mx: "auto" }}>
+        <Grid item xs={11} sm={8} md={6} lg={4} xl={3} sx={{ mx: 'auto' }}>
           <ArgonBox display="flex" flexDirection="column" justifyContent="center" height="100vh">
             <ArgonBox pt={3} px={3}>
               {!header ? (
@@ -62,7 +62,7 @@ function IllustrationLayout({ color, header, title, description, button, illustr
         </Grid>
         <Grid item xs={12} lg={6}>
           <ArgonBox
-            display={{ xs: "none", lg: "flex" }}
+            display={{ xs: 'none', lg: 'flex' }}
             flexDirection="column"
             justifyContent="center"
             alignItems="center"
@@ -73,8 +73,7 @@ function IllustrationLayout({ color, header, title, description, button, illustr
             textAlign="center"
             m={2}
             px={13}
-            sx={{ overflow: "hidden" }}
-          >
+            sx={{ overflow: 'hidden' }}>
             <ArgonBox
               component="img"
               src={illustration.image}
@@ -119,17 +118,17 @@ function IllustrationLayout({ color, header, title, description, button, illustr
 
 // Setting default values for the props of IllustrationLayout
 IllustrationLayout.defaultProps = {
-  color: "info",
-  header: "",
-  title: "",
-  description: "",
-  button: { color: "info" },
+  color: 'info',
+  header: '',
+  title: '',
+  description: '',
+  button: { color: 'info' },
   illustration: {},
 };
 
 // Typechecking props for the IllustrationLayout
 IllustrationLayout.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  color: PropTypes.oneOf(['primary', 'secondary', 'info', 'success', 'warning', 'error', 'dark']),
   header: PropTypes.node,
   title: PropTypes.string,
   description: PropTypes.string,
@@ -139,7 +138,7 @@ IllustrationLayout.propTypes = {
     image: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
-  }),
+  })
 };
 
 export default IllustrationLayout;

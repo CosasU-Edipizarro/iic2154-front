@@ -14,17 +14,17 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI base styles
-import borders from "assets/theme-dark/base/borders";
+import borders from 'assets/theme-dark/base/borders';
 
 // Argon Dashboard 2 MUI helper functions
-import pxToRem from "assets/theme-dark/functions/pxToRem";
+import pxToRem from 'assets/theme-dark/functions/pxToRem';
 
 const { borderRadius } = borders;
 
 const tableHead = {
   styleOverrides: {
     root: {
-      display: "block",
+      display: 'block',
       padding: `${pxToRem(16)} ${pxToRem(16)} 0  ${pxToRem(16)}`,
       borderRadius: `${borderRadius.xl} ${borderRadius.xl} 0 0`,
     },

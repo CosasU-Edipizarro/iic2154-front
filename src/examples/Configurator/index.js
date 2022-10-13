@@ -14,26 +14,26 @@ Coded by www.creative-tim.com
 */
 
 // react-github-btn
-import GitHubButton from "react-github-btn";
+import GitHubButton from 'react-github-btn';
 
 // @mui material components
-import Divider from "@mui/material/Divider";
-import Switch from "@mui/material/Switch";
-import IconButton from "@mui/material/IconButton";
-import Link from "@mui/material/Link";
-import Icon from "@mui/material/Icon";
+import Divider from '@mui/material/Divider';
+import Switch from '@mui/material/Switch';
+import IconButton from '@mui/material/IconButton';
+import Link from '@mui/material/Link';
+import Icon from '@mui/material/Icon';
 
 // @mui icons
-import TwitterIcon from "@mui/icons-material/Twitter";
-import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
-import ArgonButton from "components/ArgonButton";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonButton from 'components/ArgonButton';
 
 // Custom styles for the Configurator
-import ConfiguratorRoot from "examples/Configurator/ConfiguratorRoot";
+import ConfiguratorRoot from 'examples/Configurator/ConfiguratorRoot';
 
 // Argon Dashboard 2 MUI context
 import {
@@ -44,13 +44,13 @@ import {
   setFixedNavbar,
   setSidenavColor,
   setDarkMode,
-} from "context";
+} from 'context';
 
 function Configurator() {
   const [controller, dispatch] = useArgonController();
   const { openConfigurator, darkSidenav, miniSidenav, fixedNavbar, sidenavColor, darkMode } =
     controller;
-  const sidenavColors = ["primary", "dark", "info", "success", "warning", "error"];
+  const sidenavColors = ['primary', 'dark', 'info', 'success', 'warning', 'error'];
 
   const handleCloseConfigurator = () => setOpenConfigurator(dispatch, false);
   const handledarkSidenav = () => setDarkSidenav(dispatch, true);
@@ -85,8 +85,8 @@ function Configurator() {
             fontWeight: `${fontWeightBold} !important`,
             color: darkMode ? white.main : dark.main,
             stroke: darkMode ? white.main : dark.main,
-            strokeWidth: "2px",
-            cursor: "pointer",
+            strokeWidth: '2px',
+            cursor: 'pointer',
             mt: 2,
           })}
           onClick={handleCloseConfigurator}
@@ -106,23 +106,23 @@ function Configurator() {
               <IconButton
                 key={color}
                 sx={({ borders: { borderWidth }, palette: { white, dark }, transitions }) => ({
-                  width: "24px",
-                  height: "24px",
+                  width: '24px',
+                  height: '24px',
                   padding: 0,
                   border: `${borderWidth[1]} solid ${white.main}`,
                   borderColor: sidenavColor === color && dark.main,
-                  transition: transitions.create("border-color", {
+                  transition: transitions.create('border-color', {
                     easing: transitions.easing.sharp,
                     duration: transitions.duration.shorter,
                   }),
                   backgroundImage: ({ functions: { linearGradient }, palette: { gradients } }) =>
                     linearGradient(gradients[color].main, gradients[color].state),
 
-                  "&:not(:last-child)": {
+                  '&:not(:last-child)': {
                     mr: 1,
                   },
 
-                  "&:hover, &:focus, &:active": {
+                  '&:hover, &:focus, &:active': {
                     borderColor: dark.main,
                   },
                 })}
@@ -140,13 +140,13 @@ function Configurator() {
 
           <ArgonBox
             sx={{
-              display: "flex",
+              display: 'flex',
               mt: 2,
             }}
           >
             <ArgonButton
               color="info"
-              variant={darkSidenav ? "outlined" : "gradient"}
+              variant={darkSidenav ? 'outlined' : 'gradient'}
               onClick={handleWhiteSidenav}
               fullWidth
             >
@@ -154,7 +154,7 @@ function Configurator() {
             </ArgonButton>
             <ArgonButton
               color="info"
-              variant={darkSidenav ? "gradient" : "outlined"}
+              variant={darkSidenav ? 'gradient' : 'outlined'}
               onClick={handledarkSidenav}
               fullWidth
               sx={{
@@ -217,7 +217,7 @@ function Configurator() {
             href="https://www.creative-tim.com/learning-lab/react/quick-start/argon-dashboard/"
             target="_blank"
             rel="noreferrer"
-            color={darkMode ? "white" : "dark"}
+            color={darkMode ? 'white' : 'dark'}
             variant="outlined"
             fullWidth
           >

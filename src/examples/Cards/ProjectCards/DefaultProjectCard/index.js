@@ -14,21 +14,21 @@ Coded by www.creative-tim.com
 */
 
 // react-router-dom components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
-import Tooltip from "@mui/material/Tooltip";
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
+import Tooltip from '@mui/material/Tooltip';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
-import ArgonButton from "components/ArgonButton";
-import ArgonAvatar from "components/ArgonAvatar";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonButton from 'components/ArgonButton';
+import ArgonAvatar from 'components/ArgonAvatar';
 
 function DefaultProjectCard({ image, label, title, description, action, authors }) {
   const renderAuthors = authors.map(({ image: media, name }) => (
@@ -39,13 +39,13 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
         size="xs"
         sx={({ borders: { borderWidth }, palette: { white } }) => ({
           border: `${borderWidth[2]} solid ${white.main}`,
-          cursor: "pointer",
-          position: "relative",
+          cursor: 'pointer',
+          position: 'relative',
           ml: -1.25,
 
-          "&:hover, &:focus": {
-            zIndex: "10",
-          },
+          '&:hover, &:focus': {
+            zIndex: '10'
+          }
         })}
       />
     </Tooltip>
@@ -54,11 +54,11 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
   return (
     <Card
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        backgroundColor: "transparent",
-        boxShadow: "none",
-        overflow: "visible",
+        display: 'flex',
+        flexDirection: 'column',
+        backgroundColor: 'transparent',
+        boxShadow: 'none',
+        overflow: 'visible'
       }}
     >
       <ArgonBox position="relative" width="100.25%" shadow="md" borderRadius="xl">
@@ -67,11 +67,11 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
           component="img"
           title={title}
           sx={{
-            maxWidth: "100%",
+            maxWidth: '100%',
             margin: 0,
             boxShadow: ({ boxShadows: { md } }) => md,
-            objectFit: "cover",
-            objectPosition: "center",
+            objectFit: 'cover',
+            objectPosition: 'center'
           }}
         />
       </ArgonBox>
@@ -85,7 +85,7 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
           {label}
         </ArgonTypography>
         <ArgonBox mb={1}>
-          {action.type === "internal" ? (
+          {action.type === 'internal' ? (
             <ArgonTypography
               component={Link}
               to={action.route}
@@ -113,7 +113,7 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
           </ArgonTypography>
         </ArgonBox>
         <ArgonBox display="flex" justifyContent="space-between" alignItems="center">
-          {action.type === "internal" ? (
+          {action.type === 'internal' ? (
             <ArgonButton
               component={Link}
               to={action.route}
@@ -155,18 +155,18 @@ DefaultProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   action: PropTypes.shape({
-    type: PropTypes.oneOf(["external", "internal"]),
+    type: PropTypes.oneOf(['external', 'internal']),
     route: PropTypes.string.isRequired,
     color: PropTypes.oneOf([
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "light",
-      "dark",
-      "white",
+      'primary',
+      'secondary',
+      'info',
+      'success',
+      'warning',
+      'error',
+      'light',
+      'dark',
+      'white'
     ]).isRequired,
     label: PropTypes.string.isRequired,
   }).isRequired,

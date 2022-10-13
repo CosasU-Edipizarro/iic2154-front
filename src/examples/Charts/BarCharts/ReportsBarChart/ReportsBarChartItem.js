@@ -14,18 +14,18 @@ Coded by www.creative-tim.com
 */
 
 // porp-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Icon from "@mui/material/Icon";
+import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI base styles
-import typography from "assets/theme/base/typography";
+import typography from 'assets/theme/base/typography';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
-import ArgonProgress from "components/ArgonProgress";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonProgress from 'components/ArgonProgress';
 
 function ReportsBarChartItem({ color, icon, label, progress }) {
   const { size } = typography;
@@ -72,14 +72,14 @@ function ReportsBarChartItem({ color, icon, label, progress }) {
 
 // Setting default values for the props of ReportsBarChartItem
 ReportsBarChartItem.defaultProps = {
-  color: "dark",
+  color: 'dark'
 };
 
 // Typechecking props for the ReportsBarChartItem
 ReportsBarChartItem.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  color: PropTypes.oneOf(['primary', 'secondary', 'info', 'success', 'warning', 'error', 'dark']),
   icon: PropTypes.shape({
-    color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"])
+    color: PropTypes.oneOf(['primary', 'secondary', 'info', 'success', 'warning', 'error', 'dark'])
       .isRequired,
     component: PropTypes.node.isRequired,
   }).isRequired,

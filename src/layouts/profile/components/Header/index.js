@@ -13,51 +13,51 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
-import AppBar from "@mui/material/AppBar";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+import Card from '@mui/material/Card';
+import Grid from '@mui/material/Grid';
+import AppBar from '@mui/material/AppBar';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
-import ArgonAvatar from "components/ArgonAvatar";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonAvatar from 'components/ArgonAvatar';
 
 // Argon Dashboard 2 MUI example components
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
 
 // Argon Dashboard 2 MUI base styles
-import breakpoints from "assets/theme/base/breakpoints";
+import breakpoints from 'assets/theme/base/breakpoints';
 
 // Images
-import burceMars from "assets/images/bruce-mars.jpg";
+import burceMars from 'assets/images/bruce-mars.jpg';
 
 function Header() {
-  const [tabsOrientation, setTabsOrientation] = useState("horizontal");
+  const [tabsOrientation, setTabsOrientation] = useState('horizontal');
   const [tabValue, setTabValue] = useState(0);
 
   useEffect(() => {
     // A function that sets the orientation state of the tabs.
     function handleTabsOrientation() {
       return window.innerWidth < breakpoints.values.sm
-        ? setTabsOrientation("vertical")
-        : setTabsOrientation("horizontal");
+        ? setTabsOrientation('vertical')
+        : setTabsOrientation('horizontal');
     }
 
-    /** 
+    /**
      The event listener that's calling the handleTabsOrientation function when resizing the window.
     */
-    window.addEventListener("resize", handleTabsOrientation);
+    window.addEventListener('resize', handleTabsOrientation);
 
     // Call the handleTabsOrientation function to set the state with the initial value.
     handleTabsOrientation();
 
     // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", handleTabsOrientation);
+    return () => window.removeEventListener('resize', handleTabsOrientation);
   }, [tabsOrientation]);
 
   const handleSetTabValue = (event, newValue) => setTabValue(newValue);
@@ -93,13 +93,13 @@ function Header() {
               </ArgonTypography>
             </ArgonBox>
           </Grid>
-          <Grid item xs={12} md={6} lg={4} sx={{ ml: "auto" }}>
+          <Grid item xs={12} md={6} lg={4} sx={{ ml: 'auto' }}>
             <AppBar position="static">
               <Tabs orientation={tabsOrientation} value={tabValue} onChange={handleSetTabValue}>
                 <Tab
                   label="App"
                   icon={
-                    <i className="ni ni-app" style={{ marginTop: "6px", marginRight: "8px" }} />
+                    <i className="ni ni-app" style={{ marginTop: '6px', marginRight: '8px' }} />
                   }
                 />
                 <Tab
@@ -107,7 +107,7 @@ function Header() {
                   icon={
                     <i
                       className="ni ni-email-83"
-                      style={{ marginTop: "6px", marginRight: "8px" }}
+                      style={{ marginTop: '6px', marginRight: '8px' }}
                     />
                   }
                 />
@@ -116,7 +116,7 @@ function Header() {
                   icon={
                     <i
                       className="ni ni-settings-gear-65"
-                      style={{ marginTop: "6px", marginRight: "8px" }}
+                      style={{ marginTop: '6px', marginRight: '8px' }}
                     />
                   }
                 />

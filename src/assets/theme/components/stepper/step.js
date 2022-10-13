@@ -14,7 +14,7 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI helper functions
-import pxToRem from "assets/theme/functions/pxToRem";
+import pxToRem from 'assets/theme/functions/pxToRem';
 
 const step = {
   styleOverrides: {

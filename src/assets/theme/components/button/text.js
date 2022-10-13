@@ -14,11 +14,11 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI Base Styles
-import colors from "assets/theme/base/colors";
-import typography from "assets/theme/base/typography";
+import colors from 'assets/theme/base/colors';
+import typography from 'assets/theme/base/typography';
 
 // Argon Dashboard 2 MUI Helper Functions
-import pxToRem from "assets/theme/functions/pxToRem";
+import pxToRem from 'assets/theme/functions/pxToRem';
 
 const { transparent, info, secondary, grey } = colors;
 const { size } = typography;
@@ -26,33 +26,33 @@ const { size } = typography;
 const buttonText = {
   base: {
     backgroundColor: transparent.main,
-    height: "max-content",
+    height: 'max-content',
     color: info.main,
-    boxShadow: "none",
+    boxShadow: 'none',
     padding: `${pxToRem(6)} ${pxToRem(12)}`,
 
-    "&:hover": {
+    '&:hover': {
       backgroundColor: transparent.main,
-      boxShadow: "none",
+      boxShadow: 'none',
       color: info.focus,
     },
 
-    "&:focus": {
-      boxShadow: "none",
+    '&:focus': {
+      boxShadow: 'none',
       color: info.focus,
     },
 
-    "&:active, &:active:focus, &:active:hover": {
+    '&:active, &:active:focus, &:active:hover': {
       opacity: 0.85,
-      boxShadow: "none",
+      boxShadow: 'none'
     },
 
-    "&:disabled": {
+    '&:disabled': {
       color: grey[600],
-      boxShadow: "none",
+      boxShadow: 'none'
     },
 
-    "& .material-icons, .material-icons-round, svg, span": {
+    '& .material-icons, .material-icons-round, svg, span': {
       fontSize: `${pxToRem(16)} !important`,
     },
   },
@@ -60,7 +60,7 @@ const buttonText = {
   small: {
     fontSize: size.xs,
 
-    "& .material-icons, .material-icons-round, svg, span": {
+    '& .material-icons, .material-icons-round, svg, span': {
       fontSize: `${pxToRem(12)} !important`,
     },
   },
@@ -68,7 +68,7 @@ const buttonText = {
   large: {
     fontSize: size.sm,
 
-    "& .material-icons, .material-icons-round, svg, span": {
+    '& .material-icons, .material-icons-round, svg, span': {
       fontSize: `${pxToRem(22)} !important`,
     },
   },
@@ -77,32 +77,32 @@ const buttonText = {
     color: info.main,
     backgroundColor: transparent.main,
 
-    "&:hover": {
+    '&:hover': {
       color: info.focus,
       backgroundColor: transparent.main,
     },
 
-    "&:focus:not(:hover)": {
+    '&:focus:not(:hover)': {
       color: info.focus,
       backgroundColor: transparent.focus,
-      boxShadow: "none",
-    },
+      boxShadow: 'none'
+    }
   },
 
   secondary: {
     color: secondary.focus,
     backgroundColor: transparent.main,
 
-    "&:hover": {
+    '&:hover': {
       color: secondary.focus,
       backgroundColor: transparent.main,
     },
 
-    "&:focus:not(:hover)": {
+    '&:focus:not(:hover)': {
       color: secondary.focus,
       backgroundColor: transparent.focus,
-      boxShadow: "none",
-    },
+      boxShadow: 'none'
+    }
   },
 };
 

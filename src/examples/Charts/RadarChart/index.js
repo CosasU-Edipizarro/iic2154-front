@@ -13,36 +13,36 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useMemo } from "react";
+import { useMemo } from 'react';
 
 // porp-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // react-chartjs-2 components
-import { Radar } from "react-chartjs-2";
+import { Radar } from 'react-chartjs-2';
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // RadarChart configurations
-import configs from "examples/Charts/RadarChart/configs";
+import configs from 'examples/Charts/RadarChart/configs';
 
 // Argon Dashboard 2 MUI base styles
-import colors from "assets/theme/base/colors";
+import colors from 'assets/theme/base/colors';
 
 // Argon Dashboard 2 MUI helper functions
-import rgba from "assets/theme/functions/rgba";
+import rgba from 'assets/theme/functions/rgba';
 
 function RadarChart({ title, description, chart }) {
   const chartDatasets = chart.datasets
     ? chart.datasets.map((dataset) => ({
         ...dataset,
         backgroundColor: colors[dataset.color]
-          ? rgba(colors[dataset.color || "dark"].main, 0.2)
+          ? rgba(colors[dataset.color || 'dark'].main, 0.2)
           : rgba(colors.dark.main, 0.2),
       }))
     : [];
@@ -81,8 +81,8 @@ function RadarChart({ title, description, chart }) {
 
 // Setting default values for the props of RadarChart
 RadarChart.defaultProps = {
-  title: "",
-  description: "",
+  title: '',
+  description: ''
 };
 
 // Typechecking props for the RadarChart

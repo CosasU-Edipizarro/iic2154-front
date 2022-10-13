@@ -14,19 +14,19 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card';
+import Grid from '@mui/material/Grid';
+import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from "components/ArgonBox";
-import ArgonTypography from "components/ArgonTypography";
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Argon Dashboard 2 MUI contexts
-import { useArgonController } from "context";
+import { useArgonController } from 'context';
 
 function DetailedStaticsCard({ bgColor, title, count, percentage, icon, direction }) {
   const [controller] = useArgonController();
@@ -35,17 +35,16 @@ function DetailedStaticsCard({ bgColor, title, count, percentage, icon, directio
   return (
     <Card>
       <ArgonBox
-        bgColor={bgColor === "white" && darkMode ? "transparent" : bgColor}
-        variant={bgColor === "white" && darkMode ? "contained" : "gradient"}
-      >
+        bgColor={bgColor === 'white' && darkMode ? 'transparent' : bgColor}
+        variant={bgColor === 'white' && darkMode ? 'contained' : 'gradient'}>
         <ArgonBox p={2}>
           <Grid container>
-            {direction === "left" ? (
+            {direction === 'left' ? (
               <Grid item>
                 <ArgonBox
                   variant="gradient"
-                  bgColor={bgColor === "white" ? icon.color : "white"}
-                  color={bgColor === "white" ? "white" : "dark"}
+                  bgColor={bgColor === 'white' ? icon.color : 'white'}
+                  color={bgColor === 'white' ? 'white' : 'dark'}
                   width="3rem"
                   height="3rem"
                   borderRadius="section"
@@ -53,7 +52,7 @@ function DetailedStaticsCard({ bgColor, title, count, percentage, icon, directio
                   justifyContent="center"
                   alignItems="center"
                 >
-                  {typeof icon.component === "string" ? (
+                  {typeof icon.component === 'string' ? (
                     <Icon fontSize="small" color="inherit">
                       {icon.component}
                     </Icon>
@@ -71,10 +70,10 @@ function DetailedStaticsCard({ bgColor, title, count, percentage, icon, directio
               </Grid>
             ) : null}
             <Grid item xs={8}>
-              <ArgonBox ml={direction === "left" ? 2 : 0} lineHeight={1}>
+              <ArgonBox ml={direction === 'left' ? 2 : 0} lineHeight={1}>
                 <ArgonTypography
                   variant="button"
-                  color={bgColor === "white" ? "text" : "white"}
+                  color={bgColor === 'white' ? 'text' : 'white'}
                   textTransform="uppercase"
                   fontWeight="medium"
                 >
@@ -83,19 +82,19 @@ function DetailedStaticsCard({ bgColor, title, count, percentage, icon, directio
                 <ArgonTypography
                   variant="h5"
                   fontWeight="bold"
-                  color={bgColor === "white" ? "dark" : "white"}
+                  color={bgColor === 'white' ? 'dark' : 'white'}
                   mb={1}
                 >
                   {count}
                 </ArgonTypography>
               </ArgonBox>
             </Grid>
-            {direction === "right" ? (
+            {direction === 'right' ? (
               <Grid item xs={4}>
                 <ArgonBox
                   variant="gradient"
-                  bgColor={bgColor === "white" ? icon.color : "white"}
-                  color={bgColor === "white" ? "white" : "dark"}
+                  bgColor={bgColor === 'white' ? icon.color : 'white'}
+                  color={bgColor === 'white' ? 'white' : 'dark'}
                   width="3rem"
                   height="3rem"
                   borderRadius="section"
@@ -104,7 +103,7 @@ function DetailedStaticsCard({ bgColor, title, count, percentage, icon, directio
                   alignItems="center"
                   ml="auto"
                 >
-                  {typeof icon.component === "string" ? (
+                  {typeof icon.component === 'string' ? (
                     <Icon fontSize="small" color="inherit">
                       {icon.component}
                     </Icon>
@@ -133,7 +132,7 @@ function DetailedStaticsCard({ bgColor, title, count, percentage, icon, directio
             <ArgonTypography
               variant="body2"
               fontWeight="regular"
-              color={bgColor === "white" ? "text" : "white"}
+              color={bgColor === 'white' ? 'text' : 'white'}
               ml={0.5}
               mt={-0.125}
             >
@@ -148,49 +147,49 @@ function DetailedStaticsCard({ bgColor, title, count, percentage, icon, directio
 
 // Setting default values for the props of DetailedStaticsCard
 DetailedStaticsCard.defaultProps = {
-  bgColor: "white",
+  bgColor: 'white',
   percentage: {
-    color: "success",
+    color: 'success',
     count: 0,
-    text: "",
+    text: ''
   },
-  direction: "right",
+  direction: 'right'
 };
 
 // Typechecking props for the DetailedStaticsCard
 DetailedStaticsCard.propTypes = {
   bgColor: PropTypes.oneOf([
-    "transparent",
-    "white",
-    "primary",
-    "secondary",
-    "info",
-    "success",
-    "warning",
-    "error",
-    "dark",
+    'transparent',
+    'white',
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'error',
+    'dark'
   ]),
   title: PropTypes.string.isRequired,
   count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   percentage: PropTypes.shape({
     color: PropTypes.oneOf([
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "dark",
-      "white",
+      'primary',
+      'secondary',
+      'info',
+      'success',
+      'warning',
+      'error',
+      'dark',
+      'white'
     ]),
     count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     text: PropTypes.string,
   }),
   icon: PropTypes.shape({
-    color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+    color: PropTypes.oneOf(['primary', 'secondary', 'info', 'success', 'warning', 'error', 'dark']),
     component: PropTypes.node.isRequired,
   }).isRequired,
-  direction: PropTypes.oneOf(["right", "left"]),
+  direction: PropTypes.oneOf(['right', 'left'])
 };
 
 export default DetailedStaticsCard;
