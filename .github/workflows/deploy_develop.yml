@@ -2,11 +2,11 @@ name: Deploy to S3 Develop
 
 on:
   workflow_run: 
-    workflows: ["continous_integration"]
-    branches: 
-      - "develop"
+    workflows: [Test branches]
     types:
       - completed
+    branches: 
+      - develop
 
 jobs:
   deploy:

@@ -2,11 +2,11 @@ name: Deploy to S3 Production
 
 on:
   workflow_run: 
-    workflows: ["continous_integration"]
-    branches: 
-      - "main"
+    workflows: [Test branches]
     types:
       - completed
+    branches: 
+      - main
 
 jobs:
   
