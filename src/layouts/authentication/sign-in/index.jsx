@@ -24,13 +24,13 @@ import { Link } from 'react-router-dom';
 import Switch from '@mui/material/Switch';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
-import ArgonInput from '@/components/ArgonInput';
-import ArgonButton from '@/components/ArgonButton';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonInput from 'components/ArgonInput';
+import ArgonButton from 'components/ArgonButton';
 
 // Authentication layout components
-import IllustrationLayout from '@/layouts/authentication/components/IllustrationLayout';
+import IllustrationLayout from 'layouts/authentication/components/IllustrationLayout';
 
 // Image
 const bgImage = 'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signin-ill.jpg';

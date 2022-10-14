@@ -38,25 +38,25 @@ function SalesTable({ title, rows }) {
     const tableRows = [];
     const rowKey = `row-${key}`;
 
-    Object.entries(row).map(([cellTitle, cellContent]) =>
-      Array.isArray(cellContent)
+    Object.entries(row).map(([cellTitle, cellContent]) => (Array.isArray(cellContent)
       ? tableRows.push(
-          <SalesTableCell
-              key={cellContent[1]}
-              title={cellTitle}
-              content={cellContent[1]}
-              image={cellContent[0]}
-              noBorder={key === rows.length - 1}
-            />,
-          )
+        <SalesTableCell
+          key={cellContent[1]}
+          title={cellTitle}
+          content={cellContent[1]}
+          image={cellContent[0]}
+          noBorder={key === rows.length - 1}
+        />,
+      )
       : tableRows.push(
-          <SalesTableCell
-              key={cellContent}
-              title={cellTitle}
-              content={cellContent}
-              noBorder={key === rows.length - 1}
-            />,
-      )),);
+        <SalesTableCell
+          key={cellContent}
+          title={cellTitle}
+          content={cellContent}
+          noBorder={key === rows.length - 1}
+        />,
+      )
+    ));
 
     return <TableRow key={rowKey}>{tableRows}</TableRow>;
   });
@@ -85,6 +85,7 @@ SalesTable.defaultProps = {
 // Typechecking props for the SalesTable
 SalesTable.propTypes = {
   title: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
   rows: PropTypes.arrayOf(PropTypes.object),
 };
 

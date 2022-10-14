@@ -21,12 +21,12 @@ import React from 'react';
 import Card from '@mui/material/Card';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
-import ArgonButton from '@/components/ArgonButton';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonButton from 'components/ArgonButton';
 
 // Billing page components
-import Invoice from '@/layouts/billing/components/Invoice';
+import Invoice from 'layouts/billing/components/Invoice';
 
 function Invoices() {
   return (

@@ -29,19 +29,19 @@ import Link from '@mui/material/Link';
 import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Argon Dashboard 2 MUI example components
-import SidenavItem from '@/examples/Sidenav/SidenavItem';
-import SidenavFooter from '@/examples/Sidenav/SidenavFooter';
+import SidenavItem from 'examples/Sidenav/SidenavItem';
+import SidenavFooter from 'examples/Sidenav/SidenavFooter';
 
 // Custom styles for the Sidenav
-import SidenavRoot from '@/examples/Sidenav/SidenavRoot';
-import sidenavLogoLabel from '@/examples/Sidenav/styles/sidenav';
+import SidenavRoot from 'examples/Sidenav/SidenavRoot';
+import sidenavLogoLabel from 'examples/Sidenav/styles/sidenav';
 
 // Argon Dashboard 2 MUI context
-import { useArgonController, setMiniSidenav } from '@/context';
+import { useArgonController, setMiniSidenav } from 'context';
 
 function Sidenav({ color, brand, brandName, routes, ...rest }) {
   const [controller, dispatch] = useArgonController();

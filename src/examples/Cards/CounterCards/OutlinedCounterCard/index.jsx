@@ -23,12 +23,12 @@ import CountUp from 'react-countup';
 import PropTypes from 'prop-types';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Argon Dashboard 2 MUI base styles
-import colors from '@/assets/theme/base/colors';
-import borders from '@/assets/theme/base/borders';
+import colors from 'assets/theme/base/colors';
+import borders from 'assets/theme/base/borders';
 
 function OutlinedCounterCard({
   color, count, title, prefix, suffix,

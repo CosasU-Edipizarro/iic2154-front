@@ -26,17 +26,17 @@ import { Line } from 'react-chartjs-2';
 import Card from '@mui/material/Card';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Argon Dashboard 2 MUI helper functions
-import gradientChartLine from '@/assets/theme/functions/gradientChartLine';
+import gradientChartLine from 'assets/theme/functions/gradientChartLine';
 
 // MixedChart configurations
-import configs from '@/examples/Charts/MixedChart/configs';
+import configs from 'examples/Charts/MixedChart/configs';
 
 // Argon Dashboard 2 MUI base styles
-import colors from '@/assets/theme/base/colors';
+import colors from 'assets/theme/base/colors';
 
 function MixedChart({ title, description, height, chart }) {
   const chartRef = useRef(null);

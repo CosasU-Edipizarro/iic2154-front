@@ -15,11 +15,11 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI base styles
-import borders from '@/assets/theme/base/borders';
-import colors from '@/assets/theme/base/colors';
+import borders from 'assets/theme/base/borders';
+import colors from 'assets/theme/base/colors';
 
 // Argon Dashboard 2 MUI helper functions
-import pxToRem from '@/assets/theme/functions/pxToRem';
+import pxToRem from 'assets/theme/functions/pxToRem';
 
 const { borderWidth } = borders;
 const { light } = colors;

@@ -25,11 +25,11 @@ import Link from '@mui/material/Link';
 import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Argon Dashboard 2 MUI base styles
-import typography from '@/assets/theme/base/typography';
+import typography from 'assets/theme/base/typography';
 
 function Footer({ company, links }) {
   const { href, name } = company;

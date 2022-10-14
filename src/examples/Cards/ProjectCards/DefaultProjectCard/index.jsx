@@ -28,10 +28,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Tooltip from '@mui/material/Tooltip';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
-import ArgonButton from '@/components/ArgonButton';
-import ArgonAvatar from '@/components/ArgonAvatar';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonButton from 'components/ArgonButton';
+import ArgonAvatar from 'components/ArgonAvatar';
 
 function DefaultProjectCard({
  image, label, title, description, action, authors 

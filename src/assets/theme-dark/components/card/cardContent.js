@@ -15,7 +15,7 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI Helper Functions
-import pxToRem from '@/assets/theme-dark/functions/pxToRem';
+import pxToRem from 'assets/theme-dark/functions/pxToRem';
 
 const cardContent = {
   styleOverrides: {

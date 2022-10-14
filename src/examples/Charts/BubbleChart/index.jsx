@@ -26,14 +26,14 @@ import { Bubble } from 'react-chartjs-2';
 import Card from '@mui/material/Card';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // BubbleChart configurations
-import configs from '@/examples/Charts/BubbleChart/configs';
+import configs from 'examples/Charts/BubbleChart/configs';
 
 // Argon Dashboard 2 MUI base styles
-import colors from '@/assets/theme/base/colors';
+import colors from 'assets/theme/base/colors';
 
 function BubbleChart({ title, description, height, chart }) {
   const chartDatasets = chart.datasets

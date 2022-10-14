@@ -26,14 +26,14 @@ import { Bar } from 'react-chartjs-2';
 import Card from '@mui/material/Card';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // HorizontalBarChart configurations
-import configs from '@/examples/Charts/BarCharts/HorizontalBarChart/configs';
+import configs from 'examples/Charts/BarCharts/HorizontalBarChart/configs';
 
 // Argon Dashboard 2 MUI base styles
-import colors from '@/assets/theme/base/colors';
+import colors from 'assets/theme/base/colors';
 
 function HorizontalBarChart({ title, description, height, chart }) {
   const chartDatasets = chart.datasets

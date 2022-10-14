@@ -15,12 +15,12 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI Base Styles
-import colors from '@/assets/theme-dark/base/colors';
-import borders from '@/assets/theme-dark/base/borders';
-import boxShadows from '@/assets/theme-dark/base/boxShadows';
+import colors from 'assets/theme-dark/base/colors';
+import borders from 'assets/theme-dark/base/borders';
+import boxShadows from 'assets/theme-dark/base/boxShadows';
 
 // Argon Dashboard 2 MUI Helper Function
-import rgba from '@/assets/theme-dark/functions/rgba';
+import rgba from 'assets/theme-dark/functions/rgba';
 
 const { black, background } = colors;
 const { borderWidth, borderRadius } = borders;

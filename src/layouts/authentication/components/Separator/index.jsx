@@ -21,8 +21,8 @@ import React from 'react';
 import Divider from '@mui/material/Divider';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 function Separator() {
   return (

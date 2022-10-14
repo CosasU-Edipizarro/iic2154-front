@@ -24,16 +24,16 @@ import Icon from '@mui/material/Icon';
 import Tooltip from '@mui/material/Tooltip';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
-import ArgonButton from '@/components/ArgonButton';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonButton from 'components/ArgonButton';
 
 // Argon Dashboard 2 MUI base styles
-import borders from '@/assets/theme/base/borders';
+import borders from 'assets/theme/base/borders';
 
 // Images
-import masterCardLogo from '@/assets/images/logos/mastercard.png';
-import visaLogo from '@/assets/images/logos/visa.png';
+import masterCardLogo from 'assets/images/logos/mastercard.png';
+import visaLogo from 'assets/images/logos/visa.png';
 
 function PaymentMethod() {
   const { borderWidth, borderColor } = borders;

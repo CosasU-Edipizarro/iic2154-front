@@ -24,11 +24,11 @@ import PropTypes from 'prop-types';
 import Card from '@mui/material/Card';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Timeline context
-import { TimelineProvider } from '@/examples/Timeline/context';
+import { TimelineProvider } from 'examples/Timeline/context';
 
 function TimelineList({ title, dark, children }) {
   return (

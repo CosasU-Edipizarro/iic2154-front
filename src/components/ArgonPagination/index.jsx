@@ -22,10 +22,10 @@ import React, {
 import PropTypes from 'prop-types';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
+import ArgonBox from 'components/ArgonBox';
 
 // Custom styles for ArgonPagination
-import ArgonPaginationItemRoot from '@/components/ArgonPagination/ArgonPaginationItemRoot';
+import ArgonPaginationItemRoot from 'components/ArgonPagination/ArgonPaginationItemRoot';
 
 // The Pagination main context
 const Context = createContext();

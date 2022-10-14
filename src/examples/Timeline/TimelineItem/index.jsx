@@ -24,15 +24,15 @@ import PropTypes from 'prop-types';
 import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
-import ArgonBadge from '@/components/ArgonBadge';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonBadge from 'components/ArgonBadge';
 
 // Timeline context
-import { useTimeline } from '@/examples/Timeline/context';
+import { useTimeline } from 'examples/Timeline/context';
 
 // Custom styles for the TimelineItem
-import { timelineItem, timelineItemIcon } from '@/examples/Timeline/TimelineItem/styles';
+import { timelineItem, timelineItemIcon } from 'examples/Timeline/TimelineItem/styles';
 
 function TimelineItem({ color, icon, title, dateTime, description, badges, lastItem }) {
   const isDark = useTimeline();

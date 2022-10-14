@@ -24,15 +24,15 @@ import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Argon Dashboard 2 MUI example components
-import DefaultNavbar from '@/examples/Navbars/DefaultNavbar';
-import PageLayout from '@/examples/LayoutContainers/PageLayout';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import PageLayout from 'examples/LayoutContainers/PageLayout';
 
 // Authentication layout components
-import Footer from '@/layouts/authentication/components/Footer';
+import Footer from 'layouts/authentication/components/Footer';
 
 function CoverLayout({ title, description, image, imgPosition, button, children }) {
   return (

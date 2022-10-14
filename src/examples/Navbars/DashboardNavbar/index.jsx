@@ -30,13 +30,13 @@ import Menu from '@mui/material/Menu';
 import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
-import ArgonInput from '@/components/ArgonInput';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonInput from 'components/ArgonInput';
 
 // Argon Dashboard 2 MUI example components
-import Breadcrumbs from '@/examples/Breadcrumbs';
-import NotificationItem from '@/examples/Items/NotificationItem';
+import Breadcrumbs from 'examples/Breadcrumbs';
+import NotificationItem from 'examples/Items/NotificationItem';
 
 // Custom styles for DashboardNavbar
 import {
@@ -46,7 +46,7 @@ import {
   navbarIconButton,
   navbarDesktopMenu,
   navbarMobileMenu,
-} from '@/examples/Navbars/DashboardNavbar/styles';
+} from 'examples/Navbars/DashboardNavbar/styles';
 
 // Argon Dashboard 2 MUI context
 import {
@@ -54,11 +54,11 @@ import {
   setTransparentNavbar,
   setMiniSidenav,
   setOpenConfigurator,
-} from '@/context';
+} from 'context';
 
 // Images
-import team2 from '@/assets/images/team-2.jpg';
-import logoSpotify from '@/assets/images/small-logos/logo-spotify.svg';
+import team2 from 'assets/images/team-2.jpg';
+import logoSpotify from 'assets/images/small-logos/logo-spotify.svg';
 
 function DashboardNavbar({ absolute, light, isMini }) {
   const [navbarType, setNavbarType] = useState();

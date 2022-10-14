@@ -27,9 +27,9 @@ import Card from '@mui/material/Card';
 import MuiLink from '@mui/material/Link';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
-import ArgonAvatar from '@/components/ArgonAvatar';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonAvatar from 'components/ArgonAvatar';
 
 function DefaultBlogCard({
   image, category, title, description, author, action,

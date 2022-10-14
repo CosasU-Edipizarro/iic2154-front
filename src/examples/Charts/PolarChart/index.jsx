@@ -26,11 +26,11 @@ import { PolarArea } from 'react-chartjs-2';
 import Card from '@mui/material/Card';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // PolarChart configurations
-import configs from '@/examples/Charts/PolarChart/configs';
+import configs from 'examples/Charts/PolarChart/configs';
 
 function PolarChart({ title, description, chart }) {
   const { data, options } = configs(chart.labels || [], chart.datasets || {});

@@ -20,7 +20,7 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 // Custom styles for ArgonBox
-import ArgonBoxRoot from '@/components/ArgonBox/ArgonBoxRoot';
+import ArgonBoxRoot from 'components/ArgonBox/ArgonBoxRoot';
 
 const ArgonBox = forwardRef(
   ({

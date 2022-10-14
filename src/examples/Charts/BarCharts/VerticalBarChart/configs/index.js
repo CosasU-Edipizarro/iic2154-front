@@ -15,7 +15,7 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI base styles
-import typography from '@/assets/theme/base/typography';
+import typography from 'assets/theme/base/typography';
 
 function configs(labels, datasets) {
   return {

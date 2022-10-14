@@ -15,10 +15,10 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI base styles
-import breakpoints from '@/assets/theme/base/breakpoints';
+import breakpoints from 'assets/theme/base/breakpoints';
 
 // Argon Dashboard 2 MUI helper functions
-import pxToRem from '@/assets/theme/functions/pxToRem';
+import pxToRem from 'assets/theme/functions/pxToRem';
 
 const {
   values: {

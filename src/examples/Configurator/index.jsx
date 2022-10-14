@@ -32,12 +32,12 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
-import ArgonButton from '@/components/ArgonButton';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonButton from 'components/ArgonButton';
 
 // Custom styles for the Configurator
-import ConfiguratorRoot from '@/examples/Configurator/ConfiguratorRoot';
+import ConfiguratorRoot from 'examples/Configurator/ConfiguratorRoot';
 
 // Argon Dashboard 2 MUI context
 import {
@@ -48,7 +48,7 @@ import {
   setFixedNavbar,
   setSidenavColor,
   setDarkMode,
-} from '@/context';
+} from 'context';
 
 function Configurator() {
   const [controller, dispatch] = useArgonController();

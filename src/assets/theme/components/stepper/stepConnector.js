@@ -15,8 +15,8 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI base styles
-import borders from '@/assets/theme/base/borders';
-import colors from '@/assets/theme/base/colors';
+import borders from 'assets/theme/base/borders';
+import colors from 'assets/theme/base/colors';
 
 const { dark } = colors;
 const { borderWidth, borderColor } = borders;

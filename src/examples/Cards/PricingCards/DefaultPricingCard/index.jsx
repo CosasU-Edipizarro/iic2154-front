@@ -27,9 +27,9 @@ import Card from '@mui/material/Card';
 import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
-import ArgonButton from '@/components/ArgonButton';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonButton from 'components/ArgonButton';
 
 function DefaultPricingCard({ title, price, specifications, action }) {
   const renderSpecifications = specifications.map(({ label, includes }) => (

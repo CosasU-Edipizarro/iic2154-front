@@ -20,15 +20,15 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 // Custom styles for ArgonTypography
-import ArgonTypographyRoot from '@/components/ArgonTypography/ArgonTypographyRoot';
+import ArgonTypographyRoot from 'components/ArgonTypography/ArgonTypographyRoot';
 
 // Argon Dashboard 2 MUI context
-import { useArgonController } from '@/context';
+import { useArgonController } from 'context';
 
 const ArgonTypography = forwardRef(
   (
     {
-      color, fontWeight, textTransform, verticalAlign, textGradient, opacity, children, ...rest
+      color, fontWeight, textTransform, verticalalign, textGradient, opacity, children, ...rest
     },
     ref,
   ) => {
@@ -42,7 +42,7 @@ const ArgonTypography = forwardRef(
         ownerState={{
           color,
           textTransform,
-          verticalAlign,
+          verticalalign,
           fontWeight,
           opacity,
           textGradient,
@@ -60,7 +60,7 @@ ArgonTypography.defaultProps = {
   color: 'dark',
   fontWeight: false,
   textTransform: 'none',
-  verticalAlign: 'unset',
+  verticalalign: 'unset',
   textGradient: false,
   opacity: 1,
 };
@@ -82,7 +82,7 @@ ArgonTypography.propTypes = {
   ]),
   fontWeight: PropTypes.oneOf([false, 'light', 'regular', 'medium', 'bold']),
   textTransform: PropTypes.oneOf(['none', 'capitalize', 'uppercase', 'lowercase']),
-  verticalAlign: PropTypes.oneOf([
+  verticalalign: PropTypes.oneOf([
     'unset',
     'baseline',
     'sub',

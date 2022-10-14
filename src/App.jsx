@@ -27,17 +27,17 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
+import ArgonBox from 'components/ArgonBox';
 
 // Argon Dashboard 2 MUI example components
-import Sidenav from '@/examples/Sidenav';
-import Configurator from '@/examples/Configurator';
+import Sidenav from 'examples/Sidenav';
+import Configurator from 'examples/Configurator';
 
 // Argon Dashboard 2 MUI themes
-import theme from '@/assets/theme';
-import themeRTL from '@/assets/theme/theme-rtl';
-import themeDark from '@/assets/theme-dark';
-import themeDarkRTL from '@/assets/theme-dark/theme-rtl';
+import theme from 'assets/theme';
+import themeRTL from 'assets/theme/theme-rtl';
+import themeDark from 'assets/theme-dark';
+import themeDarkRTL from 'assets/theme-dark/theme-rtl';
 
 // RTL plugins
 import rtlPlugin from 'stylis-plugin-rtl';
@@ -45,18 +45,18 @@ import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 
 // Argon Dashboard 2 MUI routes
-import routes from '@/routes';
+import routes from 'routes';
 
 // Argon Dashboard 2 MUI contexts
-import { useArgonController, setMiniSidenav, setOpenConfigurator } from '@/context';
+import { useArgonController, setMiniSidenav, setOpenConfigurator } from 'context';
 
 // Images
-import brand from '@/assets/images/logo-ct.png';
-import brandDark from '@/assets/images/logo-ct-dark.png';
+import brand from 'assets/images/logo-ct.png';
+import brandDark from 'assets/images/logo-ct-dark.png';
 
 // Icon Fonts
-import '@/assets/css/nucleo-icons.css';
-import '@/assets/css/nucleo-svg.css';
+import 'assets/css/nucleo-icons.css';
+import 'assets/css/nucleo-svg.css';
 
 export default function App() {
   const [controller, dispatch] = useArgonController();

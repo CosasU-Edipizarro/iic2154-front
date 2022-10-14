@@ -7,17 +7,17 @@ import React from 'react';
 import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
-import ArgonProgress from '@/components/ArgonProgress';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonProgress from 'components/ArgonProgress';
 
 // Images
-import logoSpotify from '@/assets/images/small-logos/logo-spotify.svg';
-import logoInvesion from '@/assets/images/small-logos/logo-invision.svg';
-import logoJira from '@/assets/images/small-logos/logo-jira.svg';
-import logoSlack from '@/assets/images/small-logos/logo-slack.svg';
-import logoWebDev from '@/assets/images/small-logos/logo-webdev.svg';
-import logoXD from '@/assets/images/small-logos/logo-xd.svg';
+import logoSpotify from 'assets/images/small-logos/logo-spotify.svg';
+import logoInvesion from 'assets/images/small-logos/logo-invision.svg';
+import logoJira from 'assets/images/small-logos/logo-jira.svg';
+import logoSlack from 'assets/images/small-logos/logo-slack.svg';
+import logoWebDev from 'assets/images/small-logos/logo-webdev.svg';
+import logoXD from 'assets/images/small-logos/logo-xd.svg';
 
 function Completion({ value, color, }) {
   return (

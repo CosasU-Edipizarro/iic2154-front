@@ -22,8 +22,8 @@ import Card from '@mui/material/Card';
 import Switch from '@mui/material/Switch';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 function PlatformSettings() {
   const [followsMe, setFollowsMe] = useState(true);

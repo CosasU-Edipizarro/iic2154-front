@@ -15,8 +15,8 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI base styles
-import borders from '@/assets/theme/base/borders';
-import boxShadows from '@/assets/theme/base/boxShadows';
+import borders from 'assets/theme/base/borders';
+import boxShadows from 'assets/theme/base/boxShadows';
 
 const { borderRadius } = borders;
 const { xxl } = boxShadows;

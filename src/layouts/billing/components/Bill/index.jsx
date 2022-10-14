@@ -24,12 +24,12 @@ import PropTypes from 'prop-types';
 import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
-import ArgonButton from '@/components/ArgonButton';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonButton from 'components/ArgonButton';
 
 // Argon Dashboard 2 MUI contexts
-import { useArgonController } from '@/context';
+import { useArgonController } from 'context';
 
 function Bill({ name, company, email, vat, noGutter }) {
   const [controller] = useArgonController();

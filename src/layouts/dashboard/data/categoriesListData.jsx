@@ -18,7 +18,7 @@ Coded by www.creative-tim.com
 import React from 'react';
 
 // Argon Dashboard 2 MUI components
-import ArgonTypography from '@/components/ArgonTypography';
+import ArgonTypography from 'components/ArgonTypography';
 
 const categoriesListData = [
   {

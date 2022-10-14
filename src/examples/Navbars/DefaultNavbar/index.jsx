@@ -28,19 +28,19 @@ import Icon from '@mui/material/Icon';
 import Container from '@mui/material/Container';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
-import ArgonButton from '@/components/ArgonButton';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
+import ArgonButton from 'components/ArgonButton';
 
 // Argon Dashboard 2 MUI examples components
-import DefaultNavbarLink from '@/examples/Navbars/DefaultNavbar/DefaultNavbarLink';
-import DefaultNavbarMobile from '@/examples/Navbars/DefaultNavbar/DefaultNavbarMobile';
+import DefaultNavbarLink from 'examples/Navbars/DefaultNavbar/DefaultNavbarLink';
+import DefaultNavbarMobile from 'examples/Navbars/DefaultNavbar/DefaultNavbarMobile';
 
 // Argon Dashboard 2 MUI Base Styles
-import breakpoints from '@/assets/theme/base/breakpoints';
+import breakpoints from 'assets/theme/base/breakpoints';
 
 // Material Dashboard 2 PRO React context
-import { useArgonController } from '@/context';
+import { useArgonController } from 'context';
 
 function DefaultNavbar({ brand, transparent, light, action }) {
   const [controller] = useArgonController();

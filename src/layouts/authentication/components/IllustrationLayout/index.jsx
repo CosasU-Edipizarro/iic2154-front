@@ -24,12 +24,12 @@ import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Argon Dashboard 2 MUI example components
-import DefaultNavbar from '@/examples/Navbars/DefaultNavbar';
-import PageLayout from '@/examples/LayoutContainers/PageLayout';
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
+import PageLayout from 'examples/LayoutContainers/PageLayout';
 
 function IllustrationLayout({ color, header, title, description, button, illustration, children }) {
   return (

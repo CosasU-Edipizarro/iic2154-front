@@ -26,17 +26,17 @@ import { Radar } from 'react-chartjs-2';
 import Card from '@mui/material/Card';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // RadarChart configurations
-import configs from '@/examples/Charts/RadarChart/configs';
+import configs from 'examples/Charts/RadarChart/configs';
 
 // Argon Dashboard 2 MUI base styles
-import colors from '@/assets/theme/base/colors';
+import colors from 'assets/theme/base/colors';
 
 // Argon Dashboard 2 MUI helper functions
-import rgba from '@/assets/theme/functions/rgba';
+import rgba from 'assets/theme/functions/rgba';
 
 function RadarChart({ title, description, chart }) {
   const chartDatasets = chart.datasets

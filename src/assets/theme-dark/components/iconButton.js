@@ -15,7 +15,7 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI Base Styles
-import colors from '@/assets/theme-dark/base/colors';
+import colors from 'assets/theme-dark/base/colors';
 
 const { transparent } = colors;
 

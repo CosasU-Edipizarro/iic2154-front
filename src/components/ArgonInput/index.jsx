@@ -20,10 +20,10 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 // Custom styles for ArgonInput
-import ArgonInputRoot from '@/components/ArgonInput/ArgonInputRoot';
+import ArgonInputRoot from 'components/ArgonInput/ArgonInputRoot';
 
 // Argon Dashboard 2 MUI context
-import { useArgonController } from '@/context';
+import { useArgonController } from 'context';
 
 const ArgonInput = forwardRef(({
   size, error, success, disabled, ...rest

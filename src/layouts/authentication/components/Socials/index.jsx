@@ -18,8 +18,8 @@ Coded by www.creative-tim.com
 import React from 'react';
 
 // Argon Dashboard 2 MUI components
-import ArgonButton from '@/components/ArgonButton';
-import ArgonBox from '@/components/ArgonBox';
+import ArgonButton from 'components/ArgonButton';
+import ArgonBox from 'components/ArgonBox';
 
 function Socials() {
   return (

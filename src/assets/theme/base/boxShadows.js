@@ -21,10 +21,10 @@ Coded by www.creative-tim.com
  */
 
 // Argon Dashboard 2 MUI Base Styles
-import colors from '@/assets/theme/base/colors';
+import colors from 'assets/theme/base/colors';
 
 // Argon Dashboard 2 MUI Helper Functions
-import boxShadow from '@/assets/theme/functions/boxShadow';
+import boxShadow from 'assets/theme/functions/boxShadow';
 
 const {
   black, white, info, tabs, dark, text,

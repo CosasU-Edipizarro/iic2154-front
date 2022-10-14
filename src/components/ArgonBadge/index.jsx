@@ -20,7 +20,7 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 // Custom styles for the ArgonBadge
-import ArgonBadgeRoot from '@/components/ArgonBadge/ArgonBadgeRoot';
+import ArgonBadgeRoot from 'components/ArgonBadge/ArgonBadgeRoot';
 
 const ArgonBadge = forwardRef(
   ({

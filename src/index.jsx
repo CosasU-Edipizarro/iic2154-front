@@ -17,10 +17,10 @@ Coded by www.creative-tim.com
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import App from '@/App';
+import App from 'App';
 
 // Soft UI Context Provider
-import { ArgonControllerProvider } from '@/context';
+import { ArgonControllerProvider } from 'context';
 
 // react-perfect-scrollbar component
 import PerfectScrollbar from 'react-perfect-scrollbar';

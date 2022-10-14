@@ -15,10 +15,10 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI base styles
-import colors from '@/assets/theme-dark/base/colors';
+import colors from 'assets/theme-dark/base/colors';
 
 // Argon Dashboard 2 MUI helper functions
-import pxToRem from '@/assets/theme-dark/functions/pxToRem';
+import pxToRem from 'assets/theme-dark/functions/pxToRem';
 
 const { transparent } = colors;
 

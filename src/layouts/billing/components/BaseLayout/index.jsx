@@ -27,15 +27,15 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
+import ArgonBox from 'components/ArgonBox';
 
 // Argon Dashboard 2 MUI base styles
-import breakpoints from '@/assets/theme/base/breakpoints';
+import breakpoints from 'assets/theme/base/breakpoints';
 
 // Argon Dashboard 2 MUI example components
-import DashboardLayout from '@/examples/LayoutContainers/DashboardLayout';
-import DashboardNavbar from '@/examples/Navbars/DashboardNavbar';
-import Footer from '@/examples/Footer';
+import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
+import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
+import Footer from 'examples/Footer';
 
 function BaseLayout({ stickyNavbar, children }) {
   const [tabsOrientation, setTabsOrientation] = useState('horizontal');

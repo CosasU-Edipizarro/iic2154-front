@@ -25,11 +25,11 @@ import Grid from '@mui/material/Grid';
 import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from '@/components/ArgonBox';
-import ArgonTypography from '@/components/ArgonTypography';
+import ArgonBox from 'components/ArgonBox';
+import ArgonTypography from 'components/ArgonTypography';
 
 // Argon Dashboard 2 MUI contexts
-import { useArgonController } from '@/context';
+import { useArgonController } from 'context';
 
 function DetailedStaticsCard({
  bgColor, title, count, percentage, icon, direction 
@@ -66,7 +66,7 @@ function DetailedStaticsCard({
                     <ArgonBox
                       fontSize="1.125rem"
                       display="grid"
-                      placeItems="center"
+                      placeitems="center"
                       color="inherit"
                     >
                       {icon.component}
@@ -117,7 +117,7 @@ function DetailedStaticsCard({
                     <ArgonBox
                       fontSize="1.125rem"
                       display="grid"
-                      placeItems="center"
+                      placeitems="center"
                       color="inherit"
                     >
                       {icon.component}

@@ -15,11 +15,11 @@ Coded by www.creative-tim.com
 */
 
 // Argon Dashboard 2 MUI Base Styles
-import typography from '@/assets/theme-dark/base/typography';
-import borders from '@/assets/theme-dark/base/borders';
+import typography from 'assets/theme-dark/base/typography';
+import borders from 'assets/theme-dark/base/borders';
 
 // Argon Dashboard 2 MUI Helper Functions
-import pxToRem from '@/assets/theme-dark/functions/pxToRem';
+import pxToRem from 'assets/theme-dark/functions/pxToRem';
 
 const { fontWeightBold, size } = typography;
 const { borderRadius } = borders;
