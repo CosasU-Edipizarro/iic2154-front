@@ -71,7 +71,8 @@ function SalesTable({ title, rows }) {
             </ArgonTypography>
           </ArgonBox>
         </TableHead>
-        <TableBody>{useMemo(() => renderTableCells, [rows])}</TableBody>
+        <TableBody>{useMemo(() => renderTableCells, [renderTableCells])}</TableBody>
+        {/* <TableBody>{useMemo(() => renderTableCells, [rows])}</TableBody> */}
       </Table>
     </TableContainer>
   );
