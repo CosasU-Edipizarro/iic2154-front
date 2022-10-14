@@ -11,37 +11,37 @@ on:
 jobs:
   
   deploy:
+    runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout repository
-          uses: actions/checkout@v3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-        - name: Setup Node 14.x
-          uses: actions/setup-node@v3
-          with:
-            node-version: 14.x
-            cache: npm
+      - name: Setup Node 14.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14.x
+          cache: npm
 
-        - name: Cache dependencies
-          uses: actions/cache@v2
-          with:
-            path: ~/.npm
-            key: npm-${{ hashFiles('package-lock.json') }}
-            restore-keys: npm-
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: npm-${{ hashFiles('package-lock.json') }}
+          restore-keys: npm-
 
-        - name: Install dependencies
-          run: npm ci --ignore-scripts
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
 
-        - name: Build project
-          run: npm run build
+      - name: Build project
+        run: npm run build
 
-        - name: Configure AWS Credentials
-          uses: aws-actions/configure-aws-credentials@v1
-          with:
-            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            aws-region: ${{ secrets.AWS_REGION }}
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
 
-        - name: Deploy static site to S3 bucket
-          run: ${{ secrets.DEPLOY_PROD }}
+      - name: Deploy static site to S3 bucket
+        run: ${{ secrets.DEPLOY_PROD }}
