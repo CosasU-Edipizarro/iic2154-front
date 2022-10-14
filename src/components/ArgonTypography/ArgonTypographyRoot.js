@@ -10,7 +10,8 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+substantial portions of the Software.
 */
 
 // @mui material components
@@ -19,11 +20,14 @@ import { styled } from '@mui/material/styles';
 
 export default styled(Typography)(({ theme, ownerState }) => {
   const { palette, typography, functions } = theme;
-  const { color, textTransform, verticalAlign, fontWeight, opacity, textGradient, darkMode } =
-    ownerState;
+  const {
+    color, textTransform, verticalAlign, fontWeight, opacity, textGradient, darkMode,
+  } = ownerState;
 
   const { gradients, transparent, white } = palette;
-  const { fontWeightLight, fontWeightRegular, fontWeightMedium, fontWeightBold } = typography;
+  const {
+    fontWeightLight, fontWeightRegular, fontWeightMedium, fontWeightBold,
+  } = typography;
   const { linearGradient } = functions;
 
   // fontWeight styles

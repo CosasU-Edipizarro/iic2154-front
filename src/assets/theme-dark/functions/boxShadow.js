@@ -10,7 +10,8 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 /**
@@ -18,16 +19,16 @@ Coded by www.creative-tim.com
  */
 
 // Argon Dashboard 2 MUI helper functions
-import rgba from 'assets/theme-dark/functions/rgba';
-import pxToRem from 'assets/theme-dark/functions/pxToRem';
+import rgba from '@/assets/theme-dark/functions/rgba';
+import pxToRem from '@/assets/theme-dark/functions/pxToRem';
 
-function boxShadow(offset = [], radius = [], color, opacity, inset = '') {
+function boxShadow(color, opacity, offset = [], radius = [], inset = '') {
   const [x, y] = offset;
   const [blur, spread] = radius;
 
   return `${inset} ${pxToRem(x)} ${pxToRem(y)} ${pxToRem(blur)} ${pxToRem(spread)} ${rgba(
     color,
-    opacity
+    opacity,
   )}`;
 }
 

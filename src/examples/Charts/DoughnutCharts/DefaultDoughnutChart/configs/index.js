@@ -10,12 +10,13 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 /* eslint-disable no-dupe-keys */
 // Argon Dashboard 2 MUI base styles
-import colors from 'assets/theme/base/colors';
+import colors from '@/assets/theme/base/colors';
 
 const { gradients, dark } = colors;
 
@@ -65,7 +66,7 @@ function configs(labels, datasets, cutout = 60) {
       },
       interaction: {
         intersect: false,
-        mode: 'index'
+        mode: 'index',
       },
       scales: {
         y: {
@@ -90,7 +91,7 @@ function configs(labels, datasets, cutout = 60) {
             display: false,
           },
         },
-      }
+      },
     },
   };
 }

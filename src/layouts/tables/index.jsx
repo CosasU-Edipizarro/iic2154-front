@@ -21,18 +21,18 @@ import React from 'react';
 import Card from '@mui/material/Card';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from 'components/ArgonBox';
-import ArgonTypography from 'components/ArgonTypography';
+import ArgonBox from '@/components/ArgonBox';
+import ArgonTypography from '@/components/ArgonTypography';
 
 // Argon Dashboard 2 MUI examples
-import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
-import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
-import Footer from 'examples/Footer';
-import Table from 'examples/Tables/Table';
+import DashboardLayout from '@/examples/LayoutContainers/DashboardLayout';
+import DashboardNavbar from '@/examples/Navbars/DashboardNavbar';
+import Footer from '@/examples/Footer';
+import Table from '@/examples/Tables/Table';
 
 // Data
-import authorsTableData from 'layouts/tables/data/authorsTableData';
-import projectsTableData from 'layouts/tables/data/projectsTableData';
+import authorsTableData from '@/layouts/tables/data/authorsTableData';
+import projectsTableData from '@/layouts/tables/data/projectsTableData';
 
 function Tables() {
   const { columns, rows } = authorsTableData;

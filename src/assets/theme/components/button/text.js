@@ -10,17 +10,20 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // Argon Dashboard 2 MUI Base Styles
-import colors from 'assets/theme/base/colors';
-import typography from 'assets/theme/base/typography';
+import colors from '@/assets/theme/base/colors';
+import typography from '@/assets/theme/base/typography';
 
 // Argon Dashboard 2 MUI Helper Functions
-import pxToRem from 'assets/theme/functions/pxToRem';
+import pxToRem from '@/assets/theme/functions/pxToRem';
 
-const { transparent, info, secondary, grey } = colors;
+const {
+  transparent, info, secondary, grey,
+} = colors;
 const { size } = typography;
 
 const buttonText = {
@@ -44,12 +47,12 @@ const buttonText = {
 
     '&:active, &:active:focus, &:active:hover': {
       opacity: 0.85,
-      boxShadow: 'none'
+      boxShadow: 'none',
     },
 
     '&:disabled': {
       color: grey[600],
-      boxShadow: 'none'
+      boxShadow: 'none',
     },
 
     '& .material-icons, .material-icons-round, svg, span': {
@@ -85,8 +88,8 @@ const buttonText = {
     '&:focus:not(:hover)': {
       color: info.focus,
       backgroundColor: transparent.focus,
-      boxShadow: 'none'
-    }
+      boxShadow: 'none',
+    },
   },
 
   secondary: {
@@ -101,8 +104,8 @@ const buttonText = {
     '&:focus:not(:hover)': {
       color: secondary.focus,
       backgroundColor: transparent.focus,
-      boxShadow: 'none'
-    }
+      boxShadow: 'none',
+    },
   },
 };
 

@@ -10,7 +10,8 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // @mui material components
@@ -18,7 +19,9 @@ import Avatar from '@mui/material/Avatar';
 import { styled } from '@mui/material/styles';
 
 export default styled(Avatar)(({ theme, ownerState }) => {
-  const { palette, functions, typography, boxShadows } = theme;
+  const {
+    palette, functions, typography, boxShadows,
+  } = theme;
   const { shadow, bgColor, size } = ownerState;
 
   const { gradients, transparent } = palette;
@@ -26,8 +29,7 @@ export default styled(Avatar)(({ theme, ownerState }) => {
   const { size: fontSize, fontWeightBold } = typography;
 
   // backgroundImage value
-  const backgroundValue =
-    bgColor === 'transparent'
+  const backgroundValue = bgColor === 'transparent'
     ? transparent.main
     : linearGradient(gradients[bgColor].main, gradients[bgColor].state);
 

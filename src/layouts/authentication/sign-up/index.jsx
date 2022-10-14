@@ -25,18 +25,18 @@ import Card from '@mui/material/Card';
 import Checkbox from '@mui/material/Checkbox';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from 'components/ArgonBox';
-import ArgonTypography from 'components/ArgonTypography';
-import ArgonInput from 'components/ArgonInput';
-import ArgonButton from 'components/ArgonButton';
+import ArgonBox from '@/components/ArgonBox';
+import ArgonTypography from '@/components/ArgonTypography';
+import ArgonInput from '@/components/ArgonInput';
+import ArgonButton from '@/components/ArgonButton';
 
 // Authentication layout components
-import CoverLayout from 'layouts/authentication/components/CoverLayout';
-import Socials from 'layouts/authentication/components/Socials';
-import Separator from 'layouts/authentication/components/Separator';
+import CoverLayout from '@/layouts/authentication/components/CoverLayout';
+import Socials from '@/layouts/authentication/components/Socials';
+import Separator from '@/layouts/authentication/components/Separator';
 
 // Images
-const bgImage =  'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signup-cover.jpg';
+const bgImage = 'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signup-cover.jpg';
 
 function Cover() {
   return (

@@ -10,16 +10,17 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // Argon Dashboard 2 MUI base styles
-import borders from 'assets/theme-dark/base/borders';
-import colors from 'assets/theme-dark/base/colors';
+import borders from '@/assets/theme-dark/base/borders';
+import colors from '@/assets/theme-dark/base/colors';
 
 // Argon Dashboard 2 MUI helper functions
-import pxToRem from 'assets/theme-dark/functions/pxToRem';
-import linearGradient from 'assets/theme-dark/functions/linearGradient';
+import pxToRem from '@/assets/theme-dark/functions/pxToRem';
+import linearGradient from '@/assets/theme-dark/functions/linearGradient';
 
 const { borderWidth, borderColor } = borders;
 const { transparent, gradients, info } = colors;
@@ -58,7 +59,7 @@ const radio = {
       '&.Mui-checked': {
         backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='15px' width='15px'%3E%3Ccircle cx='50%' cy='50%' r='3' fill='%23fff' /%3E%3C/svg%3E"), ${linearGradient(
           gradients.info.main,
-          gradients.info.state
+          gradients.info.state,
         )}`,
         borderColor: gradients.info.state,
       },
@@ -74,7 +75,7 @@ const radio = {
       '&.Mui-checked': {
         backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='15px' width='15px'%3E%3Ccircle cx='50%' cy='50%' r='3' fill='%23fff' /%3E%3C/svg%3E"), ${linearGradient(
           gradients.info.main,
-          gradients.info.state
+          gradients.info.state,
         )}`,
         borderColor: gradients.info.state,
       },
@@ -83,7 +84,7 @@ const radio = {
         backgroundColor: transparent.main,
       },
     },
-  }
+  },
 };
 
 export default radio;

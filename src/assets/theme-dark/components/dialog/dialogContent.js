@@ -10,16 +10,17 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // Argon Dashboard 2 MUI base styles
-import typography from 'assets/theme-dark/base/typography';
-import borders from 'assets/theme-dark/base/borders';
-import colors from 'assets/theme-dark/base/colors';
+import typography from '@/assets/theme-dark/base/typography';
+import borders from '@/assets/theme-dark/base/borders';
+import colors from '@/assets/theme-dark/base/colors';
 
 // Argon Dashboard 2 MUI helper functions
-import pxToRem from 'assets/theme-dark/functions/pxToRem';
+import pxToRem from '@/assets/theme-dark/functions/pxToRem';
 
 const { size } = typography;
 const { text } = colors;

@@ -10,7 +10,8 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // @mui material components
@@ -33,7 +34,7 @@ export default styled(Drawer)(({ theme, ownerState }) => {
     transition: transitions.create('right', {
       easing: transitions.easing.sharp,
       duration: transitions.duration.short,
-    })
+    }),
   });
 
   // drawer styles when openConfigurator={false}
@@ -43,7 +44,7 @@ export default styled(Drawer)(({ theme, ownerState }) => {
     transition: transitions.create('all', {
       easing: transitions.easing.sharp,
       duration: transitions.duration.short,
-    })
+    }),
   });
 
   return {

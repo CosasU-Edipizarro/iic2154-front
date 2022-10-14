@@ -10,14 +10,15 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // Argon Dashboard 2 MUI Base Styles
-import borders from 'assets/theme-dark/base/borders';
+import borders from '@/assets/theme-dark/base/borders';
 
 // Argon Dashboard 2 MUI Helper Functions
-import pxToRem from 'assets/theme-dark/functions/pxToRem';
+import pxToRem from '@/assets/theme-dark/functions/pxToRem';
 
 const { borderRadius } = borders;
 
@@ -29,8 +30,8 @@ const cardMedia = {
     },
 
     media: {
-      width: 'auto'
-    }
+      width: 'auto',
+    },
   },
 };
 

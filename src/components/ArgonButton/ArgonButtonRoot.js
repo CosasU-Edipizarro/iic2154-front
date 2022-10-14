@@ -10,7 +10,8 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // @mui material components
@@ -19,10 +20,16 @@ import { styled } from '@mui/material/styles';
 
 export default styled(Button)(({ theme, ownerState }) => {
   const { palette, functions, borders } = theme;
-  const { color, variant, size, circular, iconOnly } = ownerState;
+  const {
+    color, variant, size, circular, iconOnly,
+  } = ownerState;
 
-  const { white, dark, text, transparent, gradients } = palette;
-  const { boxShadow, linearGradient, pxToRem, rgba } = functions;
+  const {
+    white, dark, transparent, gradients,
+  } = palette;
+  const {
+    boxShadow, linearGradient, pxToRem, rgba,
+  } = functions;
   const { borderRadius } = borders;
 
   // styles for the button with variant="contained"
@@ -127,8 +134,7 @@ export default styled(Button)(({ theme, ownerState }) => {
   // styles for the button with variant="gradient"
   const gradientStyles = () => {
     // background value
-    const backgroundValue =
-      color === 'white' || !gradients[color]
+    const backgroundValue = color === 'white' || !gradients[color]
       ? white.main
       : linearGradient(gradients[color].main, gradients[color].state);
 
@@ -146,7 +152,7 @@ export default styled(Button)(({ theme, ownerState }) => {
       color: colorValue,
 
       '&:focus:not(:hover)': {
-        boxShadow: 'none'
+        boxShadow: 'none',
       },
 
       '&:disabled': {
@@ -214,8 +220,8 @@ export default styled(Button)(({ theme, ownerState }) => {
       },
 
       '&:hover, &:focus, &:active': {
-        transform: 'none'
-      }
+        transform: 'none',
+      },
     };
   };
 

@@ -10,17 +10,18 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // Argon Dashboard 2 MUI base styles
-import colors from 'assets/theme-dark/base/colors';
-import borders from 'assets/theme-dark/base/borders';
-import typography from 'assets/theme-dark/base/typography';
+import colors from '@/assets/theme-dark/base/colors';
+import borders from '@/assets/theme-dark/base/borders';
+import typography from '@/assets/theme-dark/base/typography';
 
 // Argon Dashboard 2 MUI helper functions
-import pxToRem from 'assets/theme-dark/functions/pxToRem';
-import rgba from 'assets/theme-dark/functions/rgba';
+import pxToRem from '@/assets/theme-dark/functions/pxToRem';
+import rgba from '@/assets/theme-dark/functions/rgba';
 
 const { light, text, white } = colors;
 const { borderRadius } = borders;
@@ -42,7 +43,7 @@ const menuItem = {
         color: white.main,
       },
     },
-  }
+  },
 };
 
 export default menuItem;

@@ -10,7 +10,8 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 /**
@@ -20,12 +21,14 @@ Coded by www.creative-tim.com
  */
 
 // Argon Dashboard 2 MUI Base Styles
-import colors from 'assets/theme/base/colors';
+import colors from '@/assets/theme/base/colors';
 
 // Argon Dashboard 2 MUI Helper Functions
-import boxShadow from 'assets/theme/functions/boxShadow';
+import boxShadow from '@/assets/theme/functions/boxShadow';
 
-const { black, white, info, tabs, dark, text } = colors;
+const {
+  black, white, info, tabs, dark, text,
+} = colors;
 
 const boxShadows = {
   xs: boxShadow([0, 2], [9, -5], black.main, 0.15),
@@ -34,13 +37,13 @@ const boxShadows = {
     [0, 2],
     [4, -1],
     black.light,
-    0.07
+    0.07,
   )}`,
   lg: `${boxShadow([0, 8], [26, -4], black.light, 0.15)}, ${boxShadow(
     [0, 8],
     [9, -5],
     black.light,
-    0.06
+    0.06,
   )}`,
   xl: boxShadow([0, 23], [45, -11], black.light, 0.25),
   xxl: boxShadow([0, 20], [27, 0], black.main, 0.05),
@@ -49,7 +52,7 @@ const boxShadows = {
     [0, 20],
     [27, 0],
     black.main,
-    0.05
+    0.05,
   )}`,
   cardBoxShadow: `${boxShadow([0, 0], [16, 0], text.main, 0.075)}`,
   buttonBoxShadow: {
@@ -57,13 +60,13 @@ const boxShadows = {
       [0, 1],
       [3, 0],
       black.main,
-      0.08
+      0.08,
     )}`,
     stateOf: `${boxShadow([0, 7], [14, 0], dark.main, 0.1)}, ${boxShadow(
       [0, 3],
       [6, 0],
       black.main,
-      0.08
+      0.08,
     )}`,
     stateOfNotHover: boxShadow([0, 0], [0, 3.2], info.main, 0.5),
   },
@@ -71,7 +74,7 @@ const boxShadows = {
     [3, 4],
     [8, 0],
     info.main,
-    0.1
+    0.1,
   )}`,
   sliderBoxShadow: {
     thumb: boxShadow([0, 1], [13, 0], black.main, 0.2),

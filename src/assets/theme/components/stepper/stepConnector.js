@@ -10,12 +10,13 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // Argon Dashboard 2 MUI base styles
-import borders from 'assets/theme/base/borders';
-import colors from 'assets/theme/base/colors';
+import borders from '@/assets/theme/base/borders';
+import colors from '@/assets/theme/base/colors';
 
 const { dark } = colors;
 const { borderWidth, borderColor } = borders;
@@ -38,13 +39,13 @@ const stepConnector = {
     alternativeLabel: {
       top: '14%',
       left: '-50%',
-      right: '50%'
+      right: '50%',
     },
 
     line: {
       borderWidth: `${borderWidth[2]} !important`,
-      borderColor: 'currentColor'
-    }
+      borderColor: 'currentColor',
+    },
   },
 };
 

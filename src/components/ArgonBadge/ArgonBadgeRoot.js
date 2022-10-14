@@ -10,7 +10,8 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // @mui material components
@@ -18,10 +19,16 @@ import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 
 export default styled(Badge)(({ theme, ownerState }) => {
-  const { palette, typography, borders, functions } = theme;
-  const { color, circular, border, size, indicator, variant, container, children } = ownerState;
+  const {
+    palette, typography, borders, functions,
+  } = theme;
+  const {
+    color, circular, border, size, indicator, variant, container, children,
+  } = ownerState;
 
-  const { white, dark, gradients, badgeColors } = palette;
+  const {
+    white, dark, gradients, badgeColors,
+  } = palette;
   const { size: fontSize, fontWeightBold } = typography;
   const { borderRadius, borderWidth } = borders;
   const { pxToRem, linearGradient } = functions;
@@ -31,7 +38,7 @@ export default styled(Badge)(({ theme, ownerState }) => {
     xs: '0.45em 0.775em',
     sm: '0.55em 0.9em',
     md: '0.65em 1em',
-    lg: '0.85em 1.375em'
+    lg: '0.85em 1.375em',
   };
 
   // fontSize value
@@ -112,7 +119,7 @@ export default styled(Badge)(({ theme, ownerState }) => {
   // styles for the badge with container={true}
   const containerStyles = () => ({
     position: 'relative',
-    transform: 'none'
+    transform: 'none',
   });
 
   return {

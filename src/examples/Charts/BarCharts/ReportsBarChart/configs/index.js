@@ -10,7 +10,8 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 function configs(labels, datasets) {
@@ -41,7 +42,7 @@ function configs(labels, datasets) {
       },
       interaction: {
         intersect: false,
-        mode: 'index'
+        mode: 'index',
       },
       scales: {
         y: {
@@ -62,8 +63,8 @@ function configs(labels, datasets) {
               style: 'normal',
               lineHeight: 2,
             },
-            color: '#fff'
-          }
+            color: '#fff',
+          },
         },
         x: {
           grid: {
@@ -76,7 +77,7 @@ function configs(labels, datasets) {
             display: false,
           },
         },
-      }
+      },
     },
   };
 }

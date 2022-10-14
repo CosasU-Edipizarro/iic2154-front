@@ -10,7 +10,8 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 /**
@@ -19,7 +20,7 @@ Coded by www.creative-tim.com
  */
 
 // Argon Dashboard 2 MUI helper functions
-import hexToRgb from 'assets/theme-dark/functions/hexToRgb';
+import hexToRgb from '@/assets/theme-dark/functions/hexToRgb';
 
 function rgba(color, opacity) {
   return `rgba(${hexToRgb(color)}, ${opacity})`;

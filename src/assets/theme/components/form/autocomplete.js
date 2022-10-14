@@ -10,21 +10,24 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // Argon Dashboard 2 MUI base styles
-import boxShadows from 'assets/theme/base/boxShadows';
-import typography from 'assets/theme/base/typography';
-import colors from 'assets/theme/base/colors';
-import borders from 'assets/theme/base/borders';
+import boxShadows from '@/assets/theme/base/boxShadows';
+import typography from '@/assets/theme/base/typography';
+import colors from '@/assets/theme/base/colors';
+import borders from '@/assets/theme/base/borders';
 
 // Argon Dashboard 2 MUI helper functions
-import pxToRem from 'assets/theme/functions/pxToRem';
+import pxToRem from '@/assets/theme/functions/pxToRem';
 
 const { lg } = boxShadows;
 const { size } = typography;
-const { text, white, transparent, light, dark, gradients } = colors;
+const {
+  text, white, transparent, light, dark, gradients,
+} = colors;
 const { borderRadius } = borders;
 
 const autocomplete = {
@@ -94,7 +97,7 @@ const autocomplete = {
         marginRight: 0,
       },
     },
-  }
+  },
 };
 
 export default autocomplete;

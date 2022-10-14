@@ -10,16 +10,17 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // Argon Dashboard 2 MUI base styles
-import colors from 'assets/theme/base/colors';
-import borders from 'assets/theme/base/borders';
-import boxShadows from 'assets/theme/base/boxShadows';
+import colors from '@/assets/theme/base/colors';
+import borders from '@/assets/theme/base/borders';
+import boxShadows from '@/assets/theme/base/boxShadows';
 
 // Argon Dashboard 2 MUI helper functions
-import pxToRem from 'assets/theme/functions/pxToRem';
+import pxToRem from '@/assets/theme/functions/pxToRem';
 
 const { grey, white } = colors;
 const { borderRadius } = borders;
@@ -43,13 +44,13 @@ const tabs = {
 
     fixed: {
       overflow: 'unset !important',
-      overflowX: 'unset !important'
+      overflowX: 'unset !important',
     },
 
     vertical: {
       '& .MuiTabs-indicator': {
-        width: '100%'
-      }
+        width: '100%',
+      },
     },
 
     indicator: {
@@ -57,8 +58,8 @@ const tabs = {
       borderRadius: borderRadius.md,
       backgroundColor: white.main,
       boxShadow: tabsBoxShadow.indicator,
-      transition: 'all 500ms ease'
-    }
+      transition: 'all 500ms ease',
+    },
   },
 };
 

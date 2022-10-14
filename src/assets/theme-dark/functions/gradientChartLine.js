@@ -10,7 +10,8 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 /**
@@ -18,7 +19,7 @@ Coded by www.creative-tim.com
  */
 
 // Argon Dashboard 2 MUI helper functions
-import rgba from 'assets/theme-dark/functions/rgba';
+import rgba from '@/assets/theme-dark/functions/rgba';
 
 function gradientChartLine(chart, color, opacity = 0.2) {
   const ctx = chart.getContext('2d');

@@ -10,16 +10,17 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // Argon Dashboard 2 MUI base styles
-import colors from 'assets/theme-dark/base/colors';
-import borders from 'assets/theme-dark/base/borders';
+import colors from '@/assets/theme-dark/base/colors';
+import borders from '@/assets/theme-dark/base/borders';
 
 // Argon Dashboard 2 MUI helper functions
-import pxToRem from 'assets/theme-dark/functions/pxToRem';
-import boxShadow from 'assets/theme-dark/functions/boxShadow';
+import pxToRem from '@/assets/theme-dark/functions/pxToRem';
+import boxShadow from '@/assets/theme-dark/functions/boxShadow';
 
 const { dark, white } = colors;
 const { borderWidth, borderColor } = borders;
@@ -54,7 +55,7 @@ const stepIcon = {
         boxShadow: boxShadow([0, 0], [0, 2], dark.main, 1),
       },
     },
-  }
+  },
 };
 
 export default stepIcon;

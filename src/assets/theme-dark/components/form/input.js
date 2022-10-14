@@ -10,15 +10,16 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // Argon Dashboard 2 MUI Base Styles
-import colors from 'assets/theme-dark/base/colors';
-import borders from 'assets/theme-dark/base/borders';
+import colors from '@/assets/theme-dark/base/colors';
+import borders from '@/assets/theme-dark/base/borders';
 
 // Soft UI Dashboard PRO helper functions
-import pxToRem from 'assets/theme-dark/functions/pxToRem';
+import pxToRem from '@/assets/theme-dark/functions/pxToRem';
 
 const { inputColors } = colors;
 const { borderWidth, borderRadius } = borders;
@@ -32,13 +33,13 @@ const input = {
       borderRadius: `${borderRadius.md} !important`,
 
       '& fieldset': {
-        border: 'none'
-      }
+        border: 'none',
+      },
     },
 
     input: {
       height: pxToRem(22),
-      width: 'max-content !important'
+      width: 'max-content !important',
     },
 
     inputSizeSmall: {

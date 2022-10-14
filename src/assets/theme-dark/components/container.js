@@ -10,17 +10,20 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // Argon Dashboard 2 MUI base styles
-import breakpoints from 'assets/theme-dark/base/breakpoints';
+import breakpoints from '@/assets/theme-dark/base/breakpoints';
 
 // Argon Dashboard 2 MUI helper functions
-import pxToRem from 'assets/theme-dark/functions/pxToRem';
+import pxToRem from '@/assets/theme-dark/functions/pxToRem';
 
 const {
-  values: { sm, md, lg, xl, xxl }
+  values: {
+    sm, md, lg, xl, xxl,
+  },
 } = breakpoints;
 
 const SM = `@media (min-width: ${sm}px)`;
@@ -35,39 +38,39 @@ const sharedClasses = {
   marginRight: 'auto !important',
   marginLeft: 'auto !important',
   width: '100% !important',
-  position: 'relative'
+  position: 'relative',
 };
 
 const container = {
   [SM]: {
     '.MuiContainer-root': {
       ...sharedClasses,
-      maxWidth: '540px !important'
-    }
+      maxWidth: '540px !important',
+    },
   },
   [MD]: {
     '.MuiContainer-root': {
       ...sharedClasses,
-      maxWidth: '720px !important'
-    }
+      maxWidth: '720px !important',
+    },
   },
   [LG]: {
     '.MuiContainer-root': {
       ...sharedClasses,
-      maxWidth: '960px !important'
-    }
+      maxWidth: '960px !important',
+    },
   },
   [XL]: {
     '.MuiContainer-root': {
       ...sharedClasses,
-      maxWidth: '1140px !important'
-    }
+      maxWidth: '1140px !important',
+    },
   },
   [XXL]: {
     '.MuiContainer-root': {
       ...sharedClasses,
-      maxWidth: '1320px !important'
-    }
+      maxWidth: '1320px !important',
+    },
   },
 };
 

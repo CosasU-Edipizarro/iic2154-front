@@ -10,17 +10,20 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // @mui material components
 import { styled } from '@mui/material/styles';
 
 // Argon Dashboard 2 MUI components
-import ArgonButton from 'components/ArgonButton';
+import ArgonButton from '@/components/ArgonButton';
 
 export default styled(ArgonButton)(({ theme, ownerState }) => {
-  const { borders, functions, typography, palette } = theme;
+  const {
+    borders, functions, typography, palette,
+  } = theme;
   const { variant, paginationSize, active } = ownerState;
 
   const { borderColor } = borders;
@@ -51,7 +54,7 @@ export default styled(ArgonButton)(({ theme, ownerState }) => {
     '&:hover, &:focus, &:active': {
       transform: 'none',
       boxShadow: (variant !== 'gradient' || variant !== 'contained') && 'none !important',
-      opacity: '1 !important'
+      opacity: '1 !important',
     },
 
     '&:hover': {

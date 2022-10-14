@@ -21,6 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "lint": "./node_modules/.bin/eslint ./src/",
+    "lint:fix": "./node_modules/.bin/eslint ./src/ --fix",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "install:peer-deps": "npm install --legacy-peer-deps"
@@ -78,10 +79,9 @@
     "eslint": "^8.25.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-import-resolver-babel-module": "^5.3.1",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-module-resolver": "^1.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.7.1"
   }

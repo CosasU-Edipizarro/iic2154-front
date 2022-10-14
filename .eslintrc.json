@@ -9,7 +9,7 @@
     "plugin:import/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended",
+    "prettier",
     "airbnb"
   ],
   "overrides": [
@@ -23,12 +23,13 @@
     "module-resolver"
   ],
   "rules": {
-    "comma-dangle": ["error", "always"],
-    "module-resolver/use-alias": 2
   },
   "settings": {
     "import/resolver": {
-      "babel-module": {}
+      "alias": {
+        "map": [["@", "./src"]],
+        "extensions": [".js", ".jsx"]
+      }
     }
   }
 }

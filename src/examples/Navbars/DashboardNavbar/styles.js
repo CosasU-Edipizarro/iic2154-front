@@ -10,13 +10,18 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 function navbar(theme, ownerState) {
-  const { palette, boxShadows, functions, transitions, breakpoints, borders } = theme;
+  const {
+    palette, boxShadows, functions, transitions, breakpoints, borders,
+  } = theme;
   const { transparentNavbar, absolute, light } = ownerState;
 
-  const { dark, white, text, transparent } = palette;
+  const {
+    dark, white, text, transparent,
+  } = palette;
   const { navbarBoxShadow } = boxShadows;
   const { pxToRem } = functions;
   const { borderRadius } = borders;
@@ -52,7 +57,7 @@ function navbar(theme, ownerState) {
       transition: transitions.create('all', {
         easing: transitions.easing.easeInOut,
         duration: transitions.duration.standard,
-      })
+      }),
     },
 
     '& .MuiToolbar-root': {
@@ -79,8 +84,8 @@ const navbarContainer = ({ breakpoints }) => ({
     flexDirection: 'row',
     alignItems: 'center',
     paddingTop: '0',
-    paddingBottom: '0'
-  }
+    paddingBottom: '0',
+  },
 });
 
 const navbarRow = ({ breakpoints }, { isMini }) => ({
@@ -91,13 +96,13 @@ const navbarRow = ({ breakpoints }, { isMini }) => ({
 
   [breakpoints.up('md')]: {
     justifyContent: isMini ? 'space-between' : 'stretch',
-    width: isMini ? '100%' : 'max-content'
+    width: isMini ? '100%' : 'max-content',
   },
 
   [breakpoints.up('xl')]: {
     justifyContent: 'stretch !important',
-    width: 'max-content !important'
-  }
+    width: 'max-content !important',
+  },
 });
 
 const navbarIconButton = ({ typography: { size }, breakpoints }) => ({
@@ -123,8 +128,8 @@ const navbarDesktopMenu = ({ breakpoints }) => ({
   cursor: 'pointer',
 
   [breakpoints.up('xl')]: {
-    display: 'inline-block !important'
-  }
+    display: 'inline-block !important',
+  },
 });
 
 const navbarMobileMenu = ({ breakpoints }) => ({
@@ -132,8 +137,8 @@ const navbarMobileMenu = ({ breakpoints }) => ({
   lineHeight: 0,
 
   [breakpoints.up('xl')]: {
-    display: 'none'
-  }
+    display: 'none',
+  },
 });
 
 export {

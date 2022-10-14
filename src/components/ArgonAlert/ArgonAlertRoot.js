@@ -10,7 +10,8 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // @mui material components
@@ -18,7 +19,9 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 
 export default styled(Box)(({ theme, ownerState }) => {
-  const { palette, typography, borders, functions } = theme;
+  const {
+    palette, typography, borders, functions,
+  } = theme;
   const { color } = ownerState;
 
   const { white, alertColors } = palette;

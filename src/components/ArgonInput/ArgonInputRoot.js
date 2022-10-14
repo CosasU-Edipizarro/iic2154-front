@@ -10,7 +10,8 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // @mui material components
@@ -18,10 +19,16 @@ import InputBase from '@mui/material/InputBase';
 import { styled } from '@mui/material/styles';
 
 export default styled(InputBase)(({ theme, ownerState }) => {
-  const { palette, functions, typography, borders, boxShadows } = theme;
-  const { size, error, success, iconDirection, disabled, darkMode } = ownerState;
+  const {
+    palette, functions, typography, borders, boxShadows,
+  } = theme;
+  const {
+    size, error, success, iconDirection, disabled, darkMode,
+  } = ownerState;
 
-  const { inputColors, grey, white, transparent, info, text, dark } = palette;
+  const {
+    inputColors, grey, white, transparent, info, text, dark,
+  } = palette;
   const { inputBoxShadow } = boxShadows;
   const { pxToRem, boxShadow } = functions;
   const { size: fontSize } = typography;
@@ -73,7 +80,7 @@ export default styled(InputBase)(({ theme, ownerState }) => {
       [3, 4],
       [8, 0],
       inputColors.error,
-      0.1
+      0.1,
     )}`;
   } else if (success) {
     borderColor = inputColors.success;
@@ -82,7 +89,7 @@ export default styled(InputBase)(({ theme, ownerState }) => {
       [3, 4],
       [8, 0],
       inputColors.success,
-      0.1
+      0.1,
     )}`;
   }
 

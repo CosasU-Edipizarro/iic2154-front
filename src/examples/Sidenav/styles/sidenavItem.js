@@ -11,13 +11,20 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 function item(theme, ownerState) {
-  const { palette, transitions, breakpoints, boxShadows, borders, functions } = theme;
-  const { active, darkSidenav, sidenavColor, miniSidenav } = ownerState;
+  const {
+    palette, transitions, breakpoints, boxShadows, borders, functions,
+  } = theme;
+  const {
+    active, darkSidenav, sidenavColor, miniSidenav,
+  } = ownerState;
 
-  const { dark, text, transparent, white } = palette;
+  const {
+    dark, text, transparent, white,
+  } = palette;
   const { xxl } = boxShadows;
   const { borderRadius } = borders;
   const { pxToRem, rgba } = functions;
@@ -59,8 +66,8 @@ function item(theme, ownerState) {
       transition: transitions.create('box-shadow', {
         easing: transitions.easing.easeInOut,
         duration: transitions.duration.shorter,
-      })
-    }
+      }),
+    },
   };
 }
 
@@ -84,12 +91,12 @@ function itemIconBox(theme, ownerState) {
     }),
 
     '& svg, svg g': {
-      fill: 'currentColor'
+      fill: 'currentColor',
     },
 
     '& i': {
-      color: active && (darkSidenav || sidenavColor) ? 'inherit' : null
-    }
+      color: active && (darkSidenav || sidenavColor) ? 'inherit' : null,
+    },
   };
 }
 
@@ -98,7 +105,9 @@ const itemIcon = ({ palette: { white, gradients } }, { active }) => ({
 });
 
 function itemText(theme, ownerState) {
-  const { typography, transitions, breakpoints, functions } = theme;
+  const {
+    typography, transitions, breakpoints, functions,
+  } = theme;
   const { miniSidenav, active } = ownerState;
 
   const { size, fontWeightMedium, fontWeightRegular } = typography;
@@ -115,7 +124,7 @@ function itemText(theme, ownerState) {
       transition: transitions.create(['opacity', 'margin'], {
         easing: transitions.easing.easeInOut,
         duration: transitions.duration.standard,
-      })
+      }),
     },
 
     '& span': {
@@ -127,4 +136,6 @@ function itemText(theme, ownerState) {
   };
 }
 
-export { item, itemIconBox, itemIcon, itemText };
+export {
+  item, itemIconBox, itemIcon, itemText,
+};

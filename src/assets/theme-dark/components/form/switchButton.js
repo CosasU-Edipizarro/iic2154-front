@@ -10,18 +10,19 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // Argon Dashboard 2 MUI base styles
-import colors from 'assets/theme-dark/base/colors';
-import borders from 'assets/theme-dark/base/borders';
-import boxShadows from 'assets/theme-dark/base/boxShadows';
+import colors from '@/assets/theme-dark/base/colors';
+import borders from '@/assets/theme-dark/base/borders';
+import boxShadows from '@/assets/theme-dark/base/boxShadows';
 
 // Argon Dashboard 2 MUI helper functions
-import rgba from 'assets/theme-dark/functions/rgba';
-import pxToRem from 'assets/theme-dark/functions/pxToRem';
-import linearGradient from 'assets/theme-dark/functions/linearGradient';
+import rgba from '@/assets/theme-dark/functions/rgba';
+import pxToRem from '@/assets/theme-dark/functions/pxToRem';
+import linearGradient from '@/assets/theme-dark/functions/linearGradient';
 
 const { white, light, gradients } = colors;
 const { borderWidth } = borders;
@@ -39,7 +40,7 @@ const switchButton = {
       margin: `${pxToRem(4)} 0`,
       padding: 0,
       borderRadius: pxToRem(160),
-      transition: 'transform 250ms ease-in'
+      transition: 'transform 250ms ease-in',
     },
 
     switchBase: {
@@ -59,7 +60,7 @@ const switchButton = {
       },
 
       '&.Mui-disabled + .MuiSwitch-track': {
-        opacity: '0.3 !important'
+        opacity: '0.3 !important',
       },
 
       '&.Mui-focusVisible .MuiSwitch-thumb': {
@@ -72,7 +73,7 @@ const switchButton = {
       height: pxToRem(16),
       backgroundColor: white.main,
       boxShadow: md,
-      top: '50%'
+      top: '50%',
     },
 
     track: {
@@ -80,7 +81,7 @@ const switchButton = {
       border: `${borderWidth[1]} solid ${light.main}`,
       borderRadius: pxToRem(160),
       opacity: 1,
-      transition: 'background-color 250ms ease, border-color 200ms ease'
+      transition: 'background-color 250ms ease, border-color 200ms ease',
     },
 
     checked: {},

@@ -10,12 +10,13 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 /* eslint-disable no-dupe-keys */
 // Argon Dashboard 2 MUI base styles
-import colors from 'assets/theme/base/colors';
+import colors from '@/assets/theme/base/colors';
 
 const { gradients, dark } = colors;
 
@@ -24,9 +25,9 @@ function configs(labels, datasets) {
 
   if (datasets.backgroundColors) {
     datasets.backgroundColors.forEach((color) => (gradients[color]
-        ? backgroundColors.push(gradients[color].state)
-        : backgroundColors.push(dark.main)
-    );
+      ? backgroundColors.push(gradients[color].state)
+      : backgroundColors.push(dark.main)
+    ));
   } else {
     backgroundColors.push(dark.main);
   }
@@ -44,7 +45,7 @@ function configs(labels, datasets) {
           borderWidth: 2,
           backgroundColor: backgroundColors,
           fill: false,
-          data: datasets.data
+          data: datasets.data,
         },
       ],
     },
@@ -53,7 +54,7 @@ function configs(labels, datasets) {
       maintainAspectRatio: false,
       plugins: {
         legend: {
-          display: false
+          display: false,
         },
       },
       interaction: {
@@ -66,10 +67,10 @@ function configs(labels, datasets) {
             drawBorder: false,
             display: false,
             drawOnChartArea: false,
-            drawTicks: false
+            drawTicks: false,
           },
           ticks: {
-            display: false
+            display: false,
           },
         },
         x: {
@@ -77,10 +78,10 @@ function configs(labels, datasets) {
             drawBorder: false,
             display: false,
             drawOnChartArea: false,
-            drawTicks: false
+            drawTicks: false,
           },
           ticks: {
-            display: false
+            display: false,
           },
         },
       },

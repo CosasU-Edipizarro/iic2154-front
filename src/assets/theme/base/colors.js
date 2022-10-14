@@ -10,7 +10,8 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 /**
@@ -22,67 +23,67 @@ Coded by www.creative-tim.com
 const colors = {
   background: {
     default: '#f8f9fa',
-    dark: '#172b4d'
+    dark: '#172b4d',
   },
 
   text: {
     main: '#67748e',
-    focus: '#67748e'
+    focus: '#67748e',
   },
 
   transparent: {
-    main: 'transparent'
+    main: 'transparent',
   },
 
   white: {
     main: '#ffffff',
-    focus: '#ffffff'
+    focus: '#ffffff',
   },
 
   black: {
     light: '#141414',
     main: '#000000',
-    focus: '#000000'
+    focus: '#000000',
   },
 
   primary: {
     main: '#5e72e4',
-    focus: '#5e72e4'
+    focus: '#5e72e4',
   },
 
   secondary: {
     main: '#8392ab',
-    focus: '#8392ab'
+    focus: '#8392ab',
   },
 
   info: {
     main: '#11cdef',
-    focus: '#11cdef'
+    focus: '#11cdef',
   },
 
   success: {
     main: '#2dce89',
-    focus: '#2dce89'
+    focus: '#2dce89',
   },
 
   warning: {
     main: '#fb6340',
-    focus: '#fb6340'
+    focus: '#fb6340',
   },
 
   error: {
     main: '#f5365c',
-    focus: '#f5365c'
+    focus: '#f5365c',
   },
 
   light: {
     main: '#e9ecef',
-    focus: '#e9ecef'
+    focus: '#e9ecef',
   },
 
   dark: {
     main: '#344767',
-    focus: '#344767'
+    focus: '#344767',
   },
 
   grey: {
@@ -94,222 +95,222 @@ const colors = {
     600: '#6c757d',
     700: '#495057',
     800: '#343a40',
-    900: '#212529'
+    900: '#212529',
   },
 
   gradients: {
     primary: {
       main: '#5e72e4',
-      state: '#825ee4'
+      state: '#825ee4',
     },
 
     secondary: {
       main: '#627594',
-      state: '#a8b8d8'
+      state: '#a8b8d8',
     },
 
     info: {
       main: '#1171ef',
-      state: '#11cdef'
+      state: '#11cdef',
     },
 
     success: {
       main: '#2dce89',
-      state: '#2dcecc'
+      state: '#2dcecc',
     },
 
     warning: {
       main: '#fb6340',
-      state: '#fbb140'
+      state: '#fbb140',
     },
 
     error: {
       main: '#f5365c',
-      state: '#f56036'
+      state: '#f56036',
     },
 
     light: {
       main: '#ced4da',
-      state: '#ebeff4'
+      state: '#ebeff4',
     },
 
     dark: {
       main: '#212229',
-      state: '#212529'
-    }
+      state: '#212529',
+    },
   },
 
   socialMediaColors: {
     facebook: {
       main: '#3b5998',
-      dark: '#344e86'
+      dark: '#344e86',
     },
 
     twitter: {
       main: '#55acee',
-      dark: '#3ea1ec'
+      dark: '#3ea1ec',
     },
 
     instagram: {
       main: '#125688',
-      dark: '#0e456d'
+      dark: '#0e456d',
     },
 
     linkedin: {
       main: '#0077b5',
-      dark: '#00669c'
+      dark: '#00669c',
     },
 
     pinterest: {
       main: '#cc2127',
-      dark: '#b21d22'
+      dark: '#b21d22',
     },
 
     youtube: {
       main: '#e52d27',
-      dark: '#d41f1a'
+      dark: '#d41f1a',
     },
 
     vimeo: {
       main: '#1ab7ea',
-      dark: '#13a3d2'
+      dark: '#13a3d2',
     },
 
     slack: {
       main: '#3aaf85',
-      dark: '#329874'
+      dark: '#329874',
     },
 
     dribbble: {
       main: '#ea4c89',
-      dark: '#e73177'
+      dark: '#e73177',
     },
 
     github: {
       main: '#24292e',
-      dark: '#171a1d'
+      dark: '#171a1d',
     },
 
     reddit: {
       main: '#ff4500',
-      dark: '#e03d00'
+      dark: '#e03d00',
     },
 
     tumblr: {
       main: '#35465c',
-      dark: '#2a3749'
-    }
+      dark: '#2a3749',
+    },
   },
 
   alertColors: {
     primary: {
       main: '#5e72e4',
       state: '#673bde',
-      border: '#cfd5f7'
+      border: '#cfd5f7',
     },
 
     secondary: {
       main: '#627594',
       state: '#8ca1cb',
-      border: '#dadee6'
+      border: '#dadee6',
     },
 
     info: {
       main: '#1171ef',
       state: '#0eadca',
-      border: '#b8f0fa'
+      border: '#b8f0fa',
     },
 
     success: {
       main: '#2dce89',
       state: '#26adab',
-      border: '#c0f0dc'
+      border: '#c0f0dc',
     },
 
     warning: {
       main: '#fb6340',
       state: '#faa118',
-      border: '#fed0c6'
+      border: '#fed0c6',
     },
 
     error: {
       main: '#f5365c',
       state: '#f3410f',
-      border: '#fcc3ce'
+      border: '#fcc3ce',
     },
 
     light: {
       main: '#ced4da',
       state: '#d1dae6',
-      border: '#f8f9fa'
+      border: '#f8f9fa',
     },
 
     dark: {
       main: '#212229',
       state: '#0f1112',
-      border: '#c2c8d1'
-    }
+      border: '#c2c8d1',
+    },
   },
 
   badgeColors: {
     primary: {
       background: '#eaecfb',
-      text: '##2643e9'
+      text: '##2643e9',
     },
 
     secondary: {
       background: '#e4e8ed',
-      text: '#5974a2'
+      text: '#5974a2',
     },
 
     info: {
       background: '#aaedf9',
-      text: '#03acca'
+      text: '#03acca',
     },
 
     success: {
       background: '#b0eed3',
-      text: '#1aae6f'
+      text: '#1aae6f',
     },
 
     warning: {
       background: '#fee6e0',
-      text: '#ff3709'
+      text: '#ff3709',
     },
 
     error: {
       background: '#fdd1da',
-      text: '#f80031'
+      text: '#f80031',
     },
 
     light: {
       background: '#ffffff',
-      text: '#c7d3de'
+      text: '#c7d3de',
     },
 
     dark: {
       background: '#8097bf',
-      text: '#1e2e4a'
-    }
+      text: '#1e2e4a',
+    },
   },
 
   inputColors: {
     borderColor: { main: '#d2d6da', focus: '#11cdef' },
     error: '#f5365c',
-    success: '#2dce89'
+    success: '#2dce89',
   },
 
   sliderColors: {
-    thumb: { borderColor: '#d9d9d9' }
+    thumb: { borderColor: '#d9d9d9' },
   },
 
   circleSliderColors: {
-    background: '#d3d3d3'
+    background: '#d3d3d3',
   },
 
   tabs: {
-    indicator: { boxShadow: '#ddd' }
-  }
+    indicator: { boxShadow: '#ddd' },
+  },
 };
 
 export default colors;

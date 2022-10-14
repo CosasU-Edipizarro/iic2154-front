@@ -10,7 +10,8 @@ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or
+  substantial portions of the Software.
 */
 
 // @mui material components
@@ -18,8 +19,12 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 
 export default styled(Box)(({ theme, ownerState }) => {
-  const { palette, functions, borders, boxShadows } = theme;
-  const { variant, bgColor, color, opacity, borderRadius, shadow } = ownerState;
+  const {
+    palette, functions, borders, boxShadows,
+  } = theme;
+  const {
+    variant, bgColor, color, opacity, borderRadius, shadow,
+  } = ownerState;
 
   const { gradients, grey, white } = palette;
   const { linearGradient } = functions;
@@ -34,7 +39,7 @@ export default styled(Box)(({ theme, ownerState }) => {
     'grey-600': grey[600],
     'grey-700': grey[700],
     'grey-800': grey[800],
-    'grey-900': grey[900]
+    'grey-900': grey[900],
   };
 
   const validGradients = [
@@ -45,7 +50,7 @@ export default styled(Box)(({ theme, ownerState }) => {
     'warning',
     'error',
     'dark',
-    'light'
+    'light',
   ];
 
   const validColors = [
@@ -69,7 +74,7 @@ export default styled(Box)(({ theme, ownerState }) => {
     'grey-600',
     'grey-700',
     'grey-800',
-    'grey-900'
+    'grey-900',
   ];
 
   const validBorderRadius = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl', 'section'];
