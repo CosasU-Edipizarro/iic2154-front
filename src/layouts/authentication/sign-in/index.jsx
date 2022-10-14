@@ -48,7 +48,7 @@ function Illustration() {
         image: bgImage,
         title: '"Attention is the new currency"',
         description:
-          'The more effortless the writing looks, the more effort the writer actually put into the process.'
+          'The more effortless the writing looks, the more effort the writer actually put into the process.',
       }}
     >
       <ArgonBox component="form" role="form">
@@ -64,7 +64,8 @@ function Illustration() {
             variant="button"
             fontWeight="regular"
             onClick={handleSetRememberMe}
-            sx={{ cursor: 'pointer', userSelect: 'none' }}>
+            sx={{ cursor: 'pointer', userSelect: 'none' }}
+          >
             &nbsp;&nbsp;Remember me
           </ArgonTypography>
         </ArgonBox>
@@ -75,7 +76,8 @@ function Illustration() {
         </ArgonBox>
         <ArgonBox mt={3} textAlign="center">
           <ArgonTypography variant="button" color="text" fontWeight="regular">
-            Don&apos;t have an account?{' '}
+            Don&apos;t have an account?
+            {' '}
             <ArgonTypography
               component={Link}
               to="/authentication/sign-up"

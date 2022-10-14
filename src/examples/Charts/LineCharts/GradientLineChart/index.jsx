@@ -14,7 +14,12 @@ Coded by www.creative-tim.com
   substantial portions of the Software.
 */
 
-import React, { useRef, useEffect, useState, useMemo } from 'react';
+import React, {
+  useRef,
+  useEffect,
+  useState,
+  useMemo,
+} from 'react';
 
 // porp-types is a library for typechecking of props
 import PropTypes from 'prop-types';
@@ -38,7 +43,11 @@ import configs from 'examples/Charts/LineCharts/GradientLineChart/configs';
 // Argon Dashboard 2 MUI base styles
 import colors from 'assets/theme/base/colors';
 
-function GradientLineChart({ title, description, height, chart }) {
+function GradientLineChart({
+  title,
+  description,
+  height, chart,
+}) {
   const chartRef = useRef(null);
   const [chartData, setChartData] = useState({});
   const { data, options } = chartData;
@@ -46,20 +55,20 @@ function GradientLineChart({ title, description, height, chart }) {
   useEffect(() => {
     const chartDatasets = chart.datasets
       ? chart.datasets.map((dataset) => ({
-          ...dataset,
-          tension: 0.4,
-          pointRadius: 0,
-          borderWidth: 3,
-          borderColor: colors[dataset.color]
-            ? colors[dataset.color || 'dark'].main
-            : colors.dark.main,
-          fill: true,
-          maxBarThickness: 6,
-          backgroundColor: gradientChartLine(
-            chartRef.current.children[0],
-            colors[dataset.color] ? colors[dataset.color || 'dark'].main : colors.dark.main,
-          ),
-        }))
+        ...dataset,
+        tension: 0.4,
+        pointRadius: 0,
+        borderWidth: 3,
+        borderColor: colors[dataset.color]
+          ? colors[dataset.color || 'dark'].main
+          : colors.dark.main,
+        fill: true,
+        maxBarThickness: 6,
+        backgroundColor: gradientChartLine(
+          chartRef.current.children[0],
+          colors[dataset.color] ? colors[dataset.color || 'dark'].main : colors.dark.main,
+        ),
+      }))
       : [];
 
     setChartData(configs(chart.labels || [], chartDatasets));
@@ -87,7 +96,8 @@ function GradientLineChart({ title, description, height, chart }) {
             <Line data={data} options={options} />
           </ArgonBox>
         ),
-        [chartData, height],
+        [data, height, options],
+        // [chartData, height],
       )}
     </ArgonBox>
   );
@@ -107,6 +117,7 @@ GradientLineChart.propTypes = {
   title: PropTypes.string,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  // eslint-disable-next-line react/forbid-prop-types
   chart: PropTypes.objectOf(PropTypes.array).isRequired,
 };
 

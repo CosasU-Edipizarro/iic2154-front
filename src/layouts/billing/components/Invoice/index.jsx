@@ -27,7 +27,12 @@ import Icon from '@mui/material/Icon';
 import ArgonBox from 'components/ArgonBox';
 import ArgonTypography from 'components/ArgonTypography';
 
-function Invoice({ date, id, price, noGutter }) {
+function Invoice({
+  date,
+  id,
+  price,
+  noGutter,
+}) {
   return (
     <ArgonBox
       component="li"
@@ -55,7 +60,8 @@ function Invoice({ date, id, price, noGutter }) {
           alignItems="center"
           lineHeight={1}
           ml={3}
-          sx={{ cursor: 'pointer' }}>
+          sx={{ cursor: 'pointer' }}
+        >
           <Icon fontSize="small">picture_as_pdf</Icon>
           <ArgonTypography variant="button" fontWeight="bold">
             &nbsp;PDF

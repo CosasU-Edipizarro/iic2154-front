@@ -34,7 +34,12 @@ import ArgonButton from 'components/ArgonButton';
 import ArgonAvatar from 'components/ArgonAvatar';
 
 function DefaultProjectCard({
- image, label, title, description, action, authors 
+  image,
+  label,
+  title,
+  description,
+  action,
+  authors,
 }) {
   const renderAuthors = authors.map(({ image: media, name }) => (
     <Tooltip key={name} title={name} placement="bottom">
@@ -175,6 +180,7 @@ DefaultProjectCard.propTypes = {
     ]).isRequired,
     label: PropTypes.string.isRequired,
   }).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
   authors: PropTypes.arrayOf(PropTypes.object),
 };
 

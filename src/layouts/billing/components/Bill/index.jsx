@@ -31,7 +31,13 @@ import ArgonButton from 'components/ArgonButton';
 // Argon Dashboard 2 MUI contexts
 import { useArgonController } from 'context';
 
-function Bill({ name, company, email, vat, noGutter }) {
+function Bill({
+  name,
+  company,
+  email,
+  vat,
+  noGutter,
+}) {
   const [controller] = useArgonController();
   const { darkMode } = controller;
 

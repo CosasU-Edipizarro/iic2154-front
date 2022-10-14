@@ -27,7 +27,12 @@ import Icon from '@mui/material/Icon';
 import ArgonBox from 'components/ArgonBox';
 import ArgonTypography from 'components/ArgonTypography';
 
-function PlaceholderCard({ icon, title, hasBorder, outlined }) {
+function PlaceholderCard({
+  icon,
+  title,
+  hasBorder,
+  outlined,
+}) {
   return (
     <Card
       raised

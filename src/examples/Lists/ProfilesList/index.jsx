@@ -34,43 +34,48 @@ import ArgonButton from 'components/ArgonButton';
 
 function ProfilesList({ title, profiles }) {
   const renderProfiles = profiles.map(
-    ({ image, name, description, action }) => (
-    <ArgonBox
-      key={name}
-      component="li"
-      display="flex"
-      alignItems="center"
-      py={1}
-      mb={1}
-    >
-      <ArgonBox mr={2}>
-        <ArgonAvatar src={image} alt="something here" variant="rounded" shadow="md" />
-      </ArgonBox>
+    ({
+      image,
+      name,
+      description,
+      action,
+    }) => (
+      <ArgonBox
+        key={name}
+        component="li"
+        display="flex"
+        alignItems="center"
+        py={1}
+        mb={1}
+      >
+        <ArgonBox mr={2}>
+          <ArgonAvatar src={image} alt="something here" variant="rounded" shadow="md" />
+        </ArgonBox>
         <ArgonBox
-      display="flex"
-      flexDirection="column"
-      alignItems="flex-start"
-      justifyContent="center"
-    >
-      <ArgonTypography variant="button" fontWeight="medium">
+          display="flex"
+          flexDirection="column"
+          alignItems="flex-start"
+          justifyContent="center"
+        >
+          <ArgonTypography variant="button" fontWeight="medium">
             {name}
           </ArgonTypography>
-      <ArgonTypography variant="caption" color="text">
+          <ArgonTypography variant="caption" color="text">
             {description}
           </ArgonTypography>
-    </ArgonBox>
+        </ArgonBox>
         <ArgonBox ml="auto">
-      {action.type === "internal" ? (
+          {action.type === 'internal' ? (
             <ArgonButton
-          component={Link}
-          to={action.route}
-          variant="text"
-          color="info"
-        >
-          {action.label}
-        </ArgonButton>
+              component={Link}
+              to={action.route}
+              variant="text"
+              color="info"
+            >
+              {action.label}
+            </ArgonButton>
           ) : (
-        <ArgonButton
+            <ArgonButton
               component="a"
               href={action.route}
               target="_blank"
@@ -81,7 +86,7 @@ function ProfilesList({ title, profiles }) {
               {action.label}
             </ArgonButton>
           )}
-    </ArgonBox>
+        </ArgonBox>
       </ArgonBox>
     ),
   );
@@ -115,6 +120,7 @@ function ProfilesList({ title, profiles }) {
 // Typechecking props for the ProfilesList
 ProfilesList.propTypes = {
   title: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
   profiles: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 

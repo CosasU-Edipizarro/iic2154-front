@@ -54,17 +54,16 @@ import team2 from 'assets/images/team-2.jpg';
 import team3 from 'assets/images/team-3.jpg';
 import team4 from 'assets/images/team-4.jpg';
 
-const bgImage =  'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/profile-layout-header.jpg';
+const bgImage = 'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/profile-layout-header.jpg';
 
 function Overview() {
   return (
     <DashboardLayout
       sx={{
-        backgroundImage: ({ functions: { rgba, linearGradient }, palette: { gradients } }) =>
-          `${linearGradient(
-            rgba(gradients.info.main, 0.6),
-            rgba(gradients.info.state, 0.6),
-          )}, url(${bgImage})`,
+        backgroundImage: ({ functions: { rgba, linearGradient }, palette: { gradients } }) => `${linearGradient(
+          rgba(gradients.info.main, 0.6),
+          rgba(gradients.info.state, 0.6),
+        )}, url(${bgImage})`,
         backgroundPositionY: '50%',
       }}
     >
@@ -82,24 +81,24 @@ function Overview() {
                 fullName: 'Alec M. Thompson',
                 mobile: '(44) 123 1234 123',
                 email: 'alecthompson@mail.com',
-                location: 'USA'
+                location: 'USA',
               }}
               social={[
                 {
                   link: 'https://www.facebook.com/CreativeTim/',
                   icon: <FacebookIcon />,
-                  color: 'facebook'
+                  color: 'facebook',
                 },
                 {
                   link: 'https://twitter.com/creativetim',
                   icon: <TwitterIcon />,
-                  color: 'twitter'
+                  color: 'twitter',
                 },
                 {
                   link: 'https://www.instagram.com/creativetimofficial/',
                   icon: <InstagramIcon />,
-                  color: 'instagram'
-                }
+                  color: 'instagram',
+                },
               ]}
               action={{ route: '', tooltip: 'Edit Profile' }}
             />
@@ -135,13 +134,13 @@ function Overview() {
                     type: 'internal',
                     route: '/pages/profile/profile-overview',
                     color: 'info',
-                    label: 'View Project'
+                    label: 'View Project',
                   }}
                   authors={[
                     { image: team1, name: 'Elena Morison' },
                     { image: team2, name: 'Ryan Milly' },
                     { image: team3, name: 'Nick Daniel' },
-                    { image: team4, name: 'Peterson' }
+                    { image: team4, name: 'Peterson' },
                   ]}
                 />
               </Grid>
@@ -155,13 +154,13 @@ function Overview() {
                     type: 'internal',
                     route: '/pages/profile/profile-overview',
                     color: 'info',
-                    label: 'View Project'
+                    label: 'View Project',
                   }}
                   authors={[
                     { image: team3, name: 'Nick Daniel' },
                     { image: team4, name: 'Peterson' },
                     { image: team1, name: 'Elena Morison' },
-                    { image: team2, name: 'Ryan Milly' }
+                    { image: team2, name: 'Ryan Milly' },
                   ]}
                 />
               </Grid>
@@ -175,13 +174,13 @@ function Overview() {
                     type: 'internal',
                     route: '/pages/profile/profile-overview',
                     color: 'info',
-                    label: 'View Project'
+                    label: 'View Project',
                   }}
                   authors={[
                     { image: team4, name: 'Peterson' },
                     { image: team3, name: 'Nick Daniel' },
                     { image: team2, name: 'Ryan Milly' },
-                    { image: team1, name: 'Elena Morison' }
+                    { image: team1, name: 'Elena Morison' },
                   ]}
                 />
               </Grid>

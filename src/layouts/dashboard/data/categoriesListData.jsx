@@ -27,7 +27,8 @@ const categoriesListData = [
     name: 'Devices',
     description: (
       <>
-        250 in stock,{' '}
+        250 in stock,
+        {' '}
         <ArgonTypography variant="caption" color="text" fontWeight="medium">
           346+ sold
         </ArgonTypography>
@@ -41,7 +42,8 @@ const categoriesListData = [
     name: 'Tickets',
     description: (
       <>
-        123 closed,{' '}
+        123 closed,
+        {' '}
         <ArgonTypography variant="caption" color="text" fontWeight="medium">
           15 open
         </ArgonTypography>
@@ -55,7 +57,8 @@ const categoriesListData = [
     name: 'Error logs',
     description: (
       <>
-        1 is active,{' '}
+        1 is active,
+        {' '}
         <ArgonTypography variant="caption" color="text" fontWeight="medium">
           40 closed
         </ArgonTypography>
@@ -73,7 +76,7 @@ const categoriesListData = [
       </ArgonTypography>
     ),
     route: '/',
-  }
+  },
 ];
 
 export default categoriesListData;

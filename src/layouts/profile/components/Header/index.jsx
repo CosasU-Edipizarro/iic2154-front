@@ -106,21 +106,21 @@ function Header() {
                 />
                 <Tab
                   label="Message"
-                  icon={
+                  icon={(
                     <i
                       className="ni ni-email-83"
                       style={{ marginTop: '6px', marginRight: '8px' }}
                     />
-                  }
+                  )}
                 />
                 <Tab
                   label="Settings"
-                  icon={
+                  icon={(
                     <i
                       className="ni ni-settings-gear-65"
                       style={{ marginTop: '6px', marginRight: '8px' }}
                     />
-                  }
+                  )}
                 />
               </Tabs>
             </AppBar>

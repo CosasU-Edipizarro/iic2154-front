@@ -31,7 +31,7 @@ const profilesListData = [
       route: '/pages/profile/profile-overview',
       color: 'info',
       label: 'Reply',
-    }
+    },
   },
   {
     image: marie,
@@ -42,7 +42,7 @@ const profilesListData = [
       route: '/pages/profile/profile-overview',
       color: 'info',
       label: 'Reply',
-    }
+    },
   },
   {
     image: ivana,
@@ -53,7 +53,7 @@ const profilesListData = [
       route: '/pages/profile/profile-overview',
       color: 'info',
       label: 'Reply',
-    }
+    },
   },
   {
     image: team4,
@@ -64,7 +64,7 @@ const profilesListData = [
       route: '/pages/profile/profile-overview',
       color: 'info',
       label: 'Reply',
-    }
+    },
   },
   {
     image: team3,
@@ -75,7 +75,7 @@ const profilesListData = [
       route: '/pages/profile/profile-overview',
       color: 'info',
       label: 'Reply',
-    }
+    },
   },
 ];
 

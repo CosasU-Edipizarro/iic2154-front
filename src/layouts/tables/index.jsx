@@ -51,8 +51,9 @@ function Tables() {
               sx={{
                 '& .MuiTableRow-root:not(:last-child)': {
                   '& td': {
-                    borderBottom: ({ borders: { borderWidth, borderColor } }) =>
-                      `${borderWidth[1]} solid ${borderColor}`,
+                    borderBottom: ({ borders: { borderWidth, borderColor } }) => (
+                      `${borderWidth[1]} solid ${borderColor}`
+                    ),
                   },
                 },
               }}
@@ -69,8 +70,9 @@ function Tables() {
             sx={{
               '& .MuiTableRow-root:not(:last-child)': {
                 '& td': {
-                  borderBottom: ({ borders: { borderWidth, borderColor } }) =>
-                    `${borderWidth[1]} solid ${borderColor}`,
+                  borderBottom: ({ borders: { borderWidth, borderColor } }) => (
+                    `${borderWidth[1]} solid ${borderColor}`
+                  ),
                 },
               },
             }}

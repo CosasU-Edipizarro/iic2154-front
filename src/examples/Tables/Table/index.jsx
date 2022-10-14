@@ -122,7 +122,8 @@ function Table({ columns, rows }) {
               variant="button"
               fontWeight="regular"
               color="secondary"
-              sx={{ display: 'inline-block', width: 'max-content' }}>
+              sx={{ display: 'inline-block', width: 'max-content' }}
+            >
               {row[name]}
             </ArgonTypography>
           </ArgonBox>
@@ -146,7 +147,8 @@ function Table({ columns, rows }) {
         </MuiTable>
       </TableContainer>
     ),
-    [columns, rows]
+    [renderColumns, renderRows],
+    // [columns, rows],
   );
 }
 
@@ -158,7 +160,9 @@ Table.defaultProps = {
 
 // Typechecking props for the Table
 Table.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   columns: PropTypes.arrayOf(PropTypes.object),
+  // eslint-disable-next-line react/forbid-prop-types
   rows: PropTypes.arrayOf(PropTypes.object),
 };
 

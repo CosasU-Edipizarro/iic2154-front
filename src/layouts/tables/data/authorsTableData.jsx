@@ -51,7 +51,7 @@ const authorsTableData = {
     { name: 'function', align: 'left' },
     { name: 'status', align: 'center' },
     { name: 'employed', align: 'center' },
-    { name: 'action', align: 'center' }
+    { name: 'action', align: 'center' },
   ],
 
   rows: [

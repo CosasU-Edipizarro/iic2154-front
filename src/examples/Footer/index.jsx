@@ -35,15 +35,14 @@ function Footer({ company, links }) {
   const { href, name } = company;
   const { size } = typography;
 
-  const renderLinks = () =>
-    links.map((link) => (
+  const renderLinks = () => links.map((link) => (
     <ArgonBox key={link.name} component="li" px={2} lineHeight={1}>
-        <Link href={link.href} target="_blank">
+      <Link href={link.href} target="_blank">
         <ArgonTypography variant="button" fontWeight="regular" color="text">
-            {link.name}
-          </ArgonTypography>
+          {link.name}
+        </ArgonTypography>
       </Link>
-      </ArgonBox>
+    </ArgonBox>
   ));
 
   return (
@@ -64,12 +63,13 @@ function Footer({ company, links }) {
         fontSize={size.sm}
         px={1.5}
       >
-        &copy; 
-{' '}
-{new Date().getFullYear()}, made with
+        &copy;
+        {' '}
+        {new Date().getFullYear()}
+        , made with
         <ArgonBox fontSize={size.md} color="text" mb={-0.5} mx={0.25}>
           <Icon color="inherit" fontSize="inherit">
-    favorite
+            favorite
           </Icon>
         </ArgonBox>
         by
@@ -119,6 +119,7 @@ Footer.defaultProps = {
 // Typechecking props for the Footer
 Footer.propTypes = {
   company: PropTypes.objectOf(PropTypes.string),
+  // eslint-disable-next-line react/forbid-prop-types
   links: PropTypes.arrayOf(PropTypes.object),
 };
 

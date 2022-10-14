@@ -32,7 +32,12 @@ import masterCardLogo from 'assets/images/logos/mastercard.png';
 
 const bgImage = 'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/card-visa.jpg';
 
-function MasterCard({ color, number, holder, expires }) {
+function MasterCard({
+  color,
+  number,
+  holder,
+  expires,
+}) {
   const numbers = [...`${number}`];
 
   if (numbers.length < 16 || numbers.length > 16) {
@@ -55,13 +60,13 @@ function MasterCard({ color, number, holder, expires }) {
       }) => ({
         background: gradients[color]
           ? `${linearGradient(
-              rgba(gradients[color].main, 0.8),
-              rgba(gradients[color].state, 0.8),
-            )}, url(${bgImage})`
+            rgba(gradients[color].main, 0.8),
+            rgba(gradients[color].state, 0.8),
+          )}, url(${bgImage})`
           : `${linearGradient(
-              rgba(gradients.dark.main, 0.8),
-              rgba(gradients.dark.state, 0.8),
-            )}, url(${bgImage})`,
+            rgba(gradients.dark.main, 0.8),
+            rgba(gradients.dark.state, 0.8),
+          )}, url(${bgImage})`,
         boxShadow: xl,
       })}
     >

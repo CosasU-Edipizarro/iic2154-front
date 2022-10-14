@@ -32,7 +32,12 @@ import ArgonTypography from 'components/ArgonTypography';
 import { useArgonController } from 'context';
 
 function DetailedStaticsCard({
- bgColor, title, count, percentage, icon, direction 
+  bgColor,
+  title,
+  count,
+  percentage,
+  icon,
+  direction,
 }) {
   const [controller] = useArgonController();
   const { darkMode } = controller;

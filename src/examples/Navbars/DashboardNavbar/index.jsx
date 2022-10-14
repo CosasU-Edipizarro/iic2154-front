@@ -63,7 +63,12 @@ import logoSpotify from 'assets/images/small-logos/logo-spotify.svg';
 function DashboardNavbar({ absolute, light, isMini }) {
   const [navbarType, setNavbarType] = useState();
   const [controller, dispatch] = useArgonController();
-  const { miniSidenav, transparentNavbar, fixedNavbar, openConfigurator } = controller;
+  const {
+    miniSidenav,
+    transparentNavbar,
+    fixedNavbar,
+    openConfigurator,
+  } = controller;
   const [openMenu, setOpenMenu] = useState(false);
   const route = useLocation().pathname.split('/').slice(1);
 
@@ -128,14 +133,14 @@ function DashboardNavbar({ absolute, light, isMini }) {
       />
       <NotificationItem
         color="secondary"
-        image={
+        image={(
           <Icon
             fontSize="small"
             sx={{ color: ({ palette: { white } }) => white.main }}
           >
             payment
           </Icon>
-        }
+        )}
         title={['', 'Payment successfully completed']}
         date="2 days"
         onClick={handleCloseMenu}
@@ -174,11 +179,11 @@ function DashboardNavbar({ absolute, light, isMini }) {
             <ArgonBox pr={1}>
               <ArgonInput
                 placeholder="Type here..."
-                startAdornment={
-                  <Icon fontSize="small" style={{ marginRight: "6px" }}>
+                startAdornment={(
+                  <Icon fontSize="small" style={{ marginRight: '6px' }}>
                     search
                   </Icon>
-                }
+                )}
               />
             </ArgonBox>
             <ArgonBox color={light ? 'white' : 'inherit'}>

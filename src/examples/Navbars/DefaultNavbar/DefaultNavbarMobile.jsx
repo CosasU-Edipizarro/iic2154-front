@@ -42,7 +42,7 @@ function DefaultNavbarMobile({ routes, open }) {
   const [controller] = useArgonController();
   const { darkMode } = controller;
 
-  const handleSetCollapse = (name) => collapse === name ? setCollapse(false) : setCollapse(name);
+  const handleSetCollapse = (name) => (collapse === name ? setCollapse(false) : setCollapse(name));
 
   const renderNavbarItems = routes.map(
     ({
@@ -64,10 +64,10 @@ function DefaultNavbarMobile({ routes, open }) {
         collapse={Boolean(navCollapse)}
       >
         <ArgonBox
-          sx={{ height: "15rem", maxHeight: "15rem", overflowY: "scroll" }}
+          sx={{ height: '15rem', maxHeight: '15rem', overflowY: 'scroll' }}
         >
-          {routeCollapses &&
-            routeCollapses.map((item) => (
+          {routeCollapses
+            && routeCollapses.map((item) => (
               <ArgonBox key={item.name} px={item.icon ? 1 : 2}>
                 {item.collapse ? (
                   <>
@@ -231,6 +231,7 @@ function DefaultNavbarMobile({ routes, open }) {
 
 // Typechecking props for the DefaultNavbarMobile
 DefaultNavbarMobile.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   routes: PropTypes.arrayOf(PropTypes.object).isRequired,
   open: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]).isRequired,
 };

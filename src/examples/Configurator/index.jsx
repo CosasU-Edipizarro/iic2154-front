@@ -53,8 +53,13 @@ import {
 function Configurator() {
   const [controller, dispatch] = useArgonController();
   const {
- openConfigurator, darkSidenav, miniSidenav, fixedNavbar, sidenavColor, darkMode 
-} =    controller;
+    openConfigurator,
+    darkSidenav,
+    miniSidenav,
+    fixedNavbar,
+    sidenavColor,
+    darkMode,
+  } = controller;
   const sidenavColors = ['primary', 'dark', 'info', 'success', 'warning', 'error'];
 
   const handleCloseConfigurator = () => setOpenConfigurator(dispatch, false);
@@ -120,8 +125,9 @@ function Configurator() {
                     easing: transitions.easing.sharp,
                     duration: transitions.duration.shorter,
                   }),
-                  backgroundImage: ({ functions: { linearGradient }, palette: { gradients } }) =>
-                    linearGradient(gradients[color].main, gradients[color].state),
+                  backgroundImage: ({ functions: { linearGradient }, palette: { gradients } }) => (
+                    linearGradient(gradients[color].main, gradients[color].state)
+                  ),
 
                   '&:not(:last-child)': {
                     mr: 1,

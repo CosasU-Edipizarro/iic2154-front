@@ -30,7 +30,13 @@ import ArgonTypography from 'components/ArgonTypography';
 // custom styles for the NotificationItem
 import { menuItem, menuImage } from 'examples/Items/NotificationItem/styles';
 
-const NotificationItem = forwardRef(({ color, image, title, date, ...rest }, ref) => (
+const NotificationItem = forwardRef(({
+  color,
+  image,
+  title,
+  date,
+  ...rest
+}, ref) => (
   <MenuItem {...rest} ref={ref} sx={(theme) => menuItem(theme)}>
     <ArgonBox
       width="2.25rem"

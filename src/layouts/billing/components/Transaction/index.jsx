@@ -28,7 +28,13 @@ import ArgonBox from 'components/ArgonBox';
 import ArgonTypography from 'components/ArgonTypography';
 import ArgonButton from 'components/ArgonButton';
 
-function Transaction({ color, icon, name, description, value }) {
+function Transaction({
+  color,
+  icon,
+  name,
+  description,
+  value,
+}) {
   return (
     <ArgonBox key={name} component="li" py={1} pr={2} mb={1}>
       <ArgonBox display="flex" justifyContent="space-between" alignItems="center">
@@ -65,7 +71,7 @@ Transaction.propTypes = {
     'warning',
     'error',
     'light',
-    'dark'
+    'dark',
   ]).isRequired,
   icon: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,

@@ -30,7 +30,12 @@ import Icon from '@mui/material/Icon';
 import ArgonBox from 'components/ArgonBox';
 import ArgonTypography from 'components/ArgonTypography';
 
-function DefaultNavbarLink({ icon, name, route, light }) {
+function DefaultNavbarLink({
+  icon,
+  name,
+  route,
+  light,
+}) {
   return (
     <ArgonBox
       component={Link}
@@ -43,7 +48,7 @@ function DefaultNavbarLink({ icon, name, route, light }) {
     >
       <Icon
         sx={{
-          color: ({ palette: { white, secondary } }) => light ? white.main : secondary.main,
+          color: ({ palette: { white, secondary } }) => (light ? white.main : secondary.main),
           verticalalign: 'middle',
         }}
       >

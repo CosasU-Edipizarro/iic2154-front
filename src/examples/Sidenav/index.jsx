@@ -43,7 +43,13 @@ import sidenavLogoLabel from 'examples/Sidenav/styles/sidenav';
 // Argon Dashboard 2 MUI context
 import { useArgonController, setMiniSidenav } from 'context';
 
-function Sidenav({ color, brand, brandName, routes, ...rest }) {
+function Sidenav({
+  color,
+  brand,
+  brandName,
+  routes,
+  ...rest
+}) {
   const [controller, dispatch] = useArgonController();
   const { miniSidenav, darkSidenav, layout } = controller;
   const location = useLocation();
@@ -71,7 +77,15 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
   }, [dispatch, location]);
 
   // Render all the routes from the routes.js (All the visible items on the Sidenav)
-  const renderRoutes = routes.map(({ type, name, icon, title, key, href, route }) => {
+  const renderRoutes = routes.map(({
+    type,
+    name,
+    icon,
+    title,
+    key,
+    href,
+    route,
+  }) => {
     let returnValue;
 
     if (type === 'route') {
@@ -82,6 +96,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
               name={name}
               icon={icon}
               active={key === itemName}
+              // eslint-disable-next-line no-undef
               noCollapse={noCollapse}
             />
           </Link>
@@ -128,7 +143,8 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
           right={0}
           p={1.625}
           onClick={closeSidenav}
-          sx={{ cursor: 'pointer' }}>
+          sx={{ cursor: 'pointer' }}
+        >
           <ArgonTypography variant="h6" color="secondary">
             <Icon sx={{ fontWeight: 'bold' }}>close</Icon>
           </ArgonTypography>
@@ -145,7 +161,8 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
               component="h6"
               variant="button"
               fontWeight="medium"
-              color={darkSidenav ? 'white' : 'dark'}>
+              color={darkSidenav ? 'white' : 'dark'}
+            >
               {brandName}
             </ArgonTypography>
           </ArgonBox>
@@ -164,7 +181,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
 // Setting default values for the props of Sidenav
 Sidenav.defaultProps = {
   color: 'info',
-  brand: ''
+  brand: '',
 };
 
 // Typechecking props for the Sidenav
@@ -172,6 +189,7 @@ Sidenav.propTypes = {
   color: PropTypes.oneOf(['primary', 'secondary', 'info', 'success', 'warning', 'error', 'dark']),
   brand: PropTypes.string,
   brandName: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
   routes: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 

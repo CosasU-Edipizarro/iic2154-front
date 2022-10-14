@@ -89,19 +89,20 @@ function Default() {
           <Grid item xs={12} lg={7}>
             <GradientLineChart
               title="Sales Overview"
-              description={
+              description={(
                 <ArgonBox display="flex" alignItems="center">
                   <ArgonBox fontSize={size.lg} color="success" mb={0.3} mr={0.5} lineHeight={0}>
                     <Icon sx={{ fontWeight: 'bold' }}>arrow_upward</Icon>
                   </ArgonBox>
                   <ArgonTypography variant="button" color="text" fontWeight="medium">
-                    4% more{' '}
+                    4% more
+                    {' '}
                     <ArgonTypography variant="button" color="text" fontWeight="regular">
                       in 2022
                     </ArgonTypography>
                   </ArgonTypography>
                 </ArgonBox>
-              }
+              )}
               chart={gradientLineChartData}
             />
           </Grid>

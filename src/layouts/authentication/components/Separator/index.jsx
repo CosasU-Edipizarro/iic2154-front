@@ -35,7 +35,8 @@ function Separator() {
         left="50%"
         px={1.5}
         lineHeight={1}
-        sx={{ transform: 'translate(-50%, -60%)' }}>
+        sx={{ transform: 'translate(-50%, -60%)' }}
+      >
         <ArgonTypography variant="button" fontWeight="medium" color="secondary">
           or
         </ArgonTypography>

@@ -31,7 +31,15 @@ import ArgonTypography from 'components/ArgonTypography';
 import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
 import PageLayout from 'examples/LayoutContainers/PageLayout';
 
-function IllustrationLayout({ color, header, title, description, button, illustration, children }) {
+function IllustrationLayout({
+  color,
+  header,
+  title,
+  description,
+  button,
+  illustration,
+  children,
+}) {
   return (
     <PageLayout background="white">
       <DefaultNavbar
@@ -77,7 +85,8 @@ function IllustrationLayout({ color, header, title, description, button, illustr
             textAlign="center"
             m={2}
             px={13}
-            sx={{ overflow: 'hidden' }}>
+            sx={{ overflow: 'hidden' }}
+          >
             <ArgonBox
               component="img"
               src={illustration.image}
@@ -136,13 +145,14 @@ IllustrationLayout.propTypes = {
   header: PropTypes.node,
   title: PropTypes.string,
   description: PropTypes.string,
+  // eslint-disable-next-line react/forbid-prop-types
   button: PropTypes.object,
   children: PropTypes.node.isRequired,
   illustration: PropTypes.shape({
     image: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
-  })
+  }),
 };
 
 export default IllustrationLayout;

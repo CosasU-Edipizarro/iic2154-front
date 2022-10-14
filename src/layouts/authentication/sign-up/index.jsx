@@ -45,7 +45,8 @@ function Cover() {
       description="Use these awesome forms to login or create new account in your project for free."
       image={bgImage}
       imgPosition="top"
-      button={{ color: 'dark', variant: 'gradient' }}>
+      button={{ color: 'dark', variant: 'gradient' }}
+    >
       <Card>
         <ArgonBox p={3} mb={1} textAlign="center">
           <ArgonTypography variant="h5" fontWeight="medium">
@@ -74,7 +75,8 @@ function Cover() {
               <ArgonTypography
                 variant="button"
                 fontWeight="regular"
-                sx={{ cursor: 'pointer', userSelect: 'none' }}>
+                sx={{ cursor: 'pointer', userSelect: 'none' }}
+              >
                 &nbsp;&nbsp;I agree the&nbsp;
               </ArgonTypography>
               <ArgonTypography

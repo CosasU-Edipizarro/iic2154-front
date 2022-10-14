@@ -42,7 +42,12 @@ import breakpoints from 'assets/theme/base/breakpoints';
 // Material Dashboard 2 PRO React context
 import { useArgonController } from 'context';
 
-function DefaultNavbar({ brand, transparent, light, action }) {
+function DefaultNavbar({
+  brand,
+  transparent,
+  light,
+  action,
+}) {
   const [controller] = useArgonController();
   const { darkMode } = controller;
   const [mobileNavbar, setMobileNavbar] = useState(false);
@@ -128,8 +133,8 @@ function DefaultNavbar({ brand, transparent, light, action }) {
               light={light}
             />
           </ArgonBox>
-          {action &&
-            (action.type === 'internal' ? (
+          {action
+            && (action.type === 'internal' ? (
               <ArgonBox display={{ xs: 'none', lg: 'inline-block' }}>
                 <ArgonButton
                   component={Link}

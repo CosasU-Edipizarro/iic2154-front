@@ -65,7 +65,8 @@ function Transactions() {
           flexDirection="column"
           p={0}
           m={0}
-          sx={{ listStyle: 'none' }}>
+          sx={{ listStyle: 'none' }}
+        >
           <Transaction
             color="error"
             icon="arrow_downward"
@@ -97,7 +98,8 @@ function Transactions() {
           flexDirection="column"
           p={0}
           m={0}
-          sx={{ listStyle: 'none' }}>
+          sx={{ listStyle: 'none' }}
+        >
           <Transaction
             color="success"
             icon="arrow_upward"

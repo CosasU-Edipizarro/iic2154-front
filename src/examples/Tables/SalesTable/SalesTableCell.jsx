@@ -27,14 +27,21 @@ import TableCell from '@mui/material/TableCell';
 import ArgonTypography from 'components/ArgonTypography';
 import ArgonBox from 'components/ArgonBox';
 
-function SalesTableCell({ title, content, image, noBorder, ...rest }) {
+function SalesTableCell({
+  title,
+  content,
+  image,
+  noBorder,
+  ...rest
+}) {
   let template;
 
   if (image) {
     template = (
       <TableCell {...rest} align="left" width="30%" sx={{ border: noBorder && 0 }}>
         <ArgonBox display="flex" alignItems="center" width="max-content">
-          <ArgonBox component="img" src={image} alt={content} width="1.5rem" height="auto" />{' '}
+          <ArgonBox component="img" src={image} alt={content} width="1.5rem" height="auto" />
+          {' '}
           <ArgonBox display="flex" flexDirection="column" ml={3}>
             <ArgonTypography
               variant="caption"
@@ -42,7 +49,8 @@ function SalesTableCell({ title, content, image, noBorder, ...rest }) {
               fontWeight="medium"
               textTransform="capitalize"
             >
-              {title}:
+              {title}
+              :
             </ArgonTypography>
             <ArgonTypography variant="button" fontWeight="medium" textTransform="capitalize">
               {content}
@@ -61,7 +69,8 @@ function SalesTableCell({ title, content, image, noBorder, ...rest }) {
             fontWeight="medium"
             textTransform="capitalize"
           >
-            {title}:
+            {title}
+            :
           </ArgonTypography>
           <ArgonTypography variant="button" fontWeight="medium" textTransform="capitalize">
             {content}

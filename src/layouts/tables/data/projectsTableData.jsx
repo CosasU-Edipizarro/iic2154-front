@@ -19,7 +19,7 @@ import logoSlack from 'assets/images/small-logos/logo-slack.svg';
 import logoWebDev from 'assets/images/small-logos/logo-webdev.svg';
 import logoXD from 'assets/images/small-logos/logo-xd.svg';
 
-function Completion({ value, color, }) {
+function Completion({ value, color }) {
   return (
     <ArgonBox display="flex" alignItems="center">
       <ArgonTypography variant="caption" color="text" fontWeight="medium">
@@ -45,7 +45,7 @@ const projectsTableData = {
     { name: 'budget', align: 'left' },
     { name: 'status', align: 'left' },
     { name: 'completion', align: 'center' },
-    { name: 'action', align: 'center' }
+    { name: 'action', align: 'center' },
   ],
 
   rows: [

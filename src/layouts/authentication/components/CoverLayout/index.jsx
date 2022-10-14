@@ -34,7 +34,14 @@ import PageLayout from 'examples/LayoutContainers/PageLayout';
 // Authentication layout components
 import Footer from 'layouts/authentication/components/Footer';
 
-function CoverLayout({ title, description, image, imgPosition, button, children }) {
+function CoverLayout({
+  title,
+  description,
+  image,
+  imgPosition,
+  button,
+  children,
+}) {
   return (
     <PageLayout>
       <ArgonBox mt={1}>
@@ -59,12 +66,12 @@ function CoverLayout({ title, description, image, imgPosition, button, children 
         pt={18}
         pb={20}
         sx={{
-          backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
-            image &&
-            `${linearGradient(
+          backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) => (
+            image
+            && `${linearGradient(
               rgba(gradients.dark.main, 0.6),
               rgba(gradients.dark.state, 0.6),
-            )}, url(${image})`,
+            )}, url(${image})`),
           backgroundSize: 'cover',
           backgroundPosition: imgPosition,
           backgroundRepeat: 'no-repeat',
@@ -102,7 +109,7 @@ CoverLayout.defaultProps = {
   title: '',
   description: '',
   imgPosition: 'center',
-  button: { color: 'white' }
+  button: { color: 'white' },
 };
 
 // Typechecking props for the CoverLayout
@@ -111,6 +118,7 @@ CoverLayout.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string.isRequired,
   imgPosition: PropTypes.string,
+  // eslint-disable-next-line react/forbid-prop-types
   button: PropTypes.object,
   children: PropTypes.node.isRequired,
 };

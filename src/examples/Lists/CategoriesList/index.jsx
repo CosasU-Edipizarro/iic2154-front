@@ -32,7 +32,13 @@ import ArgonBox from 'components/ArgonBox';
 import ArgonTypography from 'components/ArgonTypography';
 
 function CategoriesList({ title, categories }) {
-  const renderItems = categories.map(({ color, icon, name, description, route }, key) => (
+  const renderItems = categories.map(({
+    color,
+    icon,
+    name,
+    description,
+    route,
+  }, key) => (
     <ArgonBox
       key={name}
       component="li"

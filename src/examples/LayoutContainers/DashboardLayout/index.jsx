@@ -35,7 +35,7 @@ function DashboardLayout({ bgColor, children, ...rest }) {
 
   useEffect(() => {
     setLayout(dispatch, 'dashboard');
-  }, [pathname]);
+  }, [dispatch, pathname]);
 
   const background = darkMode && !bgColor ? 'transparent' : bgColor;
 
@@ -62,6 +62,7 @@ function DashboardLayout({ bgColor, children, ...rest }) {
         left={0}
         sx={
           darkMode && {
+            // eslint-disable-next-line no-shadow
             bgColor: ({ palette: { background } }) => background.default,
           }
         }
@@ -74,6 +75,7 @@ function DashboardLayout({ bgColor, children, ...rest }) {
 
 // Typechecking props for the DashboardLayout
 DashboardLayout.propTypes = {
+  // eslint-disable-next-line react/require-default-props
   bgColor: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
