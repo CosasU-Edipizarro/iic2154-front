@@ -14,7 +14,6 @@ Coded by www.creative-tim.com
   substantial portions of the Software.
 */
 
-// Import React
 import React from 'react';
 
 // react-router-dom components
@@ -67,7 +66,7 @@ function CategoriesList({ title, categories }) {
           <Icon
             sx={{
               display: 'grid',
-              placeitems: 'center',
+              placeItems: 'center',
             }}
           >
             {icon}

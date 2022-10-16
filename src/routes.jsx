@@ -46,6 +46,8 @@ import ArgonBox from './components/ArgonBox';
 // Argon Dashboard 2 MUI layouts
 import Dashboard from './layouts/dashboard';
 import Tables from './layouts/tables';
+import CryptosDashboard from './layouts/cryptosDashboard';
+import UsersDashboard from './layouts/usersDashboard';
 import Billing from './layouts/billing';
 import Profile from './layouts/profile';
 import SignIn from './layouts/authentication/sign-in';
@@ -59,6 +61,26 @@ const routes = [
     route: '/dashboard',
     icon: <ArgonBox component="i" color="primary" fontSize="14px" className="ni ni-tv-2" />,
     component: <Dashboard />,
+  },
+  {
+    type: 'route',
+    name: 'Users',
+    key: 'usersDashboard',
+    route: '/cyptoDashboard',
+    icon: (
+      <ArgonBox component="i" color="warning" fontSize="14px" className="ni ni-spaceship" />
+    ),
+    component: <UsersDashboard />,
+  },
+  {
+    type: 'route',
+    name: 'Cryptos',
+    key: 'cyptosDashboard',
+    route: '/cyptosDashboard',
+    icon: (
+      <ArgonBox component="i" color="success" fontSize="14px" className="ni ni-money-coins" />
+    ),
+    component: <CryptosDashboard />,
   },
   {
     type: 'route',

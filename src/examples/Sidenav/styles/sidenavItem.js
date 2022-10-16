@@ -16,14 +16,25 @@ Coded by www.creative-tim.com
 */
 function item(theme, ownerState) {
   const {
-    palette, transitions, breakpoints, boxShadows, borders, functions,
+    palette,
+    transitions,
+    breakpoints,
+    boxShadows,
+    borders,
+    functions,
   } = theme;
   const {
-    active, darkSidenav, sidenavColor, miniSidenav,
+    active,
+    darkSidenav,
+    sidenavColor,
+    miniSidenav,
   } = ownerState;
 
   const {
-    dark, text, transparent, white,
+    dark,
+    text,
+    transparent,
+    white,
   } = palette;
   const { xxl } = boxShadows;
   const { borderRadius } = borders;
@@ -84,7 +95,7 @@ function itemIconBox(theme, ownerState) {
     minHeight: pxToRem(32),
     borderRadius: borderRadius.md,
     display: 'grid',
-    placeitems: 'center',
+    placeItems: 'center',
     transition: transitions.create('margin', {
       easing: transitions.easing.easeInOut,
       duration: transitions.duration.standard,
@@ -106,7 +117,10 @@ const itemIcon = ({ palette: { white, gradients } }, { active }) => ({
 
 function itemText(theme, ownerState) {
   const {
-    typography, transitions, breakpoints, functions,
+    typography,
+    transitions,
+    breakpoints,
+    functions,
   } = theme;
   const { miniSidenav, active } = ownerState;
 
@@ -137,5 +151,8 @@ function itemText(theme, ownerState) {
 }
 
 export {
-  item, itemIconBox, itemIcon, itemText,
+  item,
+  itemIconBox,
+  itemIcon,
+  itemText,
 };
