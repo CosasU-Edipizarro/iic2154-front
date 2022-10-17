@@ -11,7 +11,12 @@ import ArgonBox from 'components/ArgonBox';
 import ArgonTypography from 'components/ArgonTypography';
 import ArgonProgress from 'components/ArgonProgress';
 
-import logoSpotify from 'assets/images/small-logos/logo-spotify.svg';
+import logoBitcoin from 'assets/images/small-logos/bitcoin.svg';
+import logoEthereum from 'assets/images/small-logos/ethereum-eth.svg';
+import logoTether from 'assets/images/small-logos/tether-1.svg';
+import logoBnb from 'assets/images/small-logos/binance-logo.svg';
+import logoUsdc from 'assets/images/small-logos/usd-1.svg';
+
 
 function Completion({ value, color }) {
   return (
@@ -33,36 +38,48 @@ const action = (
   </Icon>
 );
 
-async function cryptoMarketsTableData(data) {
+function cryptoMarketsTableData(data) {
+  console.log(data)
+
+  const coinLogos = {
+    btc: logoBitcoin,
+    eth: logoEthereum,
+    usdt: logoTether,
+    bnb: logoBnb,
+    usdc: logoUsdc,
+  }
   const columns = [
-    { name: 'project', align: 'left' },
-    { name: 'budget', align: 'left' },
-    { name: 'status', align: 'left' },
-    { name: 'completion', align: 'center' },
+    { name: 'nombre', align: 'left' },
+    { name: 'valor', align: 'left' },
+    { name: 'variacion', align: 'left' },
     { name: 'action', align: 'center' },
   ];
-
-  const rows = data.map((coin) => ({
-    project: [logoSpotify, 'coin.name'],
-    budget: (
-      <ArgonTypography variant="button" color="text" fontWeight="medium">
-        {coin.current_price}
-      </ArgonTypography>
-    ),
-    status: (
-      <ArgonTypography variant="caption" color="text" fontWeight="medium">
-        working
-      </ArgonTypography>
-    ),
-    completion: <Completion value={60} color="info" />,
-    action,
-  }));
-
+  let rows = []
+  if (data["response"] && data["response"].length >= 5){
+    data["response"].forEach(element => {
+      const coinComponent = {
+        nombre: [coinLogos[element.symbol], `${element.name}`],
+        valor: (
+          <ArgonTypography variant="button" color="text" fontWeight="medium">
+            {element.current_price}
+          </ArgonTypography>
+        ),
+        variacion: (
+          <ArgonTypography variant="caption" color={element.price_change_percentage_24h >= 0 ? "success": "warning"} fontWeight="medium">
+            {element.price_change_percentage_24h}%
+          </ArgonTypography>
+        ),
+       
+        action,
+      }
+      rows.push(coinComponent)
+    });
+  }
+  
   const tableData = {
     columns,
     rows,
   };
-
   return tableData;
 }
 
