@@ -38,7 +38,7 @@ import defaultuseFetch from 'layouts/cryptosDashboard/controllers/fetchMarketsDa
 
 function CryptosDashboard() {
   const page = 1;
-  const perPage = 100;
+  const perPage = 5;
   const coinData = defaultuseFetch(page, perPage);
   const { columns: prCols, rows: prRows } = cryptoMarketsTableData(coinData);
 
