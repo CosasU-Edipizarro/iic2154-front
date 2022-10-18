@@ -1,27 +1,30 @@
 // Function to fetch market data from coinGecko API
-import fetch from 'node-fetch';
+import React from 'react';
 
 const coinGecko = 'https://api.coingecko.com/api/v3';
 
-async function fetchMarketsData(page = 1, perPage = 5) {
+const useFetch = (page = 1, perPage = 5) => {
   const route = '/coins/markets';
   const baseParams = '?vs_currency=usd&order=market_cap_desc';
   const params = `${baseParams}&per_page=${perPage}&page=${page}&sparkline=false`;
 
-  const data = await fetch(coinGecko + route + params)
-    .then((response) => response.json())
-    .then((json) => json.map((coin) => ({
-      id: coin.id,
-      name: coin.name,
-      symbol: coin.symbol,
-      current_price: coin.current_price,
-      price_change_percentage_24h: coin.price_change_percentage_24h,
-      market_cap_rank: coin.market_cap_rank,
-      market_cap: coin.market_cap,
-      image: coin.image,
-    })));
+  const [response, setResponse] = React.useState({});
+  const [error, setError] = React.useState({});
+  React.useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(coinGecko + route + params, {});
+        const json = await res.json();
 
-  return data;
-}
+        setResponse(json);
+      } catch (error1) {
+        setError({ error1 });
+      }
+    };
+    fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  return { response, error };
+};
 
-export default fetchMarketsData;
+export default useFetch;

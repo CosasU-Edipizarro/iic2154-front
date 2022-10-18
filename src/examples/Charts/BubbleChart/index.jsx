@@ -35,21 +35,23 @@ import configs from 'examples/Charts/BubbleChart/configs';
 // Argon Dashboard 2 MUI base styles
 import colors from 'assets/theme/base/colors';
 
-function BubbleChart({ title, description, height, chart }) {
+function BubbleChart({
+  title, description, height, chart,
+}) {
   const chartDatasets = chart.datasets
     ? chart.datasets.map((dataset) => ({
-        ...dataset,
-        tension: 0.4,
-        borderWidth: 3,
-        pointRadius: 2,
-        backgroundColor: colors[dataset.color]
-          ? colors[dataset.color || 'dark'].main
-          : colors.dark.main,
-        borderColor: colors[dataset.color]
-          ? colors[dataset.color || 'dark'].main
-          : colors.dark.main,
-        maxBarThickness: 6,
-      }))
+      ...dataset,
+      tension: 0.4,
+      borderWidth: 3,
+      pointRadius: 2,
+      backgroundColor: colors[dataset.color]
+        ? colors[dataset.color || 'dark'].main
+        : colors.dark.main,
+      borderColor: colors[dataset.color]
+        ? colors[dataset.color || 'dark'].main
+        : colors.dark.main,
+      maxBarThickness: 6,
+    }))
     : [];
 
   const { data, options } = configs(chart.labels || [], chartDatasets);
@@ -76,6 +78,7 @@ function BubbleChart({ title, description, height, chart }) {
             <Bubble data={data} options={options} />
           </ArgonBox>
         ),
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         [chart, height],
       )}
     </ArgonBox>
@@ -96,6 +99,7 @@ BubbleChart.propTypes = {
   title: PropTypes.string,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  // eslint-disable-next-line react/forbid-prop-types
   chart: PropTypes.objectOf(PropTypes.array).isRequired,
 };
 

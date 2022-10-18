@@ -7,25 +7,7 @@ import React from 'react';
 import Icon from '@mui/material/Icon';
 
 // Argon Dashboard 2 MUI components
-import ArgonBox from 'components/ArgonBox';
 import ArgonTypography from 'components/ArgonTypography';
-import ArgonProgress from 'components/ArgonProgress';
-
-import logoSpotify from 'assets/images/small-logos/logo-spotify.svg';
-
-function Completion({ value, color }) {
-  return (
-    <ArgonBox display="flex" alignItems="center">
-      <ArgonTypography variant="caption" color="text" fontWeight="medium">
-        {value}
-        %&nbsp;
-      </ArgonTypography>
-      <ArgonBox width="8rem">
-        <ArgonProgress value={value} color={color} variant="gradient" label={false} />
-      </ArgonBox>
-    </ArgonBox>
-  );
-}
 
 const action = (
   <Icon sx={{ cursor: 'pointer', fontWeight: 'bold' }} fontSize="small">
@@ -33,36 +15,40 @@ const action = (
   </Icon>
 );
 
-async function cryptoMarketsTableData(data) {
+function cryptoMarketsTableData(data) {
   const columns = [
-    { name: 'project', align: 'left' },
-    { name: 'budget', align: 'left' },
-    { name: 'status', align: 'left' },
-    { name: 'completion', align: 'center' },
+    { name: 'nombre', align: 'left' },
+    { name: 'valor', align: 'left' },
+    { name: 'variacion', align: 'left' },
     { name: 'action', align: 'center' },
   ];
+  const rows = [];
+  if (data.response && data.response.length >= 5) {
+    data.response.forEach((element) => {
+      const coinComponent = {
+        nombre: [element.image, `${element.name}`],
+        valor: (
+          <ArgonTypography variant="button" color="text" fontWeight="medium">
+            {element.current_price}
+          </ArgonTypography>
+        ),
+        variacion: (
+          <ArgonTypography variant="caption" color={element.price_change_percentage_24h >= 0 ? 'success' : 'warning'} fontWeight="medium">
+            {element.price_change_percentage_24h}
+            %
+          </ArgonTypography>
+        ),
 
-  const rows = data.map((coin) => ({
-    project: [logoSpotify, 'coin.name'],
-    budget: (
-      <ArgonTypography variant="button" color="text" fontWeight="medium">
-        {coin.current_price}
-      </ArgonTypography>
-    ),
-    status: (
-      <ArgonTypography variant="caption" color="text" fontWeight="medium">
-        working
-      </ArgonTypography>
-    ),
-    completion: <Completion value={60} color="info" />,
-    action,
-  }));
+        action,
+      };
+      rows.push(coinComponent);
+    });
+  }
 
   const tableData = {
     columns,
     rows,
   };
-
   return tableData;
 }
 

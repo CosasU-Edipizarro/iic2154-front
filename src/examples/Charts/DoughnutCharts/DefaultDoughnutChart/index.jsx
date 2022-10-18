@@ -32,7 +32,9 @@ import ArgonTypography from 'components/ArgonTypography';
 // DefaultDoughnutChart configurations
 import configs from 'examples/Charts/DoughnutCharts/DefaultDoughnutChart/configs';
 
-function DefaultDoughnutChart({ title, description, height, chart }) {
+function DefaultDoughnutChart({
+  title, description, height, chart,
+}) {
   const { data, options } = configs(chart.labels || [], chart.datasets || {}, chart.cutout);
 
   const renderChart = (
@@ -57,6 +59,7 @@ function DefaultDoughnutChart({ title, description, height, chart }) {
             <Doughnut data={data} options={options} />
           </ArgonBox>
         ),
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         [chart, height],
       )}
     </ArgonBox>

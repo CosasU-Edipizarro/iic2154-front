@@ -36,7 +36,9 @@ import BarReportsChartItem from 'examples/Charts/BarCharts/ReportsBarChart/Repor
 // ReportsBarChart configurations
 import configs from 'examples/Charts/BarCharts/ReportsBarChart/configs';
 
-function ReportsBarChart({ color, title, description, chart, items }) {
+function ReportsBarChart({
+  color, title, description, chart, items,
+}) {
   const { data, options } = configs(chart.labels || [], chart.datasets || {});
 
   const renderItems = items.map(({ icon, label, progress }) => (
@@ -70,6 +72,7 @@ function ReportsBarChart({ color, title, description, chart, items }) {
               <Bar data={data} options={options} />
             </ArgonBox>
           ),
+          // eslint-disable-next-line react-hooks/exhaustive-deps
           [chart, color],
         )}
         <ArgonBox px={1}>
@@ -105,6 +108,7 @@ ReportsBarChart.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   chart: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.object])).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
   items: PropTypes.arrayOf(PropTypes.object),
 };
 

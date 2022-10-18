@@ -15,7 +15,7 @@ Coded by www.creative-tim.com
 */
 
 // Import React
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 // @mui material components
 import Card from '@mui/material/Card';
@@ -34,23 +34,13 @@ import Table from 'examples/Tables/Table';
 import cryptoMarketsTableData from 'layouts/cryptosDashboard/data/cryptoMarketsTableData';
 
 // Import fetchMarketsData
-import fetchMarketsData from 'layouts/cryptosDashboard/controllers/fetchMarketsData';
+import defaultuseFetch from 'layouts/cryptosDashboard/controllers/fetchMarketsData';
 
 function CryptosDashboard() {
-  const [marketData, setMarketData] = useState([]);
-  const [tableData, setTableData] = useState({ columns: [], rows: [] });
-
-  // let { columns: prCols, rows: prRows } = cryptoMarketsTableData(data);
-
-  useEffect(() => {
-    console.log(marketData);
-  }, [marketData]);
-
   const page = 1;
-  const limit = 5;
-  setMarketData(fetchMarketsData(page, limit));
-
-  fetchMarketsData(page, limit).then((res) => { setTableData(cryptoMarketsTableData(res)); });
+  const perPage = 5;
+  const coinData = defaultuseFetch(page, perPage);
+  const { columns: prCols, rows: prRows } = cryptoMarketsTableData(coinData);
 
   return (
     <DashboardLayout>
@@ -59,7 +49,7 @@ function CryptosDashboard() {
         <ArgonBox mb={3}>
           <Card>
             <ArgonBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
-              <ArgonTypography variant="h6">Cryptos Markets</ArgonTypography>
+              <ArgonTypography variant="h6">Cryptos Markets ( valores en USD )</ArgonTypography>
             </ArgonBox>
             <ArgonBox
               sx={{
@@ -72,7 +62,7 @@ function CryptosDashboard() {
                 },
               }}
             >
-              <Table columns={tableData.columns} rows={tableData.rows} />
+              <Table columns={prCols} rows={prRows} />
             </ArgonBox>
           </Card>
         </ArgonBox>

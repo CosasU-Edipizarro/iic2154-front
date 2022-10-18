@@ -35,19 +35,21 @@ import configs from 'examples/Charts/BarCharts/HorizontalBarChart/configs';
 // Argon Dashboard 2 MUI base styles
 import colors from 'assets/theme/base/colors';
 
-function HorizontalBarChart({ title, description, height, chart }) {
+function HorizontalBarChart({
+  title, description, height, chart,
+}) {
   const chartDatasets = chart.datasets
     ? chart.datasets.map((dataset) => ({
-        ...dataset,
-        weight: 5,
-        borderWidth: 0,
-        borderRadius: 4,
-        backgroundColor: colors[dataset.color]
-          ? colors[dataset.color || 'dark'].main
-          : colors.dark.main,
-        fill: false,
-        maxBarThickness: 35,
-      }))
+      ...dataset,
+      weight: 5,
+      borderWidth: 0,
+      borderRadius: 4,
+      backgroundColor: colors[dataset.color]
+        ? colors[dataset.color || 'dark'].main
+        : colors.dark.main,
+      fill: false,
+      maxBarThickness: 35,
+    }))
     : [];
 
   const { data, options } = configs(chart.labels || [], chartDatasets);
@@ -74,6 +76,7 @@ function HorizontalBarChart({ title, description, height, chart }) {
             <Bar data={data} options={options} />
           </ArgonBox>
         ),
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         [chart, height],
       )}
     </ArgonBox>
@@ -94,6 +97,7 @@ HorizontalBarChart.propTypes = {
   title: PropTypes.string,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  // eslint-disable-next-line react/forbid-prop-types
   chart: PropTypes.objectOf(PropTypes.array).isRequired,
 };
 
