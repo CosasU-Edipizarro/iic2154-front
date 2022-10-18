@@ -15,7 +15,7 @@ Coded by www.creative-tim.com
 */
 
 // Import React
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 // @mui material components
 import Card from '@mui/material/Card';
@@ -35,11 +35,10 @@ import cryptoMarketsTableData from 'layouts/cryptosDashboard/data/cryptoMarketsT
 
 // Import fetchMarketsData
 import defaultuseFetch from 'layouts/cryptosDashboard/controllers/fetchMarketsData';
-import { RepeatOneSharp } from '@mui/icons-material';
 
 function CryptosDashboard() {
   const page = 1;
-  const perPage = 5;  
+  const perPage = 100;
   const coinData = defaultuseFetch(page, perPage);
   const { columns: prCols, rows: prRows } = cryptoMarketsTableData(coinData);
 
@@ -74,4 +73,3 @@ function CryptosDashboard() {
 }
 
 export default CryptosDashboard;
-

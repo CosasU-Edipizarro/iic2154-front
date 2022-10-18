@@ -20,8 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "./node_modules/.bin/eslint ./src/",
-    "lint:fix": "./node_modules/.bin/eslint ./src/ --fix",
+    "lint": "./node_modules/.bin/eslint ./src/ --ext .js,.jsx",
+    "lint:fix": "./node_modules/.bin/eslint ./src/ --ext .js,.jsx --fix",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "install:peer-deps": "npm install --legacy-peer-deps"

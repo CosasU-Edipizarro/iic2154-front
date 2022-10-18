@@ -37,7 +37,6 @@ import projectsTableData from 'layouts/tables/data/projectsTableData';
 function Tables() {
   const { columns, rows } = authorsTableData;
   const { columns: prCols, rows: prRows } = projectsTableData;
-  console.log(prRows)
 
   return (
     <DashboardLayout>

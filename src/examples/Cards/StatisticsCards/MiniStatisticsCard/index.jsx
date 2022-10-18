@@ -32,7 +32,7 @@ import ArgonTypography from 'components/ArgonTypography';
 import { useArgonController } from 'context';
 
 function MiniStatisticsCard({
- bgColor, title, count, percentage, icon, direction 
+  bgColor, title, count, percentage, icon, direction,
 }) {
   const [controller] = useArgonController();
   const { darkMode } = controller;
@@ -77,7 +77,8 @@ function MiniStatisticsCard({
                   fontWeight="bold"
                   color={bgColor === 'white' ? 'dark' : 'white'}
                 >
-                  {count}{' '}
+                  {count}
+                  {' '}
                   <ArgonTypography variant="button" color={percentage.color} fontWeight="bold">
                     {percentage.text}
                   </ArgonTypography>

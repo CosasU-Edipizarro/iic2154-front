@@ -31,7 +31,9 @@ import ArgonBox from 'components/ArgonBox';
 import ArgonTypography from 'components/ArgonTypography';
 import ArgonButton from 'components/ArgonButton';
 
-function DefaultPricingCard({ title, price, specifications, action }) {
+function DefaultPricingCard({
+  title, price, specifications, action,
+}) {
   const renderSpecifications = specifications.map(({ label, includes }) => (
     <ArgonBox key={label} display="flex" alignItems="center" p={1}>
       <ArgonBox
@@ -109,6 +111,7 @@ DefaultPricingCard.propTypes = {
     currency: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
   }).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
   specifications: PropTypes.arrayOf(PropTypes.object).isRequired,
   action: PropTypes.shape({
     type: PropTypes.oneOf(['external', 'internal']).isRequired,

@@ -32,7 +32,9 @@ import ArgonTypography from 'components/ArgonTypography';
 // PieChart configurations
 import configs from 'examples/Charts/PieChart/configs';
 
-function PieChart({ title, description, height, chart }) {
+function PieChart({
+  title, description, height, chart,
+}) {
   const { data, options } = configs(chart.labels || [], chart.datasets || {});
 
   const renderChart = (
@@ -57,6 +59,7 @@ function PieChart({ title, description, height, chart }) {
             <Pie data={data} options={options} />
           </ArgonBox>
         ),
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         [chart, height],
       )}
     </ArgonBox>
