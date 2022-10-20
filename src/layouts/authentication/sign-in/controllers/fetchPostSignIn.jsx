@@ -4,7 +4,8 @@ async function fetchPostSignIn(data) {
   let response = {};
   let error = {};
   const { email, password } = data;
-  const url = `${process.env.REACT_APP_BACKEND}/auth/logIn`;
+  // const url = `${process.env.REACT_APP_BACKEND}/auth/logIn`;
+  const url = 'https://tiki-api-dev.tk/auth/logIn';
 
   try {
     const res = await fetch(url, {
