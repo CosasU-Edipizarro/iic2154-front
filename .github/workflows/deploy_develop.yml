@@ -26,7 +26,7 @@ jobs:
         run: npm ci --ignore-scripts
 
       - name: Prepare .env
-        run: {{ secrets.BUILD_ENV_DEVELOP }}
+        run: ${{ secrets.BUILD_ENV_DEVELOP }}
 
       - name: Build project
         run: npm run build
