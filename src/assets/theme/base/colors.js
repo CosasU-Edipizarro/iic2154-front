@@ -57,8 +57,8 @@ const colors = {
   },
 
   info: {
-    main: '#11cdef',
-    focus: '#11cdef',
+    main: '#5569FF',
+    focus: '#5569FF',
   },
 
   success: {
@@ -77,8 +77,8 @@ const colors = {
   },
 
   light: {
-    main: '#e9ecef',
-    focus: '#e9ecef',
+    main: '#F2F5F9',
+    focus: '#F2F5F9',
   },
 
   dark: {
@@ -88,7 +88,7 @@ const colors = {
 
   grey: {
     100: '#f8f9fa',
-    200: '#e9ecef',
+    200: '#F2F5F9',
     300: '#dee2e6',
     400: '#ced4da',
     500: '#adb5bd',
