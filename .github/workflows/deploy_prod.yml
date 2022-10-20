@@ -29,6 +29,9 @@ jobs:
       - name: Prepare.env
         run: ${{ secrets.BUILD_ENV_PROD }}
 
+      - name: Cat test
+        run: cat .env
+
       - name: Build project
         run: npm run build
 
