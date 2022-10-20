@@ -17,7 +17,7 @@ Coded by www.creative-tim.com
 import React, { useState, useEffect } from 'react';
 
 // react-router components
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 // prop-types is a library for typechecking of props.
 import PropTypes from 'prop-types';
@@ -56,6 +56,11 @@ import {
   setOpenConfigurator,
 } from 'context';
 
+import {
+  getAccessToken,
+  removeTokens,
+} from 'utils/manageTokens';
+
 // Images
 import team2 from 'assets/images/team-2.jpg';
 import logoSpotify from 'assets/images/small-logos/logo-spotify.svg';
@@ -71,6 +76,13 @@ function DashboardNavbar({ absolute, light, isMini }) {
   } = controller;
   const [openMenu, setOpenMenu] = useState(false);
   const route = useLocation().pathname.split('/').slice(1);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!getAccessToken()) {
+      navigate('/authentication/sign-in');
+    }
+  });
 
   useEffect(() => {
     // Setting the navbar type
@@ -105,6 +117,10 @@ function DashboardNavbar({ absolute, light, isMini }) {
   const handleConfiguratorOpen = () => setOpenConfigurator(dispatch, !openConfigurator);
   const handleOpenMenu = (event) => setOpenMenu(event.currentTarget);
   const handleCloseMenu = () => setOpenMenu(false);
+  const handleSignOut = () => {
+    removeTokens();
+    window.location.reload();
+  };
 
   // Render the notifications menu
   const renderMenu = () => (
@@ -187,25 +203,24 @@ function DashboardNavbar({ absolute, light, isMini }) {
               />
             </ArgonBox>
             <ArgonBox color={light ? 'white' : 'inherit'}>
-              <Link to="/authentication/sign-in/basic">
-                <IconButton sx={navbarIconButton} size="small">
-                  <Icon
-                    sx={({ palette: { dark, white } }) => ({
-                      color:
-                        light && transparentNavbar ? white.main : dark.main,
-                    })}
-                  >
-                    account_circle
-                  </Icon>
-                  <ArgonTypography
-                    variant="button"
-                    fontWeight="medium"
-                    color={light && transparentNavbar ? 'white' : 'dark'}
-                  >
-                    Sign in
-                  </ArgonTypography>
-                </IconButton>
-              </Link>
+              <IconButton sx={navbarIconButton} size="small">
+                <Icon
+                  sx={({ palette: { dark, white } }) => ({
+                    color:
+                      light && transparentNavbar ? white.main : dark.main,
+                  })}
+                >
+                  account_circle
+                </Icon>
+                <ArgonTypography
+                  variant="button"
+                  fontWeight="medium"
+                  color={light && transparentNavbar ? 'white' : 'dark'}
+                  onClick={handleSignOut}
+                >
+                  Sign out
+                </ArgonTypography>
+              </IconButton>
               <IconButton
                 size="small"
                 color={light && transparentNavbar ? 'white' : 'dark'}

@@ -51,8 +51,7 @@ import routes from 'routes';
 import { useArgonController, setMiniSidenav, setOpenConfigurator } from 'context';
 
 // Images
-import brand from 'assets/images/logo-ct.png';
-import brandDark from 'assets/images/logo-ct-dark.png';
+import brand from 'assets/images/logos/tiki-logo.png';
 
 // Icon Fonts
 import 'assets/css/nucleo-icons.css';
@@ -61,7 +60,7 @@ import 'assets/css/nucleo-svg.css';
 export default function App() {
   const [controller, dispatch] = useArgonController();
   const {
-    miniSidenav, direction, layout, openConfigurator, sidenavColor, darkSidenav, darkMode,
+    miniSidenav, direction, layout, openConfigurator, sidenavColor, darkMode,
   } = controller;
   const [onMouseEnter, setOnMouseEnter] = useState(false);
   const [rtlCache, setRtlCache] = useState(null);
@@ -151,8 +150,8 @@ export default function App() {
           <>
             <Sidenav
               color={sidenavColor}
-              brand={darkSidenav || darkMode ? brand : brandDark}
-              brandName="Argon Dashboard 2 PRO"
+              brand={brand}
+              brandName="Tiki Admin"
               routes={routes}
               onMouseEnter={handleOnMouseEnter}
               onMouseLeave={handleOnMouseLeave}
@@ -175,8 +174,8 @@ export default function App() {
         <>
           <Sidenav
             color={sidenavColor}
-            brand={darkSidenav || darkMode ? brand : brandDark}
-            brandName="Argon Dashboard 2 PRO"
+            brand={brand}
+            brandName="Tiki Admin"
             routes={routes}
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}

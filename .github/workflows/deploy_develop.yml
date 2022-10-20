@@ -26,6 +26,7 @@ jobs:
         run: npm ci --ignore-scripts
 
       - name: Build project
+        run: echo ${{ secrets.ENV_DEVELOP }} >> .env
         run: npm run build
 
       - name: Configure AWS Credentials

@@ -15,13 +15,19 @@ Coded by www.creative-tim.com
 */
 
 // Import React
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // react-router-dom components
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // @mui material components
 import Switch from '@mui/material/Switch';
+
+import {
+  getAccessToken,
+  setAccessToken,
+  setRefreshToken,
+} from 'utils/manageTokens';
 
 // Argon Dashboard 2 MUI components
 import ArgonBox from 'components/ArgonBox';
@@ -32,13 +38,45 @@ import ArgonButton from 'components/ArgonButton';
 // Authentication layout components
 import IllustrationLayout from 'layouts/authentication/components/IllustrationLayout';
 
+import fetchPostSignIn from 'layouts/authentication/sign-in/controllers/fetchPostSignIn';
+
 // Image
 const bgImage = 'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signin-ill.jpg';
 
 function Illustration() {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
+
+  const handleEmail = (event) => setEmail(event.target.value);
+  const handlePassword = (event) => setPassword(event.target.value);
+
+  const handleSignIn = () => {
+    const signInData = {
+      email,
+      password,
+    };
+    fetchPostSignIn(signInData)
+      .then((data) => {
+        setAccessToken(data.response.accessToken);
+        setRefreshToken(data.response.refreshToken);
+      })
+      .then(() => {
+        if (getAccessToken()) {
+          window.location.reload();
+          // navigate('/dashboard');
+        }
+      });
+  };
+
+  useEffect(() => {
+    if (getAccessToken()) {
+      navigate('/dashboard');
+    }
+  });
 
   return (
     <IllustrationLayout
@@ -46,17 +84,29 @@ function Illustration() {
       description="Enter your email and password to sign in"
       illustration={{
         image: bgImage,
-        title: '"Attention is the new currency"',
+        title: '"Tiki is your crypto market watcher"',
         description:
-          'The more effortless the writing looks, the more effort the writer actually put into the process.',
+          // 'The more transparent the crypto market is, the more it will develop.',
+          // `${cookies.accessToken}`,
+          `${getAccessToken()}`,
       }}
     >
       <ArgonBox component="form" role="form">
         <ArgonBox mb={2}>
-          <ArgonInput type="email" placeholder="Email" size="large" />
+          <ArgonInput
+            type="email"
+            placeholder="Email"
+            size="large"
+            onChange={handleEmail}
+          />
         </ArgonBox>
         <ArgonBox mb={2}>
-          <ArgonInput type="password" placeholder="Password" size="large" />
+          <ArgonInput
+            type="password"
+            placeholder="Password"
+            size="large"
+            onChange={handlePassword}
+          />
         </ArgonBox>
         <ArgonBox display="flex" alignItems="center">
           <Switch checked={rememberMe} onChange={handleSetRememberMe} />
@@ -70,24 +120,14 @@ function Illustration() {
           </ArgonTypography>
         </ArgonBox>
         <ArgonBox mt={4} mb={1}>
-          <ArgonButton color="info" size="large" fullWidth>
+          <ArgonButton
+            color="info"
+            size="large"
+            fullWidth
+            onClick={handleSignIn}
+          >
             Sign In
           </ArgonButton>
-        </ArgonBox>
-        <ArgonBox mt={3} textAlign="center">
-          <ArgonTypography variant="button" color="text" fontWeight="regular">
-            Don&apos;t have an account?
-            {' '}
-            <ArgonTypography
-              component={Link}
-              to="/authentication/sign-up"
-              variant="button"
-              color="info"
-              fontWeight="medium"
-            >
-              Sign up
-            </ArgonTypography>
-          </ArgonTypography>
         </ArgonBox>
       </ArgonBox>
     </IllustrationLayout>
